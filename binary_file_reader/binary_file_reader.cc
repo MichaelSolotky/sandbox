@@ -1,8 +1,6 @@
 #include <cstdlib>
 #include <cstdio>
 
-using namespace std;
-
 enum { BLOCK_SIZE = 65536 };
 
 int main(int argc, char **argv) {

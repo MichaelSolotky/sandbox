@@ -23,14 +23,20 @@ class UnconditionalProblem():
             return Du
             u is numpy array
         '''
-        return u
+        v = np.empty(10000)
+        v[:1000] = u[9000:]
+        v[1000:] = u[:9000]
+        return 2 * u
 
     def apply_conjugate_operator(self, u):
         '''
             return D*(u)
             u is numpy array
         '''
-        return u
+        v = np.empty(10000)
+        v[:9000] = u[1000:]
+        v[:1000] = u[9000:]
+        return 2 * u
 
     def calc_dot(self, f1, f2):
         '''
@@ -49,6 +55,8 @@ class UnconditionalProblem():
         # J'(u) = a * b * ||u||^{b-2} * u + c * (D + D*)u + e * f
         deriv_J = self.a * self.b * (self.calc_dot(u, u) ** (self.b / 2 - 1)) * u + \
                   self.c * (self.apply_linear_operator(u) + self.apply_conjugate_operator(u)) + self.e * self.f
+        print(self.apply_linear_operator(u))
+        print(self.c)
         return deriv_J
 
     def calc_hessian(self, u):

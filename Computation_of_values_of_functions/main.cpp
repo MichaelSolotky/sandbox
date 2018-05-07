@@ -5,7 +5,6 @@
 #include <cmath>
 #include <ctime>
 
-using namespace std;
 
 template <typename T>
 inline int __attribute((fastcall)) delete_array(int res, T arr) {

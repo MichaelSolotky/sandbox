@@ -101,6 +101,7 @@ class SimplexMethod():
 
         decisive_col = np.argmin(ratings)
         while ratings[decisive_col] < -1e-6:
+            print ('iter')
             # ToDo: think about devision by 0
             # change b vector
             b = b / A[:, decisive_col]
