@@ -55,8 +55,6 @@ class UnconditionalProblem():
         # J'(u) = a * b * ||u||^{b-2} * u + c * (D + D*)u + e * f
         deriv_J = self.a * self.b * (self.calc_dot(u, u) ** (self.b / 2 - 1)) * u + \
                   self.c * (self.apply_linear_operator(u) + self.apply_conjugate_operator(u)) + self.e * self.f
-        print(self.apply_linear_operator(u))
-        print(self.c)
         return deriv_J
 
     def calc_hessian(self, u):
