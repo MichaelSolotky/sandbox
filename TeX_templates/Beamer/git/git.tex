@@ -1,0 +1,227 @@
+\documentclass[]{beamer}
+
+\mode<presentation> {
+	%\usetheme{default}
+	\usetheme{AnnArbor}
+	%\usetheme{Antibes}
+	%\usetheme{Bergen}
+	%\usetheme{Berkeley}
+	%\usetheme{Berlin}
+	%\usetheme{Boadilla}
+	%\usetheme{CambridgeUS}
+	%\usetheme{Copenhagen}
+	%\usetheme{Darmstadt}
+	%\usetheme{Dresden}
+	%\usetheme{Frankfurt}
+	%\usetheme{Goettingen}
+	%\usetheme{Hannover}
+	%\usetheme{Ilmenau}
+	%\usetheme{JuanLesPins}
+	%\usetheme{Luebeck}
+	%\usetheme{Madrid}
+	%\usetheme{Malmoe}
+	%\usetheme{Marburg}
+	%\usetheme{Montpellier}
+	%\usetheme{PaloAlto}
+	%\usetheme{Pittsburgh}
+	%\usetheme{Rochester}
+	%\usetheme{Singapore}
+	%\usetheme{Szeged}
+	%\usetheme{Warsaw}
+
+	%\usecolortheme{albatross}
+	\usecolortheme{beaver}
+	%\usecolortheme{beetle}
+	%\usecolortheme{crane}
+	%\usecolortheme{dolphin}
+	%\usecolortheme{dove}
+	%\usecolortheme{fly}
+	%\usecolortheme{lily}
+	%\usecolortheme{orchid}
+	%\usecolortheme{rose}
+	%\usecolortheme{seagull}
+	%\usecolortheme{seahorse}
+	%\usecolortheme{whale}
+	%\usecolortheme{wolverine}
+}
+
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+%\usepackage[T2A]{fontenc}
+%\usepackage[T1]{fontenc}
+%\usepackage{tgtermes}
+\usepackage{verbatim}
+%\usepackage{minted}
+
+%\usepackage{citehack} 
+%\usepackage{tikz}
+%\usetikzlibrary{patterns}
+
+%\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{pgfplots}
+\usepackage{hyperref}
+\usepackage{graphics, graphicx}
+
+%\usepackage{color}
+%\usepackage{enumerate}
+%\usepackage{booktabs}
+%\usepackage{mathtools}
+%\usepackage{algorithm}
+%\usepackage[noend]{algpseudocode}
+%\usepackage{latexsym}
+%\usepackage{mdframed}
+%\usepackage{minted}
+%\usemintedstyle{default}
+%\usepackage[noend]{algorithmic}
+
+\title[Git]{\bfseries Обзор системы контроля версий Git}
+\author[Cолоткий~М.]{Солоткий Михаил}
+\subtitle{Практикум на ЭВМ 2017/2018}
+\institute[ВМК МГУ]{МГУ имени М. В. Ломоносова, факультет ВМК, кафедра ММП}
+\date{14 ноября 2017 года}
+
+\begin{document}
+
+%\medskip
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame} \frametitle{Что такое система контроля версий и зачем она нужна.}
+	\begin{itemize}
+		\item Система контроля версий (СКВ) — это система, регистрирующая изменения в одном или нескольких файлах с тем, чтобы в дальнейшем была возможность вернуться к определённым старым версиям этих файлов. \newline \par
+		\item Вообще, если, пользуясь СКВ, вы всё испортите или потеряете файлы, всё можно будет легко восстановить.
+	\end{itemize}
+\end{frame}
+
+\begin{frame} \frametitle{Преимущества Git.}
+	\begin{itemize}
+		\item Быстрое переключение между версиями (в отличие от CVS, Subversion, Perforce, Bazaar); \newline \par
+		\item Git - распределённая система (в отличие от CVS, Subversion и Perforce); \newline \par
+		\item Git следит за безопасностью данных. \newline \par
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile] \frametitle{Установка git - утилиты для системы Git.}
+	\begin{itemize}
+		\item Windows \newline
+		Скачиваем .exe инсталятор с \url{http://msysgit.github.com/}
+		\item[~]
+
+		\item Mac \newline
+		Можно скачать графический инсталятор. \newline
+		\url{http://sourceforge.net/projects/git-osx-installer/}
+		\item[~]
+
+		\item Linux
+		\begin{verbatim}
+			$ yum install git-core # Fedora
+			$ apt-get install git # Debian or Ubuntu
+		\end{verbatim}
+		\item[~]
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile] \frametitle{Как начать контроль версий с git.}
+	\begin{itemize}
+		\item Создать пустой репозиторий с 0 зафиксированных изменений.
+		\begin{verbatim}
+			$ git init
+		\end{verbatim}
+		\item[~]
+
+		\item Скопировать существующий репозиторий со всей историей.
+		\begin{verbatim}
+			$ git clone https://github.com/esokolov/ml-course-msu.git
+		\end{verbatim}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile] \frametitle{Коммиты.}
+	\begin{itemize}
+		\item Добавляем отслеживание файлов.
+		\begin{verbatim}
+			$ git add . # Для всех файлов
+			$ git add README # Для файла README
+		\end{verbatim}
+		\item[~]
+		\item Фиксируем изменение.
+		\begin{verbatim}
+			$ git commit -m 'first commit'
+			[master (root-commit) 11730f0] first commit
+			1 file changed, 1 insertion(+)
+			create mode 100644 README
+		\end{verbatim}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile] \frametitle{Ветвление.}
+	\begin{itemize}
+		\item Ветка - просто указатель на последний коммит.
+		\item[~]
+
+		\item Создание ветки iss53 и работа в ней.
+		\begin{verbatim}
+			$ git checkout -b iss53
+			$ vim index.html
+			$ git commit -a -m 'added a new footer [issue 53]'
+		\end{verbatim}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile] \frametitle{Ветвление.}
+	\begin{itemize}
+		\item Слияние ветки iss53 с веткой master.
+		\begin{verbatim}
+			$ git checkout master
+			$ git merge iss53
+		\end{verbatim}
+
+		\begin{center}
+			\includegraphics[scale=0.4]{git-merge-normal}
+		\end{center}
+
+		\item Удаление ветки iss53.
+		\begin{verbatim}
+			$ git branch -d iss53
+		\end{verbatim}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile] \frametitle{Откат до какого-то из прошлых коммитов.}
+	\begin{itemize}
+		\item Небезопасный способ:
+		\begin{verbatim}
+			$ git checkout -- README
+		\end{verbatim}
+		\item[~]
+
+		\item Безопасный способ:
+		\begin{verbatim}
+			$ git log # Чтобы узнать hash коммита
+			$ git checkout <commit hash>
+			$ git checkout -b new_branch
+		\end{verbatim}
+		\item[~]
+		\item Больше самых разных способов: \newline
+		\href{https://ru.stackoverflow.com/questions/431520/%D0%9A%D0%B0%D0%BA-%D0%B2%D0%B5%D1%80%D0%BD%D1%83%D1%82%D1%8C%D1%81%D1%8F-%D0%BE%D1%82%D0%BA%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F-%D0%BA-%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5-%D1%80%D0%B0%D0%BD%D0%BD%D0%B5%D0%BC%D1%83-%D0%BA%D0%BE%D0%BC%D0%BC%D0%B8%D1%82%D1%83}{https://ru.stackoverflow.com/questions/431520/Как-вернуться-к-более-раннему-коммиту}
+	\end{itemize}
+\end{frame}
+
+\begin{frame} \frametitle{Самое важное, что нужно знать о git:}
+	\begin{itemize}
+		\item Как инициировать контроль версий;
+		\item Как делать коммиты;
+		\item Как переключиться на другую версию;
+		\item Как создавать, переключаться, удалять и сливать ветки;
+		\item Как работать с удалённым сервером;
+		\item Как разрешать конфликты
+		\item[~]
+	\end{itemize}
+	Книга по пользованию git: \newline
+	\url{https://git-scm.com/book/ru/v1/}
+\end{frame}
+
+\end{document}
