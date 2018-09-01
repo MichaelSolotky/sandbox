@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 template <typename T>
 class smart_pointer {
     T *my_obj;
@@ -35,7 +33,7 @@ void f() {
 void f1() {
     try {
 	f();
-    } catch(int e) { cout << "probplem\n"; }
+    } catch(int e) { cout << "trouble\n"; }
     cout << "code after thrown\n";
 }
 
