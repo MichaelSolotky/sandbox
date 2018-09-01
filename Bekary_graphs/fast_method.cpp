@@ -12,9 +12,7 @@ typedef double lf;
 typedef long long lld;
 typedef long long llu;
 
-using namespace std;
-
-inline int read_int() {
+int read_int() {
     int x = 0; 
     bool f = 0; 
     char ch = getchar();
@@ -45,7 +43,7 @@ int main() {
 	char flag = 0;
 	for(int i = 0; i < m; i++)
 		if(sources[x[i]] != sources[y[i]]) {
-			mn = min(mn, d[i]);
+			mn = std::min(mn, d[i]);
 			flag = 1;
 		}
 	if(flag)

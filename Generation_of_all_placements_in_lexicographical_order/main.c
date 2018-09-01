@@ -1,17 +1,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-// for generation of allocations from set of elements, simply add this set of elements, simply add the set
-// needs to be checked on what it really generates - may be allocations
-
-void print_allocation(int n, int *arr) {
+void print_allocation(const int n, int *arr) {
   for (int i = 0 ; i < n; ++i) {
     printf("%d", arr[i]);
   }
   puts("");
 }
 
-void generate_all_allocations(int n) {
+void generate_all_allocations(const int n) {
   // initialization
   int *arr = malloc(n * sizeof(n));
   for (int i = 0; i < n; ++i) {

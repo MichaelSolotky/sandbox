@@ -1,7 +1,5 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
     FILE *fi = fopen("input.bin", "wb");
     int n;

@@ -3,7 +3,7 @@
 
 enum { BLOCK_SIZE = 65536 };
 
-int main(int argc, char **argv) {
+int main(int argc, const char **argv) {
     FILE *bin = fopen(argv[1], "rb");
     int *buf = (int *) malloc(BLOCK_SIZE * sizeof *buf);
     int read_bytes = fread(buf, sizeof *buf, BLOCK_SIZE, bin);

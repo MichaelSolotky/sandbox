@@ -1,15 +1,16 @@
 #include "differentiation.h"
 
 tree *copy_tree(tree *root) {
-    if(!root)
-        return NULL;
+    if (!root) {
+        return nullptr;
+    }
     tree *copy_of_root = (tree *) calloc(sizeof(tree), 1);
     copy_of_root->data = root->data;
-    if(root->left) {
+    if (root->left) {
         copy_of_root->left = copy_tree(root->left);
         copy_of_root->left->parent = copy_of_root;
     }
-    if(root->right) {
+    if (root->right) {
         copy_of_root->right = copy_tree(root->right);
         copy_of_root->right->parent = copy_of_root;
     }
@@ -18,7 +19,7 @@ tree *copy_tree(tree *root) {
 
 // subroot is result of differentiation of sum (it will be created further)
 // node belongs to the tree of expression, it mustn't be changed
-
+//
 void variable_case(tree *subroot) {
     subroot->data.symb = 0;
     subroot->data.num = 1;
@@ -107,13 +108,13 @@ void simplification_of_x_in_the_power_a_case(tree *&subroot, tree *node) {
 }
 
 void power_case(tree *&subroot, tree *node) {
-    if(node->left->data.symb || node->left->data.num) { // else return a node with number 0
+    if (node->left->data.symb || node->left->data.num) { // else return a node with number 0
         subroot->data.symb = '*';
-        if(!node->left->data.symb) {
+        if (!node->left->data.symb) {
             subroot->left = copy_tree(node);
             subroot->right = a_in_the_power_x_case(node);
             subroot->left->parent = subroot->right->parent = subroot;
-        } else if(!node->right->data.symb) {
+        } else if (!node->right->data.symb) {
             simplification_of_x_in_the_power_a_case(subroot, node);
         } else {
             subroot->left = copy_tree(node);
@@ -155,7 +156,7 @@ void arc_tangent_case(tree *&subroot, tree *node) {
 
 // '2', '3', '4', '5', '6', '7', '8', '9', 'g', 'l', 's', 'n', 't', 'q'
 tree *differentiate(tree *node) {
-    if(!node) {
+    if (!node) {
         char string[30] = "Trying to differentiate NULL";
         write_mistake(string, (char) 0xff);
     }
