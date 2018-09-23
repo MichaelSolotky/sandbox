@@ -1,0 +1,158 @@
+\documentclass[12pt,fleqn,unicode]{article}
+%\usepackage{vkCourseML}
+\usepackage{cmap}       % Поддержка поиска русских слов в PDF (pdflatex)
+\usepackage[cp1251]{inputenc}
+\usepackage{amssymb,amsmath,mathrsfs}
+\usepackage[russian]{babel}
+\usepackage{theorem}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage[ruled,vlined,linesnumbered,algo2e]{algorithm2e}
+\usepackage[footnotesize]{caption2}
+\usepackage{listings}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\textheight=240mm
+\textwidth=160mm
+\topmargin=-14mm
+\headsep=7mm
+%\oddsidemargin=7mm\evensidemargin=-3mm
+\oddsidemargin=0mm\evensidemargin=0mm
+\marginparwidth=36pt
+\tolerance=4000
+\hbadness=2000
+% подавить эффект "висячих стpок"
+\clubpenalty=10000
+\widowpenalty=10000
+\flushbottom
+%\raggedbottom
+%\renewcommand{\baselinestretch}{1}
+
+% Полезные команды для математики
+\newcommand{\const}{\mathrm{const}}
+\newcommand{\tsum}{\mathop{\textstyle\sum}\limits}
+\newcommand{\tprod}{\mathop{\textstyle\prod}\limits}
+\newcommand{\argmin}{\mathop{\rm arg\,min}\limits}
+\newcommand{\argmax}{\mathop{\rm arg\,max}\limits}
+\newcommand{\sign}{\mathop{\rm sign}\limits}
+\newcommand{\norm}{\mathop{\rm norm}\limits}
+\newcommand{\SoftMax}{\mathop{\rm SoftMax}\limits}
+\newcommand{\KL}{\mathop{\rm KL}\nolimits}
+\newcommand{\Dir}{\mathop{\rm Dir}\nolimits}
+\newcommand{\rank}{\mathop{\rm rank}\nolimits}
+\newcommand{\diag}{\mathop{\rm diag}\nolimits}
+\newcommand{\scal}[2]{\left\langle #1,#2 \right\rangle}
+\newcommand{\BigARTM}{\texttt{BigARTM}}
+\renewcommand{\geq}{\geqslant}
+\renewcommand{\leq}{\leqslant}
+\renewcommand{\phi}{\varphi}
+\newcommand{\T}{\textsf{\upshape т}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\emset}{\varnothing}
+\newcommand{\cond}{\mspace{2mu}{|}\mspace{2mu}}
+\newcommand{\Loss}{\mathscr{L}}
+\newcommand{\Expect}{\mathsf{E}}
+\newcommand{\Disp}{\mathsf{D}}
+\newcommand{\Var}{\mathsf{D}}
+\newcommand\RR{\mathbb{R}}
+\newcommand\DD{\mathbb{D}}
+\newcommand\cL{\mathscr{L}}
+\newcommand\cF{\mathscr{F}}
+\newcommand\cG{\mathscr{G}}
+\newcommand\cJ{\mathcal{J}}
+\newcommand\cN{\mathcal{N}}
+\newcommand\cB{\mathscr{B}}
+\newcommand\cK{\mathscr{K}}
+\newcommand\cP{\mathscr{P}}
+\newcommand\cC{\mathscr{C}}
+\newcommand\cS{\mathscr{S}}
+\renewcommand{\em}{\it}
+\def\afterlabel#1{\renewcommand\labelenumi{\theenumi #1}}
+
+% Оформление окружений типа теорем
+\theoremstyle{plain}
+% Шаманские притопывания, чтобы ставить точку после номера теоремы
+\makeatletter
+\gdef\th@plain{\normalfont
+	\def\@begintheorem##1##2{%
+		\item[\hskip\labelsep\theorem@headerfont ##1\ ##2. ]}%
+	\def\@opargbegintheorem##1##2##3{%
+		\item[\hskip\labelsep\theorem@headerfont ##1\ ##2 (##3). ]}%
+}
+\makeatother
+\theorembodyfont{\rmfamily\slshape}
+\newtheorem{Theorem}{Теорема}
+\newtheorem{Lemma}{Лемма}
+\newtheorem{Corr}{Следствие}
+
+\newenvironment{Proof}%
+	%{\par\noindent{\bf Доказательство.\par\nopagebreak}}%
+	{\par\noindent{\bf Доказательство.~}}%
+	{\hfill$\scriptstyle\blacksquare$\par\medskip}
+
+% Оформление алгоритмов в пакете algorithm2e
+\makeatletter
+\renewcommand{\algorithmcfname}{Алгоритм}
+\renewcommand{\listalgorithmcfname}{Список алгоритмов}
+\renewcommand{\@algocf@procname}{Процедура}
+\renewcommand{\@algocf@funcname}{Функция}
+\renewcommand{\procedureautorefname}{процедура}
+\renewcommand{\functionautorefname}{функция}
+\newcommand{\vkKw}[1]{\textsf{#1}}
+\SetKwInput{KwIn}{\vkKw{Вход}}
+\SetKwInput{KwOut}{\vkKw{Выход}}
+\SetKwInput{KwData}{\vkKw{Вход}}
+\SetKwInput{KwResult}{\vkKw{Выход}}
+\SetKw{KwRet}{\vkKw{выход}}
+\SetKw{Return}{\vkKw{выход}}
+\SetKwIF{If}{ElseIf}{Else}{\vkKw{если}}{\vkKw{то}}{\vkKw{иначе если}}{\vkKw{иначе}}{}
+\SetKwRepeat{Repeat}{\vkKw{повторять}}{\vkKw{пока}}
+\SetKwFor{For}{\vkKw{для}}{}{}
+\SetKwFor{ForAll}{\vkKw{для всех}}{}{}
+\SetKwFor{ForEach}{\vkKw{для всех}}{}{}
+\SetKwFor{While}{\vkKw{пока}}{}{}
+\setlength{\interspacetitleruled}{4pt}
+\SetAlgoCaptionSeparator{.}
+\SetAlgoInsideSkip{smallskip}
+\SetAlCapHSkip{0ex}
+\SetArgSty{relax}
+\makeatother
+
+% Оформление листингов
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.98,0.98,0.98}
+\lstdefinestyle{python}{
+	backgroundcolor=\color{backcolour},
+	commentstyle=\color{blue}\slshape,
+	keywordstyle=\color{codegreen},
+	stringstyle=\color{codepurple},
+	%basicstyle=\ttfamily\scriptsize,
+	basicstyle=\ttfamily\small,
+	%basicstyle=\ttfamily\footnotesize\setstretch{0.9},
+	columns=flexible,
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	keepspaces=true,
+	numbers=left,
+	numberstyle=\tiny\color{codegray},
+	numbersep=2ex,
+	xleftmargin=\parindent,
+	framextopmargin=2em,
+	framexbottommargin=2em,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=2
+}
+\lstset{style=python}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	g
+\end{document}
