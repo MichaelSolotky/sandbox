@@ -7,6 +7,9 @@
 #define len_of_cell 9
 #define sieve_limit_for_trivial 256
 
+// This code is written in C++ in C style (it was long ago on 1 course,
+// when I was really better in C than in C++)
+
 typedef struct res_of_sieve {
     int *sieve, num_of_primes;
 } res_of_sieve;
@@ -44,8 +47,9 @@ void long_sum(std::vector<int> &a, const std::vector<int> &b) {
     if ((b.size() == 1) && ((a[0] % 10 + b[0]) < 10)) {
         a[0] += b[0];
     } else {
+        // Carry is a number which is 1 when arithmetical carry has happened and 0 else
         int carry = 0, base = 1000 * 1000 * 1000;
-        for (int i=0; i < std::max(a.size(), b.size()) || carry; ++i) {
+        for (int i = 0; i < std::max(a.size(), b.size()) || carry; ++i) {
             if (i == a.size()) {
                 a.push_back (0);
             }
@@ -123,7 +127,7 @@ int long_div_short(std::vector<int> &number, const int divisor) {
         number[i] = static_cast<int>(cur / divisor);
         carry = static_cast<int>(cur % divisor);
     }
-    while(size > 1 && !number.back()) {
+    while (size > 1 && !number.back()) {
         number.pop_back();
         --size;
     }
@@ -149,7 +153,7 @@ int decimal_logarithm(const std::vector<int>& num) {
     int cnt = 0;
     while (n) {
         n /= 10;
-        cnt++;
+        ++cnt;
     }
     return static_cast<int>(num.size() - 1) * len_of_cell + cnt;
 }
@@ -179,7 +183,7 @@ std::vector<int> long_div_long(std::vector<int> dividend,
         long_sum(tmp, tmp2);
         int cnt1 = 0;
         while (cmp_of_longs(tmp, divisor) >= 0) {
-            cnt1++;
+            ++cnt1;
             long_sub(tmp, divisor);
         }
         tmp2[0] = cnt1;
@@ -241,6 +245,8 @@ res_of_sieve Sieve_of_Eratosthenes(int len_of_sieve, int num_of_primes) {
     return res; // returns an array with length equal to num of primes
 }
 
+// In the most cases the number is really composite and has trivial divisors like 3 or 5
+// so this function checks if the number has trivial divisors
 bool trivial_div(const std::vector<int>& number) {
     // returns false if divisor was found
     bool flag = true;
@@ -258,12 +264,11 @@ bool trivial_div(const std::vector<int>& number) {
     return flag;
 }
 
-// here i have doubts, but haven't found crushing test, sort out with rubbish gathering and don't use vectors so often
+// Check if number is a power of prime
 bool is_pow(const std::vector<int>& number, int log_2) {
     std::vector<int> tmp(1), tmp2(1), tmp3(1);
     tmp[0] = 257, tmp2[0] = 1;
     int log_10 = decimal_logarithm(number);
-    // can b optimized, double p = pow(10, (log_10 % log_2 / (log_2 + 0.0))) + 0.01
     std::vector<int> t10(1);
     t10[0] = 10;
     tmp3[0] = log_10 / log_2 + 1;
@@ -305,6 +310,8 @@ bool is_pow(const std::vector<int>& number, int log_2) {
     return false;
 }
 
+// The function gets a big number and produces testing by the following algorihm
+// https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D1%81%D1%82_%D0%9C%D0%B8%D0%BB%D0%BB%D0%B5%D1%80%D0%B0_(%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D1%87%D0%B8%D1%81%D0%B5%D0%BB)
 bool fast_test(const std::vector<int>& number) {
     if ((number.size() == 1) &&
        (number[0] <= sieve_limit_for_trivial * sieve_limit_for_trivial)) {
@@ -314,6 +321,7 @@ bool fast_test(const std::vector<int>& number) {
         return false;
     }
     int log_2 = binary_logarithm(number);
+    // Following the Miller algorithm, you first need to check if the number is a power of a prime
     if (is_pow(number, log_2)) {
         return false;
     }
@@ -323,7 +331,6 @@ bool fast_test(const std::vector<int>& number) {
     if (cmp_of_longs(number, ten_to_th_pow_36) > 0) {
         double log_10_e = log10(M_E), ln_N = decimal_logarithm(number) / log_10_e;
         int f = static_cast<int>(binary_logarithm(number) * log(ln_N)) + 4;
-        // four is inaccuracy
         std::vector<int> tmp(1);
         tmp[0] = f;
         res_of_sieve sieve_res = Sieve_of_Eratosthenes(f, f / 3 + (3 * f / 2 / binary_logarithm(tmp)) + 2);
@@ -342,15 +349,17 @@ bool fast_test(const std::vector<int>& number) {
     int s = 0;
     while (!(q[0] & 1)) {
         long_div_short(q, 2);
-        s++;
+        ++s;
     }
     std::vector<std::vector<int> > tmp_values((unsigned long) (s + 1));
     std::vector<int> tmp;
-    for(int i = 0; i < num_of_primes_to_check; i++) {
+    for (int i = 0; i < num_of_primes_to_check; i++) {
         std::vector <int> tmp3(1);
         if (primes[i] > sieve_limit_for_trivial) {
             tmp = number;
-            if (!long_div_short(tmp, primes[i])) return false;
+            if (!long_div_short(tmp, primes[i])) {
+                return false;
+            }
         }
         tmp3[0] = primes[i];
         std::vector<int> tmp_res1 = long_pow_mod_n(tmp3, q, number);
@@ -362,17 +371,19 @@ bool fast_test(const std::vector<int>& number) {
             previous_res = tmp_res;
         }
         std::vector<int> res = long_div_long(tmp_values[s], number);
-        if (!((res.size() == 1) && (res[0] == 1)))
+        if (!((res.size() == 1) && (res[0] == 1))) {
             return false;
+        }
         if ((tmp_values[0].size() == 1) && (tmp_values[0][0] == 1)) {
             tmp3.clear();
             continue;
         }
         int j = s - 1;
-        for (; j >= 0; j--)
+        for (; j >= 0; --j) {
             if (!((tmp_values[j].size() == 1) && (tmp_values[j][0]) == 1)) {
                 break;
             }
+        }
         if (!cmp_of_longs(tmp_values[j], decrement_of_number)) {
             tmp3.clear();
             continue;
@@ -383,7 +394,7 @@ bool fast_test(const std::vector<int>& number) {
 }
 
 int main(int argc, char **argv) {
-    int len = (int) strlen(argv[2]);
+    int len = static_cast<int>(strlen(argv[2]));
     if (((len == 1) && (argv[2][0] < '2')) || (argv[2][0] == '-')) {
         std::cout << "undefined\n";
         return 0;
