@@ -1,7 +1,9 @@
+# python stuff
 __pycache__
 .ipynb_checkpoints
 idea
 main
+ipynb_checkpoints
 
 # Apple stuff
 .DS_Store
