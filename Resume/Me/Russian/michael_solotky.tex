@@ -108,11 +108,10 @@
       \begin{itemize}
         \item Реализовано несколько методов сглаживания вероятностей в языковых моделях для распознавания речи
         \item Проведены эксперименты по сравнению качества для нахождения лучшей модели среди использованных
-        \item Реализован оптимальный алгоритм построения n-граммных языковых моделей на C++ с использованием MapReduce, \textbf{which surpassed baseline by up to 5 times in wall time on checked datasets and slightly in quality}
-        \item Wrote a complete framework with a set of operations available from CLI
+        \item Реализован оптимальный алгоритм построения n-граммных языковых моделей на C++ с использованием MapReduce, \textbf{время работы которого минимум в 3 раза меньше базовой реализации, а также он немного превосходит по метрике качества базовую реализацию на некоторых датасетах}
+        \item Написан фреймворк с операциями, доступными из терминала
       \end{itemize}
   \resumeSubHeadingListEnd
-
 
 %-----------PROJECTS-----------------
 \section{Проекты}
@@ -120,13 +119,14 @@
     \item{
       \textbf{{BigARTM}{ (C++ Boost/STL, Protobuf, Travis, AppVeyor)}}
       \hfill
-      January 2017 -- present
+      Январь 2017 -- настоящее время
     } \\
-    Open Source library for topic modelling \\
+    Бибилотека с открытым кодом по тематическому моделированию, поддерживающая использование и добавление множества ергуляризаторов \\
     \faGithub \enspace \href{https://github.com/bigartm/bigartm}{\color{blue} github.com/bigartm/bigartm}
     \begin{itemize}
-      \item Developed a tool for parallel calculation of pairwise word statistics such as frequency of mutual occurrence, PMI in text collections of unlimited size \\
-      \textbf{Wikipedia full text processing takes 6 hours on a laptop with quad core AMD A6}
+      \item Разработан и реализован алгоритм параллельного сбора статистики со-встречаемостей пар слов, positive PMI на корпусах неограниченного размера \\
+      \textbf{Обработка полного текста англоязычной Википедии на 8 ядерном процессоре intel core i5 8th gen за 6 часов}
+      \item Отвечаю за парсинг входных данных
     \end{itemize}
 
   \resumeSubHeadingListEnd
@@ -136,15 +136,15 @@
 \section{Другой опыт}
   \resumeSubHeadingListStart
       \item{
-        \textbf{{Primality test}{ (C++) }} \\
-        Implementation of Miller test for deterministic checking of large numbers for primality as part of the \href{https://www.kaspersky.com/}{\color{blue} Kaspersky Lab} information security course \\
-        \textbf{Wall time on prime numbers of length 100 is about 4 seconds} \\
+        \textbf{{Тест простоты чисел}{ (C++) }} \\
+        Реализация теста Миллера для детерминированной проверки больших чисел на простоту в рамках курса \href{https://www.kaspersky.com/}{\color{blue} Лаборатории Касперского} <<C++ и проблемы безопасности>> \\
+        \textbf{Время работы на простых числах длины 100 примерно 4 секунды} \\
         \faGithub \enspace \href{https://github.com/MichaelSolotky/sandbox/tree/master/Cpp_old_tasks/Primality_tests}{\color{blue} github.com/MichaelSolotky/sandbox/tree/master/Cpp\_old\_tasks/Primality\_tests}
       }
 
       \item{
-        \textbf{ML (NumPy, Scipy)} \\
-        Implementation of various ML algorithms from scratch \\
+        \textbf{Машинное обучение (NumPy, Scipy)} \\
+        Реализация различных алгоритмов машинного обучения с нуля \\
         \faGithub \enspace \href{https://github.com/MichaelSolotky/sandbox/tree/master/ML}{\color{blue} github.com/MichaelSolotky/sandbox/tree/master/ML}
       }
       \resumeSubHeadingListEnd
@@ -158,9 +158,6 @@
     \resumeSubItem{Technologies}{C++ Boost, CMake, Make, Protobuf, MapReduce, SciPy, Scikit-learn, NumPy, Pandas, Pytorch}
     \resumeSubItem{Tools}{Git, Subversion, UNIX/Linux, Travis, AppVeyor, \LaTeX}
   \resumeSubHeadingListEnd
-
-%{C++ and security issues}{Feb--June 2016}{Kaspersky Lab, Moscow}{}
-
 
 %-------------------------------------------
 \end{document}
