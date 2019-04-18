@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.9)  18 APR 2019 15:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.9)  18 APR 2019 16:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -516,249 +516,249 @@ File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 )
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\CYRO' on input line 86.
+(hyperref)                removing `\CYRO' on input line 90.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrb' on input line 86.
+(hyperref)                removing `\cyrb' on input line 90.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrr' on input line 86.
+(hyperref)                removing `\cyrr' on input line 90.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyra' on input line 86.
+(hyperref)                removing `\cyra' on input line 90.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrz' on input line 86.
+(hyperref)                removing `\cyrz' on input line 90.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyro' on input line 86.
+(hyperref)                removing `\cyro' on input line 90.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrv' on input line 86.
+(hyperref)                removing `\cyrv' on input line 90.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyra' on input line 86.
+(hyperref)                removing `\cyra' on input line 90.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrn' on input line 86.
+(hyperref)                removing `\cyrn' on input line 90.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyri' on input line 86.
+(hyperref)                removing `\cyri' on input line 90.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyre' on input line 86.
+(hyperref)                removing `\cyre' on input line 90.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 88.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 92.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 88.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 92.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\CYRO' on input line 100.
+(hyperref)                removing `\CYRO' on input line 104.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrp' on input line 100.
+(hyperref)                removing `\cyrp' on input line 104.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrery' on input line 100.
+(hyperref)                removing `\cyrery' on input line 104.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrt' on input line 100.
+(hyperref)                removing `\cyrt' on input line 104.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrr' on input line 100.
+(hyperref)                removing `\cyrr' on input line 104.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyra' on input line 100.
+(hyperref)                removing `\cyra' on input line 104.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrb' on input line 100.
+(hyperref)                removing `\cyrb' on input line 104.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyro' on input line 100.
+(hyperref)                removing `\cyro' on input line 104.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrt' on input line 100.
+(hyperref)                removing `\cyrt' on input line 104.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrery' on input line 100.
+(hyperref)                removing `\cyrery' on input line 104.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\CYRP' on input line 117.
+(hyperref)                removing `\CYRP' on input line 121.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrr' on input line 117.
+(hyperref)                removing `\cyrr' on input line 121.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyro' on input line 117.
+(hyperref)                removing `\cyro' on input line 121.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyre' on input line 117.
+(hyperref)                removing `\cyre' on input line 121.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrk' on input line 117.
+(hyperref)                removing `\cyrk' on input line 121.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrt' on input line 117.
+(hyperref)                removing `\cyrt' on input line 121.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrery' on input line 117.
+(hyperref)                removing `\cyrery' on input line 121.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\CYRD' on input line 136.
+(hyperref)                removing `\CYRD' on input line 140.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrr' on input line 136.
+(hyperref)                removing `\cyrr' on input line 140.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyru' on input line 136.
+(hyperref)                removing `\cyru' on input line 140.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrg' on input line 136.
+(hyperref)                removing `\cyrg' on input line 140.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyro' on input line 136.
+(hyperref)                removing `\cyro' on input line 140.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrishrt' on input line 136.
+(hyperref)                removing `\cyrishrt' on input line 140.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyro' on input line 136.
+(hyperref)                removing `\cyro' on input line 140.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrp' on input line 136.
+(hyperref)                removing `\cyrp' on input line 140.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrery' on input line 136.
+(hyperref)                removing `\cyrery' on input line 140.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrt' on input line 136.
+(hyperref)                removing `\cyrt' on input line 140.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\CYRT' on input line 154.
+(hyperref)                removing `\CYRT' on input line 158.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyre' on input line 154.
+(hyperref)                removing `\cyre' on input line 158.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrh' on input line 154.
+(hyperref)                removing `\cyrh' on input line 158.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrn' on input line 154.
+(hyperref)                removing `\cyrn' on input line 158.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyri' on input line 154.
+(hyperref)                removing `\cyri' on input line 158.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrch' on input line 154.
+(hyperref)                removing `\cyrch' on input line 158.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyre' on input line 154.
+(hyperref)                removing `\cyre' on input line 158.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrs' on input line 154.
+(hyperref)                removing `\cyrs' on input line 158.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrk' on input line 154.
+(hyperref)                removing `\cyrk' on input line 158.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyri' on input line 154.
+(hyperref)                removing `\cyri' on input line 158.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyre' on input line 154.
+(hyperref)                removing `\cyre' on input line 158.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrn' on input line 154.
+(hyperref)                removing `\cyrn' on input line 158.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyra' on input line 154.
+(hyperref)                removing `\cyra' on input line 158.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrv' on input line 154.
+(hyperref)                removing `\cyrv' on input line 158.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrery' on input line 154.
+(hyperref)                removing `\cyrery' on input line 158.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyrk' on input line 154.
+(hyperref)                removing `\cyrk' on input line 158.
 
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
-(hyperref)                removing `\cyri' on input line 154.
+(hyperref)                removing `\cyri' on input line 158.
 
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 157.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 161.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 159.
+(Font)              <7> on input line 163.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 159.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 163.
+(Font)              <5> on input line 163.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
 [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 163.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
 
 (./michael_solotky.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 163.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 163.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 167.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
 Package rerunfilecheck Info: File `michael_solotky.out' has not changed.
 (rerunfilecheck)             Checksum: 422E1090D0B883F0BD3A925008526F0A;178.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 163.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 167.
  ) 
 Here is how much of TeX's memory you used:
  8517 strings out of 492649
@@ -779,10 +779,10 @@ b></usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></
 usr/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></us
 r/local/texlive/2018/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on michael_solotky.pdf (1 page, 137247 bytes).
+Output written on michael_solotky.pdf (1 page, 138796 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 82 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
  7 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

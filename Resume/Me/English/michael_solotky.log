@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.9)  6 MAR 2019 13:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.9)  18 APR 2019 16:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -282,30 +282,30 @@ line 78.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/fontawesome/ufontawesometwo.fd
 File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 86.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 91.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 86.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 91.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 155.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 160.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 157.
+(Font)              <7> on input line 162.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 157.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 164.
+(Font)              <5> on input line 162.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 169.
  [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 164.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
  (./michael_solotky.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 164.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 164.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
 Package rerunfilecheck Info: File `michael_solotky.out' has not changed.
 (rerunfilecheck)             Checksum: 980691668CCD552606980432DAD00847;234.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 164.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
  ) 
 Here is how much of TeX's memory you used:
  7380 strings out of 492649
@@ -324,10 +324,10 @@ c10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
 0.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
 fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b>
-Output written on michael_solotky.pdf (1 page, 89948 bytes).
+Output written on michael_solotky.pdf (1 page, 91242 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
+ 74 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  7 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
