@@ -2,7 +2,7 @@
 
 \mode<presentation> {
 	%\usetheme{default}
-	\usetheme{AnnArbor}
+	%\usetheme{AnnArbor}
 	%\usetheme{Antibes}
 	%\usetheme{Bergen}
 	%\usetheme{Berkeley}
@@ -18,7 +18,7 @@
 	%\usetheme{Ilmenau}
 	%\usetheme{JuanLesPins}
 	%\usetheme{Luebeck}
-	%\usetheme{Madrid}
+	\usetheme{Madrid}
 	%\usetheme{Malmoe}
 	%\usetheme{Marburg}
 	%\usetheme{Montpellier}
@@ -30,7 +30,6 @@
 	%\usetheme{Warsaw}
 
 	%\usecolortheme{albatross}
-	\usecolortheme{beaver}
 	%\usecolortheme{beetle}
 	%\usecolortheme{crane}
 	%\usecolortheme{dolphin}
@@ -45,8 +44,8 @@
 	%\usecolortheme{wolverine}
 }
 
-\usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
+\usepackage[utf8]{inputenc}
 %\usepackage[T2A]{fontenc}
 %\usepackage[T1]{fontenc}
 %\usepackage{tgtermes}
@@ -75,11 +74,10 @@
 %\usemintedstyle{default}
 %\usepackage[noend]{algorithmic}
 
-\title[Git]{\bfseries Обзор системы контроля версий Git}
+\title[Git]{\bfseries Система контроля версий git. Методика git-flow}
 \author[Cолоткий~М.]{Солоткий Михаил}
-\subtitle{Практикум на ЭВМ 2017/2018}
 \institute[ВМК МГУ]{МГУ имени М. В. Ломоносова, факультет ВМК, кафедра ММП}
-\date{14 ноября 2017 года}
+\date{27 марта 2019 года}
 
 \begin{document}
 
@@ -89,128 +87,36 @@
 	\titlepage
 \end{frame}
 
-\begin{frame} \frametitle{Что такое система контроля версий и зачем она нужна.}
+\begin{frame} \frametitle{Что такое система контроля версий}
 	\begin{itemize}
 		\item Система контроля версий (СКВ) — это система, регистрирующая изменения в одном или нескольких файлах с тем, чтобы в дальнейшем была возможность вернуться к определённым старым версиям этих файлов. \newline \par
-		\item Вообще, если, пользуясь СКВ, вы всё испортите или потеряете файлы, всё можно будет легко восстановить.
+
+		\item Кому может пригодиться:
+		\begin{itemize}
+		    \item Разработчикам;
+		    \item Аналитикам;
+		    \item Исследователям.
+		\end{itemize}
 	\end{itemize}
 \end{frame}
 
-\begin{frame} \frametitle{Преимущества Git.}
-	\begin{itemize}
-		\item Быстрое переключение между версиями (в отличие от CVS, Subversion, Perforce, Bazaar); \newline \par
-		\item Git - распределённая система (в отличие от CVS, Subversion и Perforce); \newline \par
-		\item Git следит за безопасностью данных. \newline \par
-	\end{itemize}
+\begin{frame} \frametitle{Зачем нужны СКВ}
+\begin{itemize}
+		\item Зачем нужна:
+		\begin{itemize}
+		    \item Если что-то будет испорчено, это можно легко восстановить;
+             \item Хранит время и автора изменения;
+		    \item Удобно хранить неудачные версии;
+		    \item Автоматизация совместной работы над проектом;
+		    \begin{itemize}
+		        \item Каждый ответственен за свою некоторую часть проекта и вносит изменения по ней;
+		        \item Можно совместно писать научную статью.
+		    \end{itemize}
+		\end{itemize}
+\end{itemize}
 \end{frame}
 
-\begin{frame}[fragile] \frametitle{Установка git - утилиты для системы Git.}
-	\begin{itemize}
-		\item Windows \newline
-		Скачиваем .exe инсталятор с \url{http://msysgit.github.com/}
-		\item[~]
-
-		\item Mac \newline
-		Можно скачать графический инсталятор. \newline
-		\url{http://sourceforge.net/projects/git-osx-installer/}
-		\item[~]
-
-		\item Linux
-		\begin{verbatim}
-			$ yum install git-core # Fedora
-			$ apt-get install git # Debian or Ubuntu
-		\end{verbatim}
-		\item[~]
-	\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile] \frametitle{Как начать контроль версий с git.}
-	\begin{itemize}
-		\item Создать пустой репозиторий с 0 зафиксированных изменений.
-		\begin{verbatim}
-			$ git init
-		\end{verbatim}
-		\item[~]
-
-		\item Скопировать существующий репозиторий со всей историей.
-		\begin{verbatim}
-			$ git clone https://github.com/esokolov/ml-course-msu.git
-		\end{verbatim}
-	\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile] \frametitle{Коммиты.}
-	\begin{itemize}
-		\item Добавляем отслеживание файлов.
-		\begin{verbatim}
-			$ git add . # Для всех файлов
-			$ git add README # Для файла README
-		\end{verbatim}
-		\item[~]
-		\item Фиксируем изменение.
-		\begin{verbatim}
-			$ git commit -m 'first commit'
-			[master (root-commit) 11730f0] first commit
-			1 file changed, 1 insertion(+)
-			create mode 100644 README
-		\end{verbatim}
-	\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile] \frametitle{Ветвление.}
-	\begin{itemize}
-		\item Ветка - просто указатель на последний коммит.
-		\item[~]
-
-		\item Создание ветки iss53 и работа в ней.
-		\begin{verbatim}
-			$ git checkout -b iss53
-			$ vim index.html
-			$ git commit -a -m 'added a new footer [issue 53]'
-		\end{verbatim}
-	\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile] \frametitle{Ветвление.}
-	\begin{itemize}
-		\item Слияние ветки iss53 с веткой master.
-		\begin{verbatim}
-			$ git checkout master
-			$ git merge iss53
-		\end{verbatim}
-
-		\begin{center}
-			\includegraphics[scale=0.4]{git-merge-normal}
-		\end{center}
-
-		\item Удаление ветки iss53.
-		\begin{verbatim}
-			$ git branch -d iss53
-		\end{verbatim}
-	\end{itemize}
-\end{frame}
-
-\begin{frame}[fragile] \frametitle{Откат до какого-то из прошлых коммитов.}
-	\begin{itemize}
-		\item Небезопасный способ:
-		\begin{verbatim}
-			$ git checkout -- README
-		\end{verbatim}
-		\item[~]
-
-		\item Безопасный способ:
-		\begin{verbatim}
-			$ git log # Чтобы узнать hash коммита
-			$ git checkout <commit hash>
-			$ git checkout -b new_branch
-		\end{verbatim}
-		\item[~]
-		\item Больше самых разных способов: \newline
-		\href{https://ru.stackoverflow.com/questions/431520/%D0%9A%D0%B0%D0%BA-%D0%B2%D0%B5%D1%80%D0%BD%D1%83%D1%82%D1%8C%D1%81%D1%8F-%D0%BE%D1%82%D0%BA%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F-%D0%BA-%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5-%D1%80%D0%B0%D0%BD%D0%BD%D0%B5%D0%BC%D1%83-%D0%BA%D0%BE%D0%BC%D0%BC%D0%B8%D1%82%D1%83}{https://ru.stackoverflow.com/questions/431520/Как-вернуться-к-более-раннему-коммиту}
-	\end{itemize}
-\end{frame}
-
-\begin{frame} \frametitle{Самое важное, что нужно знать о git:}
+\begin{frame} \frametitle{Самое важное, что нужно знать о git}
 	\begin{itemize}
 		\item Как инициировать контроль версий;
 		\item Как делать коммиты;
@@ -222,6 +128,56 @@
 	\end{itemize}
 	Книга по пользованию git: \newline
 	\url{https://git-scm.com/book/ru/v1/}
+\end{frame}
+
+\begin{frame} \frametitle{Преимущества Git}
+	\begin{itemize}
+		\item Быстрое переключение между версиями (в отличие от CVS, Subversion, Perforce, Bazaar); \newline \par
+		\item Git - распределённая система (в отличие от CVS, Subversion и Perforce); \newline \par
+		\item Git следит за безопасностью данных. \newline \par
+	\end{itemize}
+\end{frame}
+
+\begin{frame} \frametitle{Что такое git-flow}
+	\begin{itemize}
+		\item git-flow - набор рекомендаций разработчикам, базирующийся на работе с различными ветками при приследовании различных целей; \newline \par
+		\item master - ветка, хранящая стабильные версии кода;
+		\item develop - ветка, в которую разработчики вливают новые протестированные фичи;
+		\item feature - ветка для создания новой функциональности или изменения старой, именно в этой ветке разработчики начинают работу над какой-то задачей
+		\item release - ветка для релизов, сюда вливается код из ветки develop проводится полное тестирование, назначается тэг версии;
+		\item hotfix - для быстрых изменений, вливается потом в master и develop.
+	\end{itemize}
+\end{frame}
+
+\begin{frame} \frametitle{Пример проекта с git-flow}
+\begin{center}
+    \includegraphics[scale=0.13]{git-model@2x.png}
+\end{center}
+\end{frame}
+
+\begin{frame} \frametitle{Fork}
+\begin{itemize}
+    \item Есть приложение, реализующее методологию git-flow, называется Fork
+\end{itemize}
+\begin{center}
+    \includegraphics[scale=0.13]{image1.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame} \frametitle{Выводы}
+\begin{itemize}
+    \item Git-flow = хорошо, так как позволяет автоматизировать совместную работу, быстро решать hotfix;
+    \item Стандартизация работы;
+    \item Удобно следовать методологии git-flow, так как она интегрирована в некоторые IDE.
+\end{itemize}
+\end{frame}
+
+\begin{frame} \frametitle{Где ещё можно почитать о git-flow (clickable)}
+\begin{itemize}
+    \item \href{https://zellwk.com/blog/git-flow/}{Managing your Git branches with Git Flow (Zellwk's blog)}
+    \item \href{https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow}{Gitflow Workflow with tutolrials}
+    \item \href{https://guides.github.com/introduction/flow/}{Understanding the GitHub flow (Github's guide)}
+\end{itemize}
 \end{frame}
 
 \end{document}

@@ -1,4 +1,4 @@
-\frametitle{Откат до какого-то из прошлых коммитов.}
+\frametitle{Откат до какого-то из прошлых коммитов}
 	\begin{itemize}
 		\item Небезопасный способ:
 		\begin{verbatim}

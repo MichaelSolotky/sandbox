@@ -1,0 +1,684 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Beamer Presentation
+% LaTeX Template
+% Version 1.0 (10/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+
+\documentclass{beamer}
+
+\mode<presentation> {
+
+% The Beamer class comes with a number of default slide themes
+% which change the colors and layouts of slides. Below this is a list
+% of all the themes, uncomment each in turn to see what they look like.
+
+%\usetheme{default}
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+% As well as themes, the Beamer class has a number of color themes
+% for any slide theme. Uncomment each of these in turn to see how it
+% changes the colors of your current slide theme.
+
+%\usecolortheme{albatross}
+%\usecolortheme{beaver}
+%\usecolortheme{beetle}
+%\usecolortheme{crane}
+%\usecolortheme{dolphin}
+%\usecolortheme{dove}
+%\usecolortheme{fly}
+%\usecolortheme{lily}
+%\usecolortheme{orchid}
+%\usecolortheme{rose}
+%\usecolortheme{seagull}
+%\usecolortheme{seahorse}
+%\usecolortheme{whale}
+%\usecolortheme{wolverine}
+
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+
+%\setbeamertemplate{navigation symbols}{} % To remove the navigation symbols from the bottom of all slides uncomment this line
+
+}
+
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{xcolor}
+\usepackage[export]{adjustbox}
+\usepackage{caption}
+\usepackage{subcaption}
+\setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{corollary}[numbered]
+\setbeamertemplate{definitions}[numbered]
+\deftranslation[to=russian]{Theorem}{Теорема}
+\deftranslation[to=russian]{Corollary}{Следствие}
+\deftranslation[to=russian]{Definition}{Определение}
+%\newtheorem{theorem}{Theorem}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title[]{Алгоритмы анализа поведения реагирующих систем реального времени}
+
+\author{Винарский Е. М.}
+\institute[ВМК МГУ] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
+{
+\medskip
+\textit{Московский государственный университет им. М.В.Ломоносова
+\newline
+Факультет вычислительной математики и кибернетики
+\newline
+Кафедра математической кибернетики
+} \\
+
+Научный руководитель: Захаров Владимир Анатольевич
+}
+\date{\today} % Date, can be changed to a custom date
+
+\begin{document}
+
+\begin{frame}
+\titlepage % Print the title page as the first slide
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Содержание}
+%\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+%\end{frame}
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+%------------------------------------------------
+
+%------------------------------------------------
+%------------------------------------------------
+
+%new presentation
+
+%------------------------------------------------
+\section{Введение}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Модель <<реального>> времени}
+
+% картинка
+
+Для моделирования систем <<реального>> времени простейшей моделью является временной автомат-преобразователь (трансдьюсер)
+
+В отличие от классического трансдьюсера:
+\begin{itemize}
+    \item поведение временного трансдьюсера зависит не только от порядка следования входных символов, но и от их времени поступления
+    
+    \item выходные символы выдаются по прошествии времени, называемого выходной задержкой
+\end{itemize}
+
+Необходимо учесть это обстоятельство при изучении поведения таких систем
+
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+\section{Обзор известных результатов}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Обзор известных результатов для временных автоматов}
+
+Самой общей является модель временного автомата, которая включает:
+\begin{enumerate}
+    \item несколько независимых временных переменных
+    \item временные ограничения
+    \item переходы по таймаутам
+    \item возможность сброса времени на переходах
+\end{enumerate}
+ 
+Класс языков, распознаваемых такими временными автоматами, не замкнут относительно операции дополнения
+
+Проблемы тотальности и проблема проверки эквивалентности для таких временных автоматов алгоритмически неразрешимы
+
+Модель временного автомата-преобразователя с одной временной переменной -- компромиссный вариант между сложностью и адекватностью модели
+
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Цель Выпускной квалификационной работы}
+
+Целью ВКР являлось:
+\begin{enumerate}
+    \item Исследовать свойства моделей временного автомата и временного трансдьюсера
+    
+    \item Предложить алгоритм проверки свойств для таких моделей <<реального>> времени
+\end{enumerate}
+
+%Мы предлагаем:
+%\begin{enumerate}
+%	\item Для описания допустимых последовательностей сигналов использовать временные автоматные языки
+	
+%	\item В качестве реагирующих систем <<реального>> времени использовать временные трансдьюсеры
+	
+%	\item Для описания свойств поведения временных трансдьюсеров использовать $\mathcal{LP}$-RLTL логику, которая является расширением линейной темпоральной логики LTL
+%\end{enumerate}
+
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Сквозной пример}
+
+
+
+Вопрос: существует ли входное временное слово, допускаемое $\mathcal{A}(p_0)$ такое, что выходное временное слово допускается $\mathcal{B}(q_0)$?
+
+%\pause
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+
+  \caption{Временной автомат $\mathcal{A}(p_0)$}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \caption{Временной автомат $\mathcal{B}(q_0)$}
+\end{subfigure}
+\end{figure}
+
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Постановка задачи}
+
+В рамках ВКР предполагалось решить следующие задачи:
+\begin{enumerate}
+	\item Ввести достаточно выразительный класс временных автоматных языков, который замкнут относительно теоретико-множественных операций объединения, пересечения, итерации и дополнения
+  	
+  	\item Разработать расширение LTL логики, в которой можно было бы описывать свойства <<реального>> времени
+  	
+  	\item Разработать алгоритм проверки выполнимости формулы для такой логики %$\mathcal{LP}$-RLTL логики для случая, когда временной трансдьюсер обладает свойством консервативности, то есть выходные символы располагаются в выходном слове в том же порядке, что и соответствующие им входные символы 
+%  	\item Оценить сложность этого алгоритма.
+\end{enumerate}
+
+\end{frame}
+
+%------------------------------------------------
+\section{Временные слова}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Временные слова}
+% временные слова вводятся обычным образом
+
+Последовательность пар $ (\sigma_1, t_1), (\sigma_2, t_2), \dots, (\sigma_n, t_n)$ -- \emph{входное (выходное) временным словом}, где:
+
+\begin{itemize}
+	\item $\Sigma$ -- конечный \emph{(входной или выходной) алфавит}
+    \item $\sigma_j \in \Sigma$
+	\item $t_j \in \mathbf{R}^{+}_0$ -- временная метка для $\sigma_j$
+	\item $t_1, t_2, \dots, t_n$ -- возрастающая последовательность
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+% определяем сразу временной трансдьюсер
+
+%------------------------------------------------
+\section{Временной автомат}
+%------------------------------------------------
+
+% ввести понятие временного слова, как обычно. Объект, работающий с временными словами -- временной автомат.
+
+\begin{frame}
+\frametitle{Временной автомат}
+% определяется обычным образом
+
+\emph{Временным автоматом} над алфавитом входных символов $\Sigma$ называется кортеж $\mathcal{M} = (S, G, \rho, F)$
+	\begin{itemize}
+		\item $S$ -- конечное множество состояний
+		\item $G$ -- множество допустимых интервалов, то есть интервалов вида $[u, v)$, где $u, v \in \mathcal{R^{+}}$ и $u \leq v$
+		\item $\rho \subseteq S \times \Sigma \times G \times S$ -- отношение переходов
+		\item $F \subseteq S$ -- множество финальных состояний
+	\end{itemize}
+
+Временной автомат $\mathcal{M}$ -- \emph{инициальный}, если выделено начальное состояние $s \in S$; обозначим $\mathcal{M}(s)$
+	
+Временной автомат называется \emph{детерминированным}, если для любых двух переходов вида $(s, \sigma, g_1, s')$ и $(s, \sigma, g_2, s'')$ выполняется $g_1 \cap g_2 = \emptyset$
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Временной автомат (2)}
+
+% пример в конец
+
+\begin{itemize}
+    \item $(\sigma_1, 5), (\sigma_2, 8)$ -- \emph{недопустимое временное слово}
+    \item $(\sigma_1, 3), (\sigma_2, 5)$ -- \emph{допустимое временное слово}, но не принимаемое временным автоматом
+    \item $(\sigma_1, 3), (\sigma_2, 5), (\sigma_3, 8),$ -- \emph{допустимое временное слово}, \emph{принимаемое} временным автоматом
+\end{itemize}
+
+\textit{Язык временного автомата} -- все допустимые слова, принимаемые временным автоматом
+
+Временные автоматы $\mathcal{M}_1(s_0)$ и $\mathcal{M}_2(s_0)$ \textit{эквивалентны}, если $L(\mathcal{M}_1(s_0)) = L(\mathcal{M}_2(s_0))$
+
+\end{frame}
+%------------------------------------------------
+
+%------------------------------------------------
+\section{Замкнутость временных автоматных языков относительно теоретико-множественных операций}
+%------------------------------------------------ 
+
+\begin{frame}
+\frametitle{Замкнутость временных автоматных языков относительно теоретико-множественных операций}
+
+В рамках ВКР доказаны следующие теоремы:
+\begin{theorem}
+{\itshape
+Для любого \textcolor{red}{недетерминированного} полностью определённого временного автомата $\mathcal{M}(s_0)$ над алфавитом $\Sigma$ существует временной \textcolor{red}{детерминированный} полностью определённый автомат $\mathcal{M'}(s_0)$ над алфавитом $\Sigma$, такой, что $L(\mathcal{M}(s_0)) = L(\mathcal{M'}(s_0)))$
+} 
+\end{theorem}
+
+\begin{theorem}
+{\itshape
+Класс временных автоматных языков замкнут относительно теоретико-множественных операций объединения, пересечения, конкатенации, итерации и дополнения
+}
+\end{theorem}
+
+\end{frame}
+
+%------------------------------------------------
+\section{Временной трансдьюсер}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Временной трансдьюсер}
+
+\emph{Временным трансдьюсером} над алфавитами $\Sigma$ и $\Delta$ называется кортеж $\mathcal{M} = (S, s_0, G, D, \rho)$, где:
+	\begin{itemize}
+		\item $S$ -- конечное непустое \emph{множество состояний}
+		\item $s_0 \in S$ -- \emph{начальное состояние}
+		\item $G$ -- множество \emph{входных допустимых интервалов}, то есть интервалов вида $(u, v]$, где $u, v \in \mathcal{R^{+}}$ и $0 < u < v$
+		\item $D$ -- множество \emph{выходных допустимых интервалов}, то есть интервалов вида $[p, q]$, где $p, q \in \mathcal{R^{+}}$ и $0 \leq p \leq q$
+		\item $\rho \subseteq S \times \Sigma \times \Delta \times S \times G \times D$ -- \emph{отношение переходов}
+	\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Временной трансдьюсер (2)}
+
+$(\sigma_1, 1.0), (\sigma_2, 2.7), (\sigma_3, 3.5)$ -- входное временное слово
+
+\textbf{Если} \textcolor{red}{$d_1 = 2$, $d_2 = 2.5$, $d_3 = 1.5$}, \\
+\textbf{то} \textcolor{blue}{$(b_1, 3.0), (b_3, 5.2), (b_2, 5.0)$} -- выходное временное слово \\
+и \textcolor{blue}{$b_1, b_3, b_2$} -- выходное слово.
+
+%\pause
+
+\textbf{Если} \textcolor{red}{$d_1 = 2$, $d_2 = 2.5$, $d_3 = 2$}, \\
+\textbf{то} \textcolor{blue}{$\beta_1 = (b_1, 3.0), (b_2, 5.2), (b_3, 5.5)$} -- выходное временное слово \\
+и \textcolor{blue}{$b_1, b_2, b_3$} -- выходное слово.
+
+
+
+%\pause
+
+Временной трансдьюсер называется \emph{консервативным}, если для любого допустимого входного временного слова выходные символы располагаются в том же порядке, что и соответствующие им входные символы
+
+\end{frame}
+
+%------------------------------------------------
+
+\section{$\mathcal{LP}-RLTL$ логика}
+%------------------------------------------------
+
+\subsection{Автоматные формулы}
+
+\begin{frame}
+\frametitle{Автоматные формулы}
+
+\begin{itemize}
+    \item $B(s)$ -- элементарная автоматная формула
+ 
+    \item \textbf{Если} $\varphi_1$ и $\varphi_2$ -- автоматные формулы, \textbf{то} $\varphi_1 \wedge \varphi_2$ и $\varphi_1 \vee \varphi_2$ -- автоматные формулы
+ 
+    \item \textbf{Если} $a \in \Sigma$ и $\phi$ -- автоматная формула, \textbf{то} $\mathbf{X}_{(a, t)}\varphi$ -- автоматная формула
+ 
+    \item \textbf{Если} $a \in \Sigma$ и $\varphi$ -- автоматная формула и $\langle u, v \rangle$ -- допустимый интервал, 
+    \textbf{то} $\mathbf{X}_{(a, \langle u, v \rangle)}\varphi$ -- автоматная формула
+ 
+    \item \textbf{Если} $\varphi$ -- автоматная формула, \textbf{то} $\mathbf{F}_{A(s)}\varphi$ -- автоматная формула
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Определение трассы в $\mathcal{LP}-RLTL$ логика}
+
+Под \emph{трассой} временного трансдьюсера будем понимать четвёрку следующего вида $(\alpha, \beta, \gamma, T)$, где:
+\begin{itemize}
+	\item $\alpha = (a_1, t_1), (a_2, t_2), \dots, (a_n, t_n)$ -- входное временное слово, $t_{\alpha} = \sum\limits_{j = 1}^{n}t_j$
+    \item $\beta = (b_1, \tau_1), (b_2, \tau_2), \dots, (b_n, \tau_n)$ -- выходное временное слово, $\tau_{\beta} = \sum\limits_{j = 1}^{n}\tau_j$
+    \item $\gamma = (b_1, \tau_1), (b_2, \tau_2), \dots, (b_m, \tau_m), m \leq n$ -- выходное временное слово, выданное к моменту времени $\tau_{\gamma}$ (контекст)
+    \item $T$ -- разность времени между последним поступившим и последним выданным символами (время запаздывания)
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}{Выполнимость формулы на трассе в $\mathcal{LP}-RLTL$ логике}
+
+Определим выполнимость формулы $\varphi$ на трассе 
+$(\alpha, \beta, \gamma, T)$
+
+\begin{columns}[t,onlytextwidth]
+\column{.5\textwidth}
+
+\begin{itemize}
+ \item $(\alpha, \beta, \gamma, T) \models \mathcal{B}(s)$ $\Longleftrightarrow$ $\gamma \in L(\mathcal{B}(s))$
+ 
+ \item $(\alpha, \beta, \gamma, T) \models \mathbf{X}_{(a, t)}\varphi$ 
+    $\Longleftrightarrow$
+    \begin{equation*}
+        \begin{cases}
+        
+        \alpha = (a, t)\alpha_2 \\
+       
+        \beta = \beta_1\beta_2, \text{ где }
+        \beta_2 = (b, \tau)\beta_2' \\
+        
+        T' = T + t - \tau_{\beta_1} \geq 0 \\
+        
+        T' - \tau < 0 \\
+        
+        (\alpha_2, \beta_2, \gamma\beta_1, T') \models \varphi
+	
+        \end{cases}
+    \end{equation*}
+\end{itemize}
+
+\column{.5\textwidth}
+
+\begin{itemize}
+    \item $(\alpha, \beta, \gamma, T) \models \mathbf{F}_{A(p)}\varphi$ 
+          $\Longleftrightarrow$
+    \begin{equation*}
+        \begin{cases}
+
+        \exists \alpha_1: (\alpha_1 \in \mathcal{A}(p)) \text{ и } (\alpha = \alpha_1\alpha_2) \\
+
+        \beta = \beta_1\beta_2, \text{ где } 
+        \beta_2 = (b, \tau)\beta_2' \\
+        
+        T' = T + t_{\alpha_1} - \tau_{\beta_1} \geq 0 \\
+        
+        T' - \tau < 0 \\
+    
+        (\alpha_2, \beta_2, \gamma\beta_1, T') \models \varphi
+
+        \end{cases}
+    \end{equation*}
+\end{itemize}
+
+\end{columns}
+
+
+\end{frame}
+
+%------------------------------------------------
+
+\subsection{Тождество неподвижной точки}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Тождество неподвижной точки}
+
+В рамках ВКР доказана следующая теорема:
+\begin{theorem}
+
+Пусть $\mathcal{A} = (S, G, \rho, F)$ -- временной автомат над алфавитом $\Sigma$, тогда в $\mathcal{LP}-RLTL$ логике справедливо тождество
+
+\begin{equation*}
+\mathbf{F}_{A(p)}\varphi = 
+ \begin{cases}
+   \text{$\varphi \vee \bigvee\limits_{(a, (u, v]) \in \widetilde{\Sigma}: p' = \lambda(p, (a, (u, v]))} \mathbf{X}_{(a, (u, v])}\mathbf{F}_{A(p')}\varphi $} & \text{$ p \in F $} \\
+   
+   \text{$\bigvee\limits_{(a, (u, v]) \in \widetilde{\Sigma}: s' = \lambda(s, (a, (u, v]))} \mathbf{X}_{(a, (u, v])}\mathbf{F}_{A(s')}\varphi $} & \text{$ p \not\in F $}
+ \end{cases}
+\end{equation*}
+
+\end{theorem}
+
+\end{frame}
+
+%------------------------------------------------
+\section{Размеченная система переходов}
+%------------------------------------------------
+ 
+\subsection{Размеченная система переходов}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Пример размеченной системы переходов (фрагмент)}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \caption{Временной автомат параметризации $A(p_0)$}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \caption{Временной автомат спецификации $B(q_0)$}
+\end{subfigure}
+\end{figure}
+
+
+
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Пример размеченной системы переходов (фрагмент) (2)}
+
+Свойство: существует ли входное временное слово, допускаемое $A(p_0)$ такое, что выходное временное слово допускается $B(q_0)$ 
+
+в $\mathcal{LP}-RLTL$ логике выражается следующим образом:
+
+$\varphi = \mathbf{F}_{A(p_0)}B(q_0)$
+
+
+
+\end{frame}
+
+%------------------------------------------------
+\subsection{Алгоритм проверки модели (Model Checking)}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Алгоритм проверки модели (Model Checking)}
+
+В рамках ВКР доказана теорема: 
+\begin{theorem}
+{\itshape
+Формула $\varphi$ выполнима для консервативного трансдьюсера $\textbf{M}$ если и только если в размеченной системе переходов достижимо финальное состояние
+}
+\end{theorem}
+
+\end{frame}
+
+%------------------------------------------------
+
+%------------------------------------------------
+
+\section{Полученные результаты}
+
+\begin{frame}
+\frametitle{Полученные результаты}
+
+% оставить слайд о замкнутости операций
+
+В работе получены следующие основные результаты:
+\begin{enumerate}
+	\item Введён класс временных автоматных языков, который замкнут относительно операций объединения, пересечения, итерации и дополнения
+  	\item Разработана $\mathcal{LP}$-RLTL логика
+  	\item Разработан алгоритм проверки выполнимости формулы $\mathcal{LP}$-RLTL логики для случая, когда временной трансдьюсер обладает свойством консервативности
+%  	\item Оценить сложность этого алгоритма.
+\end{enumerate}
+
+\end{frame}
+%------------------------------------------------
+
+%------------------------------------------------
+\section{Приложение}
+%------------------------------------------------
+
+\subsection{Унифицированная форма временного автомата}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Унифицированная форма временного автомата}
+
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \caption{Временной автомат $M$}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \caption{Временной автомат $M$ в унифицированной форме}
+\end{subfigure}
+\end{figure}
+
+$\widetilde{\Sigma} = (\sigma, (1, 2]), (\sigma, (2, 3]), (\sigma, (3, 4]), (\sigma, (6, 9])$ -- \textit{унифицированные временные символы}
+
+\end{frame}
+ 
+%------------------------------------------------
+\subsection{Конечно-автоматная абстракция временного автомата}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Конечно-автоматная абстракция}
+
+
+
+\begin{theorem}
+{\itshape
+Язык, распознаваемый временным автоматом, не изменится, если переход $(s, \sigma, (u, v], s')$ заменить на два перехода $(s, \sigma, [u, d), s')$ и $(s, \sigma, [d, v), s')$
+}
+\end{theorem}
+
+\end{frame}
+
+%------------------------------------------------
+\begin{frame}
+\frametitle{Конечно-автоматная абстракция (2)}
+
+\begin{itemize}
+	\item $\Sigma = \{ \sigma_1, \dots, \sigma_n \}$ -- конечный алфавит;
+	\item $M_1 = (S_1, s^1_0, G_1, \rho_1, F_1)$ и $M_2 = (S_2, s^2_0, G_2, \rho_2, F_2)$ -- временные автоматы
+	\item $\widetilde{M_1} = (S_1, s^1_0, \widetilde{\rho_1}, F_1)$ и $\widetilde{M_2} = (S_2, s^2_0, \widetilde{\rho_2}, F_2)$ -- конечно-автоматные абстракции временных автоматов $M_1$ и $M_2$
+\end{itemize}
+
+Тогда справедлива следующая теорема
+\begin{theorem}
+{\itshape
+$M_1 \sim M_2$ тогда и только тогда, когда $\widetilde{M_1} \sim \widetilde{M_2}$
+}
+\end{theorem}
+
+\end{frame}
+%------------------------------------------------
+
+\begin{frame}
+\frametitle{Построение размеченной системы переходов}
+
+\textbf{Идея:} каждое состояние размеченной системы переходов хранит информацию о
+\begin{itemize}
+	\item текущем состоянии проверяемого трансдьюсера
+	\item системе подформул, проверяемых на текущем шаге
+	\item конечной последовательности выходных временных символов, которые ещё не успели обработаться временным трансдьюсером
+	\item ''накопленном'' времени
+	\item финальными состояниями системы переходов будут те состояния, в которых:
+    \begin{itemize}
+        \item входное временное слово принадлежит языку спецификации
+        \item выходное временное слово принадлежит языку контекста
+    \end{itemize}
+\end{itemize}
+
+\end{frame}
+
+%------------------------------------------------
+
+%\section{План дальнейших работ}
+
+%\begin{frame}
+%\frametitle{План дальнейших работ}
+
+%Задачей дальнейших исследований являются:
+%\begin{itemize}
+%	\item Разработка алгоритма верификации для временных трансдьюсеров общего вида.
+%	\item Расширение $\mathcal{LP}$-RLTL логики другими темпоральными операторами.
+%\end{itemize}
+
+%\end{frame}
+
+%------------------------------------------------
+
+\end{document}
+\grid
