@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.9)  6 MAY 2019 10:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.9)  15 MAY 2019 01:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -866,12 +866,12 @@ Package epstopdf Info: Source file: <msu.eps>
 (epstopdf)                    size: 17827 bytes
 (epstopdf)             Command: <repstopdf --outfile=msu-eps-converted-to.pdf m
 su.eps>
-(epstopdf)             \includegraphics on input line 168.
+(epstopdf)             \includegraphics on input line 167.
 Package epstopdf Info: Output file is already uptodate.
-<msu-eps-converted-to.pdf, id=124, 1188.44pt x 540.0175pt>
+<msu-eps-converted-to.pdf, id=140, 1188.44pt x 540.0175pt>
 File: msu-eps-converted-to.pdf Graphic file (type pdf)
 <use msu-eps-converted-to.pdf>
-Package pdftex.def Info: msu-eps-converted-to.pdf  used on input line 168.
+Package pdftex.def Info: msu-eps-converted-to.pdf  used on input line 167.
 (pdftex.def)             Requested size: 142.26378pt x 64.64273pt.
 LaTeX Font Info:    Try loading font information for T2A+cmss on input line 178
 .
@@ -890,111 +890,309 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.201 \newpage
-               [1] [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 218--227
+               [1] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 213--222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--227
+Underfull \hbox (badness 10000) in paragraph at lines 213--222
 
  []
 
-[4] [5] [6] [7] [8]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 309.
+[3] [4] [5] [6] [7] [8] [9]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 330.
 
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 309.
- [9]
-Overfull \hbox (1.5957pt too wide) in paragraph at lines 311--312
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 330.
+
+Overfull \hbox (1.5957pt too wide) in paragraph at lines 332--333
 []\T2A/cmr/m/n/12 возможность улуч-ше-ния про-из-во-ди-тель-но-сти за счјт уве-
 ли-че-ния чис-ла потоков-
  []
 
 [10]
-LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 353
+LaTeX Font Info:    Try loading font information for T2A+cmtt on input line 374
 .
  (/usr/local/texlive/2018/texmf-dist/tex/latex/cyrillic/t2acmtt.fd
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
 [11] [12] [13] [14] [15] [16]
-<wall_time_mmro.pdf, id=327, 398.46994pt x 288.95076pt>
+<wall_time_mmro.pdf, id=350, 394.62746pt x 287.91565pt>
 File: wall_time_mmro.pdf Graphic file (type pdf)
 <use wall_time_mmro.pdf>
-Package pdftex.def Info: wall_time_mmro.pdf  used on input line 454.
-(pdftex.def)             Requested size: 211.18805pt x 153.14317pt.
-<wall_time_wiki_enru_start_from_1000.pdf, id=328, 409.84055pt x 288.57436pt>
+Package pdftex.def Info: wall_time_mmro.pdf  used on input line 475.
+(pdftex.def)             Requested size: 209.15155pt x 152.59456pt.
+<wall_time_wiki_enru_start_from_1000.pdf, id=351, 406.42152pt x 287.68039pt>
 File: wall_time_wiki_enru_start_from_1000.pdf Graphic file (type pdf)
 <use wall_time_wiki_enru_start_from_1000.pdf>
 Package pdftex.def Info: wall_time_wiki_enru_start_from_1000.pdf  used on input
- line 455.
-(pdftex.def)             Requested size: 217.21445pt x 152.94366pt.
- [17 <./wall_time_mmro.pdf> <./wall_time_wiki_enru_start_from_1000.pdf
+ line 476.
+(pdftex.def)             Requested size: 215.40237pt x 152.46988pt.
+ [17]
+Overfull \hbox (14.64864pt too wide) in paragraph at lines 483--484
+[]\T2A/cmr/m/n/12 8446835 ста-тей ан-гло-языч-ной Ви-ки-пе-дии, 8272855 уни-кал
+ь-ных то-ке-нов, 3832966193
+ []
+
+[18 <./wall_time_mmro.pdf> <./wall_time_wiki_enru_start_from_1000.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./wall_time_wiki_enru_start_
 from_1000.pdf): PDF inclusion: multiple pdfs with page group included in a sing
 le page
 >]
-Overfull \hbox (14.64864pt too wide) in paragraph at lines 462--463
-[]\T2A/cmr/m/n/12 8446835 ста-тей ан-гло-языч-ной Ви-ки-пе-дии, 8272855 уни-кал
-ь-ных то-ке-нов, 3832966193
- []
-
-<external_memory_mmro.pdf, id=425, 397.54462pt x 288.04112pt>
+<external_memory_mmro.pdf, id=453, 393.37277pt x 286.9119pt>
 File: external_memory_mmro.pdf Graphic file (type pdf)
 <use external_memory_mmro.pdf>
-Package pdftex.def Info: external_memory_mmro.pdf  used on input line 472.
-(pdftex.def)             Requested size: 210.69763pt x 152.66106pt.
-<external_memory_wiki_enru.pdf, id=426, 400.61859pt x 287.8529pt>
+Package pdftex.def Info: external_memory_mmro.pdf  used on input line 493.
+(pdftex.def)             Requested size: 208.48656pt x 152.06256pt.
+<external_memory_wiki_enru.pdf, id=454, 396.57222pt x 286.9119pt>
 File: external_memory_wiki_enru.pdf Graphic file (type pdf)
 <use external_memory_wiki_enru.pdf>
-Package pdftex.def Info: external_memory_wiki_enru.pdf  used on input line 473.
+Package pdftex.def Info: external_memory_wiki_enru.pdf  used on input line 494.
 
-(pdftex.def)             Requested size: 212.32683pt x 152.56131pt.
-[18] [19 <./external_memory_mmro.pdf> <./external_memory_wiki_enru.pdf
+(pdftex.def)             Requested size: 210.18227pt x 152.06256pt.
+ [19 <./external_memory_mmro.pdf> <./external_memory_wiki_enru.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./external_memory_wiki_enru.
 pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<perplexity_plsa_nytimes.pdf, id=532, 433.62pt x 289.08pt>
+<perplexity_plsa_nytimes.pdf, id=555, 406.13922pt x 272.51436pt>
 File: perplexity_plsa_nytimes.pdf Graphic file (type pdf)
 <use perplexity_plsa_nytimes.pdf>
-Package pdftex.def Info: perplexity_plsa_nytimes.pdf  used on input line 491.
-(pdftex.def)             Requested size: 225.48369pt x 150.32245pt.
-<coherence_plsa_nytimes.pdf, id=533, 433.62pt x 289.08pt>
+Package pdftex.def Info: perplexity_plsa_nytimes.pdf  used on input line 513.
+(pdftex.def)             Requested size: 211.1936pt x 141.70827pt.
+<coherence_plsa_nytimes.pdf, id=556, 397.94383pt x 272.51436pt>
 File: coherence_plsa_nytimes.pdf Graphic file (type pdf)
 <use coherence_plsa_nytimes.pdf>
-Package pdftex.def Info: coherence_plsa_nytimes.pdf  used on input line 492.
-(pdftex.def)             Requested size: 225.48369pt x 150.32245pt.
- [20 <./perplexity_plsa_nytimes.pdf> <./coherence_plsa_nytimes.pdf
+Package pdftex.def Info: coherence_plsa_nytimes.pdf  used on input line 514.
+(pdftex.def)             Requested size: 206.93198pt x 141.70827pt.
+ [20]
+<coherence_tf_reg_on_cond_proba_nytimes_2_plots.pdf, id=564, 486.21649pt x 286.
+06499pt>
+File: coherence_tf_reg_on_cond_proba_nytimes_2_plots.pdf Graphic file (type pdf
+)
+<use coherence_tf_reg_on_cond_proba_nytimes_2_plots.pdf>
+Package pdftex.def Info: coherence_tf_reg_on_cond_proba_nytimes_2_plots.pdf  us
+ed on input line 524.
+(pdftex.def)             Requested size: 247.96712pt x 145.8912pt.
+<coherence_tf_reg_on_cond_proba_nytimes_calculated_on_ppmi_2_plots.pdf, id=565,
+ 395.59984pt x 286.8178pt>
+File: coherence_tf_reg_on_cond_proba_nytimes_calculated_on_ppmi_2_plots.pdf Gra
+phic file (type pdf)
+<use coherence_tf_reg_on_cond_proba_nytimes_calculated_on_ppmi_2_plots.pdf>
+Package pdftex.def Info: coherence_tf_reg_on_cond_proba_nytimes_calculated_on_p
+pmi_2_plots.pdf  used on input line 525.
+(pdftex.def)             Requested size: 201.75325pt x 146.27513pt.
+<coherence_df_reg_on_cond_proba_nytimes_2_plots.pdf, id=566, 479.4208pt x 286.0
+6499pt>
+File: coherence_df_reg_on_cond_proba_nytimes_2_plots.pdf Graphic file (type pdf
+)
+<use coherence_df_reg_on_cond_proba_nytimes_2_plots.pdf>
+Package pdftex.def Info: coherence_df_reg_on_cond_proba_nytimes_2_plots.pdf  us
+ed on input line 528.
+(pdftex.def)             Requested size: 244.50136pt x 145.8912pt.
+<coherence_df_reg_on_cond_proba_nytimes_calculated_on_ppmi_2_plots.pdf, id=567,
+ 395.59984pt x 286.06499pt>
+File: coherence_df_reg_on_cond_proba_nytimes_calculated_on_ppmi_2_plots.pdf Gra
+phic file (type pdf)
+<use coherence_df_reg_on_cond_proba_nytimes_calculated_on_ppmi_2_plots.pdf>
+Package pdftex.def Info: coherence_df_reg_on_cond_proba_nytimes_calculated_on_p
+pmi_2_plots.pdf  used on input line 529.
+(pdftex.def)             Requested size: 201.75325pt x 145.8912pt.
+ [21 <./perplexity_plsa_nytimes.pdf> <./coherence_plsa_nytimes.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./coherence_plsa_nytimes.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
+> <./coherence_tf_reg_on_cond_proba_nytimes_2_plots.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./coherence_tf_reg_on_cond_p
+roba_nytimes_2_plots.pdf): PDF inclusion: multiple pdfs with page group include
+d in a single page
+> <./coherence_tf_reg_on_cond_proba_nytimes_calculated_on_ppmi_2_plots.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./coherence_tf_reg_on_cond_p
+roba_nytimes_calculated_on_ppmi_2_plots.pdf): PDF inclusion: multiple pdfs with
+ page group included in a single page
 >]
-Underfull \hbox (badness 2401) in paragraph at lines 588--589
+<perplexity_tf_reg_on_cond_proba_nytimes.pdf, id=727, 437.13pt x 276.89008pt>
+File: perplexity_tf_reg_on_cond_proba_nytimes.pdf Graphic file (type pdf)
+<use perplexity_tf_reg_on_cond_proba_nytimes.pdf>
+Package pdftex.def Info: perplexity_tf_reg_on_cond_proba_nytimes.pdf  used on i
+nput line 534.
+(pdftex.def)             Requested size: 222.93335pt x 141.21207pt.
+<coherence_tf_reg_on_ppmi_2_plots.pdf, id=729, 430.25743pt x 286.06499pt>
+File: coherence_tf_reg_on_ppmi_2_plots.pdf Graphic file (type pdf)
+<use coherence_tf_reg_on_ppmi_2_plots.pdf>
+Package pdftex.def Info: coherence_tf_reg_on_ppmi_2_plots.pdf  used on input li
+ne 542.
+(pdftex.def)             Requested size: 223.73514pt x 148.75464pt.
+<coherence_df_reg_on_ppmi_nytimes_2_plots.pdf, id=730, 427.701pt x 286.06499pt>
+
+File: coherence_df_reg_on_ppmi_nytimes_2_plots.pdf Graphic file (type pdf)
+<use coherence_df_reg_on_ppmi_nytimes_2_plots.pdf>
+Package pdftex.def Info: coherence_df_reg_on_ppmi_nytimes_2_plots.pdf  used on 
+input line 543.
+(pdftex.def)             Requested size: 222.40579pt x 148.75464pt.
+ [22 <./coherence_df_reg_on_cond_proba_nytimes_2_plots.pdf> <./coherence_df_reg
+_on_cond_proba_nytimes_calculated_on_ppmi_2_plots.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./coherence_df_reg_on_cond_p
+roba_nytimes_calculated_on_ppmi_2_plots.pdf): PDF inclusion: multiple pdfs with
+ page group included in a single page
+> <./perplexity_tf_reg_on_cond_proba_nytimes.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./perplexity_tf_reg_on_cond_
+proba_nytimes.pdf): PDF inclusion: multiple pdfs with page group included in a 
+single page
+>]
+<perplexity_tf_df_on_ppmi_nytimes.pdf, id=857, 522.36403pt x 311.00554pt>
+File: perplexity_tf_df_on_ppmi_nytimes.pdf Graphic file (type pdf)
+<use perplexity_tf_df_on_ppmi_nytimes.pdf>
+Package pdftex.def Info: perplexity_tf_df_on_ppmi_nytimes.pdf  used on input li
+ne 548.
+(pdftex.def)             Requested size: 271.63086pt x 161.7238pt.
+<coherence_tf_score_reg_on_ppmi_tf_df_nytimes.pdf, id=858, 453.27531pt x 286.06
+499pt>
+File: coherence_tf_score_reg_on_ppmi_tf_df_nytimes.pdf Graphic file (type pdf)
+<use coherence_tf_score_reg_on_ppmi_tf_df_nytimes.pdf>
+Package pdftex.def Info: coherence_tf_score_reg_on_ppmi_tf_df_nytimes.pdf  used
+ on input line 552.
+(pdftex.def)             Requested size: 213.03941pt x 134.45056pt.
+<coherence_df_score_reg_on_ppmi_tf_df_nytimes.pdf, id=859, 470.07808pt x 286.06
+499pt>
+File: coherence_df_score_reg_on_ppmi_tf_df_nytimes.pdf Graphic file (type pdf)
+<use coherence_df_score_reg_on_ppmi_tf_df_nytimes.pdf>
+Package pdftex.def Info: coherence_df_score_reg_on_ppmi_tf_df_nytimes.pdf  used
+ on input line 553.
+(pdftex.def)             Requested size: 220.93672pt x 134.45056pt.
+ [23 <./coherence_tf_reg_on_ppmi_2_plots.pdf> <./coherence_df_reg_on_ppmi_nytim
+es_2_plots.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./coherence_df_reg_on_ppmi_n
+ytimes_2_plots.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+> <./perplexity_tf_df_on_ppmi_nytimes.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./perplexity_tf_df_on_ppmi_n
+ytimes.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+> <./coherence_tf_score_reg_on_ppmi_tf_df_nytimes.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./coherence_tf_score_reg_on_
+ppmi_tf_df_nytimes.pdf): PDF inclusion: multiple pdfs with page group included 
+in a single page
+> <./coherence_df_score_reg_on_ppmi_tf_df_nytimes.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./coherence_df_score_reg_on_
+ppmi_tf_df_nytimes.pdf): PDF inclusion: multiple pdfs with page group included 
+in a single page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 560--561
+
+ []
+
+<coherence_tf_reg_tf_df_score_with_different_num_of_topics.pdf, id=1061, 443.30
+305pt x 284.73187pt>
+File: coherence_tf_reg_tf_df_score_with_different_num_of_topics.pdf Graphic fil
+e (type pdf)
+<use coherence_tf_reg_tf_df_score_with_different_num_of_topics.pdf>
+Package pdftex.def Info: coherence_tf_reg_tf_df_score_with_different_num_of_top
+ics.pdf  used on input line 563.
+(pdftex.def)             Requested size: 212.78304pt x 136.66974pt.
+<coherence_df_reg_tf_df_score_with_different_num_of_topics.pdf, id=1062, 489.67
+503pt x 284.73187pt>
+File: coherence_df_reg_tf_df_score_with_different_num_of_topics.pdf Graphic fil
+e (type pdf)
+<use coherence_df_reg_tf_df_score_with_different_num_of_topics.pdf>
+Package pdftex.def Info: coherence_df_reg_tf_df_score_with_different_num_of_top
+ics.pdf  used on input line 564.
+(pdftex.def)             Requested size: 235.04134pt x 136.66974pt.
+[24 <./coherence_tf_reg_tf_df_score_with_different_num_of_topics.pdf> <./cohere
+nce_df_reg_tf_df_score_with_different_num_of_topics.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./coherence_df_reg_tf_df_sco
+re_with_different_num_of_topics.pdf): PDF inclusion: multiple pdfs with page gr
+oup included in a single page
+>]
+<perplexity_coh_reg_tf_with_different_num_of_topics.pdf, id=1148, 405.16684pt x
+ 271.54198pt>
+File: perplexity_coh_reg_tf_with_different_num_of_topics.pdf Graphic file (type
+ pdf)
+<use perplexity_coh_reg_tf_with_different_num_of_topics.pdf>
+Package pdftex.def Info: perplexity_coh_reg_tf_with_different_num_of_topics.pdf
+  used on input line 568.
+(pdftex.def)             Requested size: 222.84244pt x 149.34854pt.
+<perplexity_coherence_tf_reg_25_topics.pdf, id=1149, 488.9768pt x 290.07999pt>
+File: perplexity_coherence_tf_reg_25_topics.pdf Graphic file (type pdf)
+<use perplexity_coherence_tf_reg_25_topics.pdf>
+Package pdftex.def Info: perplexity_coherence_tf_reg_25_topics.pdf  used on inp
+ut line 572.
+(pdftex.def)             Requested size: 224.93205pt x 133.4384pt.
+<perplexity_coherence_df_reg_25_topics.pdf, id=1150, 486.42038pt x 290.07999pt>
+
+File: perplexity_coherence_df_reg_25_topics.pdf Graphic file (type pdf)
+<use perplexity_coherence_df_reg_25_topics.pdf>
+Package pdftex.def Info: perplexity_coherence_df_reg_25_topics.pdf  used on inp
+ut line 573.
+(pdftex.def)             Requested size: 223.75609pt x 133.4384pt.
+<coherence_df_reg_ppmi_tf_score_25_topics.pdf, id=1151, 418.88054pt x 286.30023
+pt>
+File: coherence_df_reg_ppmi_tf_score_25_topics.pdf Graphic file (type pdf)
+<use coherence_df_reg_ppmi_tf_score_25_topics.pdf>
+Package pdftex.def Info: coherence_df_reg_ppmi_tf_score_25_topics.pdf  used on 
+input line 577.
+(pdftex.def)             Requested size: 217.81914pt x 148.87697pt.
+<coherence_df_reg_ppmi_df_score_25_topics.pdf, id=1152, 431.64699pt x 286.30023
+pt>
+File: coherence_df_reg_ppmi_df_score_25_topics.pdf Graphic file (type pdf)
+<use coherence_df_reg_ppmi_df_score_25_topics.pdf>
+Package pdftex.def Info: coherence_df_reg_ppmi_df_score_25_topics.pdf  used on 
+input line 578.
+(pdftex.def)             Requested size: 224.45772pt x 148.87697pt.
+ [25 <./perplexity_coh_reg_tf_with_different_num_of_topics.pdf> <./perplexity_c
+oherence_tf_reg_25_topics.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./perplexity_coherence_tf_re
+g_25_topics.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+> <./perplexity_coherence_df_reg_25_topics.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./perplexity_coherence_df_re
+g_25_topics.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+>] [26 <./coherence_df_reg_ppmi_tf_score_25_topics.pdf> <./coherence_df_reg_ppm
+i_df_score_25_topics.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./coherence_df_reg_ppmi_df_s
+core_25_topics.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+>]
+Underfull \hbox (badness 2401) in paragraph at lines 603--604
 []\T2A/cmr/m/n/12 Bullinaria, J.A. & Levy, J.P. Behavior Research Methods (2007
 ) 39: 510.
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 611.
-[21]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 611.
+[27]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 633.
+ [28]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 633.
  (./diploma.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 611.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 611.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 633.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 633.
 Package rerunfilecheck Info: File `diploma.out' has not changed.
-(rerunfilecheck)             Checksum: C1EEEB36B92C35C0258D4EAE4F807622;7714.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 611.
+(rerunfilecheck)             Checksum: EF84BACF9F2BFFED617C1448E2B76C6C;9217.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 633.
  ) 
 Here is how much of TeX's memory you used:
- 16869 strings out of 492649
- 233445 string characters out of 6129623
- 374836 words of memory out of 5000000
- 20321 multiletter control sequences out of 15000+600000
+ 16976 strings out of 492649
+ 238720 string characters out of 6129623
+ 376111 words of memory out of 5000000
+ 20398 multiletter control sequences out of 15000+600000
  29243 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  39i,24n,41p,3238b,760s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1037,10 +1235,10 @@ onts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2018/texmf-dist/fon
 ts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2018/texmf-dist/fonts
 /type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2018/texmf-dist/fonts/t
 ype1/public/cm-super/sftt1000.pfb>
-Output written on diploma.pdf (22 pages, 575798 bytes).
+Output written on diploma.pdf (29 pages, 828120 bytes).
 PDF statistics:
- 715 PDF objects out of 1000 (max. 8388607)
- 427 compressed objects within 5 object streams
- 102 named destinations out of 1000 (max. 500000)
- 288 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1484 PDF objects out of 1728 (max. 8388607)
+ 575 compressed objects within 6 object streams
+ 115 named destinations out of 1000 (max. 500000)
+ 405 words of extra memory for PDF output out of 10000 (max. 10000000)
 
