@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.9)  6 MAY 2019 12:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.9)  15 MAY 2019 15:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**diploma_presentation.tex
-(./diploma_presentation.tex
+**diploma_slides.tex
+(./diploma_slides.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/beamer/beamer.cls
@@ -923,14 +923,14 @@ Package: inputenc 2018/04/06 v1.3b Input encoding file
 \inpenc@prehook=\toks43
 \inpenc@posthook=\toks44
 )
-(./diploma_presentation.aux
+(./diploma_slides.aux
 LaTeX Font Info:    Try loading font information for T2A+cmss on input line 20.
 
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/cyrillic/t2acmss.fd
 File: t2acmss.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 ))
-\openout1 = `diploma_presentation.aux'.
+\openout1 = `diploma_slides.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
 LaTeX Font Info:    ... okay on input line 111.
@@ -1037,9 +1037,9 @@ LaTeX Info: Redefining \ref on input line 111.
 LaTeX Info: Redefining \pageref on input line 111.
 LaTeX Info: Redefining \nameref on input line 111.
 
-(./diploma_presentation.out) (./diploma_presentation.out)
+(./diploma_slides.out) (./diploma_slides.out)
 \@outlinefile=\write5
-\openout5 = `diploma_presentation.out'.
+\openout5 = `diploma_slides.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 111.
@@ -1117,7 +1117,7 @@ Dictionary: translator-numbers-dictionary, Language: English
 (/usr/local/texlive/2018/texmf-dist/tex/latex/translator/translator-theorem-dic
 tionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
-) (./diploma_presentation.nav) [1
+) (./diploma_slides.nav) [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Try loading font information for U+msa on input line 137.
@@ -1145,15 +1145,15 @@ thkerncmss.
 ] [5
 
 ]
-<perplexity_plsa_nytimes.pdf, id=260, 406.13922pt x 272.51436pt>
+<perplexity_plsa_nytimes.pdf, id=264, 406.13922pt x 272.51436pt>
 File: perplexity_plsa_nytimes.pdf Graphic file (type pdf)
 <use perplexity_plsa_nytimes.pdf>
-Package pdftex.def Info: perplexity_plsa_nytimes.pdf  used on input line 218.
+Package pdftex.def Info: perplexity_plsa_nytimes.pdf  used on input line 219.
 (pdftex.def)             Requested size: 154.3345pt x 103.55652pt.
-<coherence_plsa_nytimes.pdf, id=261, 397.94383pt x 272.51436pt>
+<coherence_plsa_nytimes.pdf, id=265, 397.94383pt x 272.51436pt>
 File: coherence_plsa_nytimes.pdf Graphic file (type pdf)
 <use coherence_plsa_nytimes.pdf>
-Package pdftex.def Info: coherence_plsa_nytimes.pdf  used on input line 218.
+Package pdftex.def Info: coherence_plsa_nytimes.pdf  used on input line 219.
 (pdftex.def)             Requested size: 151.22021pt x 103.55652pt.
  [6
 
@@ -1174,76 +1174,168 @@ pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./coherence_plsa_nytimes.pdf
 ] [12
 
 ]
-<coherence_tf_reg_on_ppmi_nytimes.pdf, id=517, 843.67381pt x 272.87508pt>
-File: coherence_tf_reg_on_ppmi_nytimes.pdf Graphic file (type pdf)
-<use coherence_tf_reg_on_ppmi_nytimes.pdf>
-Package pdftex.def Info: coherence_tf_reg_on_ppmi_nytimes.pdf  used on input li
-ne 356.
-(pdftex.def)             Requested size: 253.1041pt x 81.86314pt.
-<coherence_df_reg_on_ppmi_nytimes.pdf, id=518, 850.05704pt x 272.87508pt>
-File: coherence_df_reg_on_ppmi_nytimes.pdf Graphic file (type pdf)
-<use coherence_df_reg_on_ppmi_nytimes.pdf>
-Package pdftex.def Info: coherence_df_reg_on_ppmi_nytimes.pdf  used on input li
-ne 356.
-(pdftex.def)             Requested size: 255.01907pt x 81.86314pt.
+<coherence_tf_score_reg_on_ppmi_tf_df_nytimes.pdf, id=521, 453.27531pt x 286.06
+499pt>
+File: coherence_tf_score_reg_on_ppmi_tf_df_nytimes.pdf Graphic file (type pdf)
+<use coherence_tf_score_reg_on_ppmi_tf_df_nytimes.pdf>
+Package pdftex.def Info: coherence_tf_score_reg_on_ppmi_tf_df_nytimes.pdf  used
+ on input line 357.
+(pdftex.def)             Requested size: 158.64873pt x 100.12424pt.
+<coherence_df_score_reg_on_ppmi_tf_df_nytimes.pdf, id=522, 470.07808pt x 286.06
+499pt>
+File: coherence_df_score_reg_on_ppmi_tf_df_nytimes.pdf Graphic file (type pdf)
+<use coherence_df_score_reg_on_ppmi_tf_df_nytimes.pdf>
+Package pdftex.def Info: coherence_df_score_reg_on_ppmi_tf_df_nytimes.pdf  used
+ on input line 357.
+(pdftex.def)             Requested size: 164.52979pt x 100.12424pt.
+<perplexity_tf_df_on_ppmi_nytimes.pdf, id=523, 522.36403pt x 311.00554pt>
+File: perplexity_tf_df_on_ppmi_nytimes.pdf Graphic file (type pdf)
+<use perplexity_tf_df_on_ppmi_nytimes.pdf>
+Package pdftex.def Info: perplexity_tf_df_on_ppmi_nytimes.pdf  used on input li
+ne 357.
+(pdftex.def)             Requested size: 182.83014pt x 108.85356pt.
  [13
 
- <./coherence_tf_reg_on_ppmi_nytimes.pdf> <./coherence_df_reg_on_ppmi_nytimes.p
-df
+ <./coherence_tf_score_reg_on_ppmi_tf_df_nytimes.pdf> <./coherence_df_score_reg
+_on_ppmi_tf_df_nytimes.pdf
 
-pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./coherence_df_reg_on_ppmi_n
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./coherence_df_score_reg_on_
+ppmi_tf_df_nytimes.pdf): PDF inclusion: multiple pdfs with page group included 
+in a single page
+> <./perplexity_tf_df_on_ppmi_nytimes.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./perplexity_tf_df_on_ppmi_n
 ytimes.pdf): PDF inclusion: multiple pdfs with page group included in a single 
 page
 >]
-<coherence_tf_reg_on_ppmi_mmro.pdf, id=628, 843.67381pt x 272.87508pt>
-File: coherence_tf_reg_on_ppmi_mmro.pdf Graphic file (type pdf)
-<use coherence_tf_reg_on_ppmi_mmro.pdf>
-Package pdftex.def Info: coherence_tf_reg_on_ppmi_mmro.pdf  used on input line 
-370.
-(pdftex.def)             Requested size: 253.1041pt x 81.86314pt.
-<perplexity_tf_reg_on_ppmi_mmro.pdf, id=629, 408.38197pt x 276.89008pt>
+<coherence_tf_reg_tf_df_score_with_different_num_of_topics.pdf, id=671, 443.303
+05pt x 284.73187pt>
+File: coherence_tf_reg_tf_df_score_with_different_num_of_topics.pdf Graphic fil
+e (type pdf)
+<use coherence_tf_reg_tf_df_score_with_different_num_of_topics.pdf>
+Package pdftex.def Info: coherence_tf_reg_tf_df_score_with_different_num_of_top
+ics.pdf  used on input line 371.
+(pdftex.def)             Requested size: 132.99193pt x 85.42021pt.
+<coherence_df_reg_tf_df_score_with_different_num_of_topics.pdf, id=672, 489.675
+03pt x 284.73187pt>
+File: coherence_df_reg_tf_df_score_with_different_num_of_topics.pdf Graphic fil
+e (type pdf)
+<use coherence_df_reg_tf_df_score_with_different_num_of_topics.pdf>
+Package pdftex.def Info: coherence_df_reg_tf_df_score_with_different_num_of_top
+ics.pdf  used on input line 371.
+(pdftex.def)             Requested size: 146.90364pt x 85.42021pt.
+<perplexity_coherence_tf_reg_25_topics.pdf, id=673, 488.9768pt x 290.07999pt>
+File: perplexity_coherence_tf_reg_25_topics.pdf Graphic file (type pdf)
+<use perplexity_coherence_tf_reg_25_topics.pdf>
+Package pdftex.def Info: perplexity_coherence_tf_reg_25_topics.pdf  used on inp
+ut line 371.
+(pdftex.def)             Requested size: 146.69417pt x 87.02466pt.
+<perplexity_coherence_df_reg_25_topics.pdf, id=674, 486.42038pt x 290.07999pt>
+File: perplexity_coherence_df_reg_25_topics.pdf Graphic file (type pdf)
+<use perplexity_coherence_df_reg_25_topics.pdf>
+Package pdftex.def Info: perplexity_coherence_df_reg_25_topics.pdf  used on inp
+ut line 371.
+(pdftex.def)             Requested size: 145.92723pt x 87.02466pt.
+ [14
+
+ <./coherence_tf_reg_tf_df_score_with_different_num_of_topics.pdf> <./coherence
+_df_reg_tf_df_score_with_different_num_of_topics.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./coherence_df_reg_tf_df_sco
+re_with_different_num_of_topics.pdf): PDF inclusion: multiple pdfs with page gr
+oup included in a single page
+> <./perplexity_coherence_tf_reg_25_topics.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./perplexity_coherence_tf_re
+g_25_topics.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+> <./perplexity_coherence_df_reg_25_topics.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./perplexity_coherence_df_re
+g_25_topics.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+>]
+<coherence_df_reg_on_ppmi_mmro_tf_score.pdf, id=863, 395.59984pt x 272.87508pt>
+
+File: coherence_df_reg_on_ppmi_mmro_tf_score.pdf Graphic file (type pdf)
+<use coherence_df_reg_on_ppmi_mmro_tf_score.pdf>
+Package pdftex.def Info: coherence_df_reg_on_ppmi_mmro_tf_score.pdf  used on in
+put line 388.
+(pdftex.def)             Requested size: 118.68086pt x 81.86314pt.
+<coherence_df_reg_on_ppmi_mmro_df_score.pdf, id=864, 408.36629pt x 272.87508pt>
+
+File: coherence_df_reg_on_ppmi_mmro_df_score.pdf Graphic file (type pdf)
+<use coherence_df_reg_on_ppmi_mmro_df_score.pdf>
+Package pdftex.def Info: coherence_df_reg_on_ppmi_mmro_df_score.pdf  used on in
+put line 388.
+(pdftex.def)             Requested size: 122.51082pt x 81.86314pt.
+<perplexity_tf_reg_on_ppmi_mmro.pdf, id=865, 408.38197pt x 276.89008pt>
 File: perplexity_tf_reg_on_ppmi_mmro.pdf Graphic file (type pdf)
 <use perplexity_tf_reg_on_ppmi_mmro.pdf>
 Package pdftex.def Info: perplexity_tf_reg_on_ppmi_mmro.pdf  used on input line
- 370.
+ 388.
 (pdftex.def)             Requested size: 122.51553pt x 83.06766pt.
- [14
+<perplexity_df_reg_on_ppmi_mmro_full.pdf, id=866, 427.54732pt x 276.89008pt>
+File: perplexity_df_reg_on_ppmi_mmro_full.pdf Graphic file (type pdf)
+<use perplexity_df_reg_on_ppmi_mmro_full.pdf>
+Package pdftex.def Info: perplexity_df_reg_on_ppmi_mmro_full.pdf  used on input
+ line 388.
+(pdftex.def)             Requested size: 128.26518pt x 83.06766pt.
+ [15
 
- <./coherence_tf_reg_on_ppmi_mmro.pdf> <./perplexity_tf_reg_on_ppmi_mmro.pdf
+ <./coherence_df_reg_on_ppmi_mmro_tf_score.pdf> <./coherence_df_reg_on_ppmi_mmr
+o_df_score.pdf
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./coherence_df_reg_on_ppmi_m
+mro_df_score.pdf): PDF inclusion: multiple pdfs with page group included in a s
+ingle page
+> <./perplexity_tf_reg_on_ppmi_mmro.pdf
 
 pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./perplexity_tf_reg_on_ppmi_
 mmro.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
 ge
->] [15
+> <./perplexity_df_reg_on_ppmi_mmro_full.pdf
 
-] [16
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ./perplexity_df_reg_on_ppmi_
+mmro_full.pdf): PDF inclusion: multiple pdfs with page group included in a sing
+le page
+>] [16
+
+] [17
 
 ]
 \tf@nav=\write6
-\openout6 = `diploma_presentation.nav'.
+\openout6 = `diploma_slides.nav'.
 
 \tf@toc=\write7
-\openout7 = `diploma_presentation.toc'.
+\openout7 = `diploma_slides.toc'.
 
 \tf@snm=\write8
-\openout8 = `diploma_presentation.snm'.
+\openout8 = `diploma_slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 412.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 412.
- (./diploma_presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 412.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 412.
-Package rerunfilecheck Info: File `diploma_presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 26A7E8C1FDA8962B0B172894DA85AE56;6790.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 425.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 425.
+ (./diploma_slides.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 425.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 425.
+
+
+Package rerunfilecheck Warning: File `diploma_slides.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `diploma_slides.out':
+(rerunfilecheck)             Before: 75DE339B8802D2910F53984BA78B62CA;7244
+(rerunfilecheck)             After:  E917698342B08668EF8AE3B171F2D380;7284.
  ) 
 Here is how much of TeX's memory you used:
- 21660 strings out of 492649
- 387419 string characters out of 6129623
- 456151 words of memory out of 5000000
- 25043 multiletter control sequences out of 15000+600000
+ 21703 strings out of 492649
+ 389483 string characters out of 6129623
+ 456103 words of memory out of 5000000
+ 25076 multiletter control sequences out of 15000+600000
  23500 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,15n,57p,1201b,569s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,15n,57p,1195b,569s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
 }</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -1263,10 +1355,10 @@ e/2018/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/
 18/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2018
 /texmf-dist/fonts/type1/public/cm-super/sfsx0800.pfb></usr/local/texlive/2018/t
 exmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb>
-Output written on diploma_presentation.pdf (16 pages, 318348 bytes).
+Output written on diploma_slides.pdf (17 pages, 415982 bytes).
 PDF statistics:
- 860 PDF objects out of 1000 (max. 8388607)
- 606 compressed objects within 7 object streams
- 55 named destinations out of 1000 (max. 500000)
- 279 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1171 PDF objects out of 1200 (max. 8388607)
+ 671 compressed objects within 7 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 322 words of extra memory for PDF output out of 10000 (max. 10000000)
 

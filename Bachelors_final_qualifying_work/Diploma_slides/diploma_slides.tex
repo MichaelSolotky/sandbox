@@ -137,9 +137,9 @@ $$\mathcal{L}(\Phi, \Theta) = \sum_{d, w} n_{dw} \ln \sum_{t \in T} \phi_{wt} \t
 \end{frame}
 
 
-\subsection{Аддитивная Регуляризация Тематических Моделей}
+\subsection{Аддитивная регуляризация тематических моделей}
 \begin{frame}
-\frametitle{Аддитивная Регуляризация Тематических Моделей}
+\frametitle{Аддитивная регуляризация тематических моделей}
 \footnotetext{Воронцов К. В. Аддитивная регуляризация тематических моделей коллекций текстовых документов.  Доклады РАН  2014}
 АРТМ --- один из подходов к регуляризации log-правдоподобия:
 $$\mathcal{L}(\Phi, \Theta) = \sum_{d, w} n_{dw} \ln \sum_{t \in T} \phi_{wt} \theta_{td} + \sum_{i=1}^k \tau_i R_i(\Phi, \Theta) \rightarrow \max_{\Phi, \Theta}$$
@@ -157,9 +157,10 @@ $$\mathcal{L}(\Phi, \Theta) = \sum_{d, w} n_{dw} \ln \sum_{t \in T} \phi_{wt} \t
     \item Перплексия:
     $$\mathcal{P}(D) = \exp \bigg( -\frac{1}{n} \sum_{d \in D} \sum_{w \in d} n_{wd} \ln \Prob(w|d) \bigg)$$
     \item Средняя (по темам) когерентность:
-    $$ C = \frac{1}{|T|} \frac{2}{m(m-1)} \sum_{t \in T} \sum_{i=1}^{m-1} \sum_{j=i+1}^m \text{PMI} (w_i, w_j)$$
-    где PMI --- поточечная взаимная информация
+    $$ C = \frac{1}{|T|} \frac{2}{m(m-1)} \sum_{t \in T} \sum_{i=1}^{m-1} \sum_{j=i+1}^m \text{SPPMI}_k (w_{ti}, w_{tj})$$
+    SPPMI (Shifted Positive Pointwise Mutual Information):
     $$ \text{PMI} (w_i, w_j) = \ln \frac{\Prob(w_i, w_j)}{\Prob(w_i) \Prob(w_j)}$$
+    $$\text{SPPMI}_k = \max(0, \text{PMI}(w_i, w_j) - \ln k)$$
 \end{itemize}
 \end{frame}
 
@@ -341,49 +342,61 @@ $$\text{PMI}(u, v) = \ln \Big[ \frac{n_{uv} n}{n_u n_v} \Big]$$
 \section{Результаты}
 %------------------------------------------------
 
-\subsection{KL регуляризатор, разные типы когерентности}
+\subsection{KL-регуляризатор, разные типы когерентности}
 \begin{frame}
-\frametitle{KL регуляризатор, разные типы когерентности}
-Максимизация средней PMI на частотах пар токенов:
+\frametitle{KL-регуляризатор, разные типы когерентности}
+
 \begin{center}
-    \includegraphics[scale=0.30]{coherence_tf_reg_on_ppmi_nytimes.pdf}
+    \includegraphics[scale=0.35]{coherence_tf_score_reg_on_ppmi_tf_df_nytimes.pdf}
+    \includegraphics[scale=0.35]{coherence_df_score_reg_on_ppmi_tf_df_nytimes.pdf}
 \end{center}
 
-Максимизация средней PMI на частотах документов:
 \begin{center}
-    \includegraphics[scale=0.30]{coherence_df_reg_on_ppmi_nytimes.pdf}
+\includegraphics[scale=0.35]{perplexity_tf_df_on_ppmi_nytimes.pdf}
 \end{center}
 \end{frame}
 
 
-\subsection{Эксперимент регуляризацией KL}
+\subsection{Зависимость когерентности от количества тем}
 \begin{frame}
-\frametitle{Эксперимент с регуляризацией KL}
+\frametitle{Зависимость когерентности от количества тем}
+\begin{center}
+    \includegraphics[scale=0.30]{coherence_tf_reg_tf_df_score_with_different_num_of_topics.pdf} \,\,\,\,\,
+    \includegraphics[scale=0.30]{coherence_df_reg_tf_df_score_with_different_num_of_topics.pdf}
+\end{center}
+\begin{center}
+    \includegraphics[scale=0.30]{perplexity_coherence_tf_reg_25_topics.pdf}
+    \includegraphics[scale=0.30]{perplexity_coherence_df_reg_25_topics.pdf}
+\end{center}
+\end{frame}
+
+
+\subsection{Эксперимент регуляризацией когерентности}
+\begin{frame}
+\frametitle{Эксперимент с регуляризацией когерентности}
 \begin{enumerate}
+    \item Регуляризация когерентности на частотах документов
     \item Экспоненциальное уменьшение коэффициента регуляризации
     \item Достаточно большое число тем
 \end{enumerate}
 \begin{center}
-    \includegraphics[scale=0.30]{coherence_tf_reg_on_ppmi_mmro.pdf}
+    \includegraphics[scale=0.30]{coherence_df_reg_on_ppmi_mmro_tf_score.pdf}
+    \includegraphics[scale=0.30]{coherence_df_reg_on_ppmi_mmro_df_score.pdf}
     \includegraphics[scale=0.30]{perplexity_tf_reg_on_ppmi_mmro.pdf}
+    \includegraphics[scale=0.30]{perplexity_df_reg_on_ppmi_mmro_full.pdf}
 \end{center}
 \end{frame}
 
-
-%\subsection{Эксперимент с регуляризатором WNTM}
-%\begin{frame}
-%\frametitle{Эксперимент с регуляризатором WNTM}
-%\end{frame}
 
 \subsection{Возможные применение данных со-встречаемости в ВТМ}
 \begin{frame}
 
 \frametitle{Возможные применение данных со-встречаемости в ВТМ}
 \begin{itemize}
-    \item измерение когерентности тематической модели
-    \item регуляризаторы когерентности
-    \item модель битермов BitermTM
-    \item модель WNTM (Word Network Topic Model)
+    \item Измерение когерентности тематической модели \newline
+    \item Регуляризаторы когерентности \newline
+    \item Модель битермов BitermTM \newline
+    \item Модель WNTM (Word Network Topic Model)
 \end{itemize}
 
 \footnotetext{
