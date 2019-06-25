@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.9)  28 MAY 2019 23:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.9.9)  22 JUN 2019 00:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -292,20 +292,20 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 160.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 162.
+(Font)              <7> on input line 163.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 162.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 169.
+(Font)              <5> on input line 163.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 170.
  [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 170.
  (./michael_solotky.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 170.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 170.
 Package rerunfilecheck Info: File `michael_solotky.out' has not changed.
 (rerunfilecheck)             Checksum: 980691668CCD552606980432DAD00847;234.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 170.
  ) 
 Here is how much of TeX's memory you used:
  7380 strings out of 492649
@@ -324,7 +324,7 @@ c10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
 0.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
 fb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
 b>
-Output written on michael_solotky.pdf (1 page, 91242 bytes).
+Output written on michael_solotky.pdf (1 page, 91409 bytes).
 PDF statistics:
  74 PDF objects out of 1000 (max. 8388607)
  63 compressed objects within 1 object stream
