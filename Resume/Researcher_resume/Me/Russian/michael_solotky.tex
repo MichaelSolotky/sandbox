@@ -1,0 +1,190 @@
+%-------------------------
+% Resume in Latex
+% Author : Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\RomanNumeralCaps}[1]{\MakeUppercase{\romannumeral #1}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} c @{\extracolsep{\fill}} r}
+  \faEnvelope \enspace mihlushi@yandex.ru & \textbf{\Large Михаил Солоткий \hspace{30pt}} & Москва, Россия \\
+  \faGithub \enspace \href{https://github.com/MichaelSolotky}{\color{blue} https://github.com/MichaelSolotky} && \faMobilePhone \enspace +7 967 291-08-66 \\
+\end{tabular*}
+
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} c @{\extracolsep{\fill}} r}
+  \faLinkedin \enspace \href{https://www.linkedin.com/in/michael-solotky/}{\color{blue} https://www.linkedin.com/in/michael-solotky/} \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Образование}
+  \resumeSubHeadingListStart
+      \item{
+		Магистрант, специальность: прикладная математика и информатика \\        
+        \textbf{\href{https://www.hse.ru/}{\color{blue} НИУ Высшая Школа Экономики}}
+        \hfill
+        Сентябрь 2019 -- Июнь 2021 \\
+        \href{https://cs.hse.ru/}{\color{blue} Факультет Компьютерных Наук}, совместная программа со \\ \href{https://yandexdataschool.ru/}{\color{blue} Школой Анализа Данных Яндекса}
+      }
+  \resumeSubHeadingListEnd
+
+  \resumeSubHeadingListStart
+      \item{
+        Бакалавр, специальность: прикладная математика и информатика, ср. балл 4.85 / 5.0 \\
+        \textbf{\href{https://www.msu.ru/}{\color{blue} МГУ имени М.В. Ломоносова}}
+        \hfill
+        Сентябрь 2015 -- Июнь 2019 \\
+        \href{https://www.msu.ru/info/struct/dep/vmc.html}{\color{blue} Факультет Вычислительной Математики и Кибернетики}
+      }
+  \resumeSubHeadingListEnd
+{Планирую продолжать учёбу в аспирантуре с получением степени PhD}
+
+
+%-----------EXPERIENCE-----------------
+\section{Опыт работы}
+  \resumeSubHeadingListStart
+
+      \item{
+        \textbf{Отдел машинного перевода. Яндекс}
+        \hfill
+        Июнь 2019 -- Сентябрь 2019 \\
+        Стажёр-разработчик машинного обучения
+      }
+      \begin{itemize}
+        \item .
+      \end{itemize}
+
+      \item{
+        \textbf{Группа разработки голосовых технологий. Яндекс}
+        \hfill
+        Июнь 2018 -- Октябрь 2018 \\
+        Стажёр-разработчик бэкэнда
+      }
+      \begin{itemize}
+        \item Реализовано несколько методов сглаживания вероятностей в языковых моделях для распознавания речи
+        \item Проведены эксперименты по сравнению качества для нахождения лучшей модели среди использованных
+        \item Реализован оптимальный алгоритм построения n-граммных языковых моделей на C++ с использованием MapReduce, \textbf{время работы которого минимум в 3 раза меньше базовой реализации, а также он немного превосходит по метрике качества базовую реализацию на некоторых датасетах}
+        \item Написан фреймворк с операциями, доступными из терминала
+      \end{itemize}
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Проекты}
+\resumeSubHeadingListStart
+    \item{
+      \textbf{{BigARTM}{ (C++ Boost/STL, Protobuf, Travis, AppVeyor)}}
+      \hfill
+      Январь 2017 -- настоящее время
+    } \\
+    Библиотека с открытым кодом по тематическому моделированию, поддерживающая одновременное использование множества регуляризаторов \\
+    \faGithub \enspace \href{https://github.com/bigartm/bigartm}{\color{blue} github.com/bigartm/bigartm}
+    \begin{itemize}
+      \item Разработан и реализован алгоритм параллельного сбора статистики со-встречаемостей пар слов, positive PMI на корпусах неограниченного размера \\
+      \textbf{Обработка полного текста англоязычной Википедии на 8 ядерном процессоре intel core i5 8th gen за 6 часов}
+      \item Отвечаю за парсинг входных данных
+    \end{itemize}
+
+  \resumeSubHeadingListEnd
+
+
+%-----------OTHER EXPERIENCE-----------------
+\section{Другой опыт}
+  \resumeSubHeadingListStart
+      \item{
+        \textbf{{Тест простоты чисел}{ (C++) }} \\
+        Реализация теста Миллера для детерминированной проверки больших чисел на простоту в рамках курса \href{https://www.kaspersky.com/}{\color{blue} Лаборатории Касперского} <<C++ и проблемы безопасности>> \\
+        \textbf{Время работы на простых числах длины 100 примерно 4 секунды} \\
+        \faGithub \enspace \href{https://github.com/MichaelSolotky/sandbox/tree/master/Cpp_old_tasks/Primality_tests}{\color{blue} github.com/MichaelSolotky/sandbox/tree/master/Cpp\_old\_tasks/Primality\_tests}
+      }
+
+      \item{
+        \textbf{Машинное обучение (NumPy, Scipy)} \\
+        Реализация различных алгоритмов машинного обучения с нуля \\
+        \faGithub \enspace \href{https://github.com/MichaelSolotky/sandbox/tree/master/ML}{\color{blue} github.com/MichaelSolotky/sandbox/tree/master/ML}
+      }
+      \resumeSubHeadingListEnd
+
+
+%--------TECHNICAL SKILLS------------
+\section{Технические навыки}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Языки. Использовались в работе}{C++, Python, C, Bash}
+    \resumeSubItem{Языки. Базовые знания}{SQL, Assembly language}
+    \resumeSubItem{Технологии}{MapReduce, Protobuf, C++ Boost, CMake, Make, SciPy, Scikit-learn, NumPy, Pandas}
+    \resumeSubItem{Библиотеки глубокого обучения}{PyTorch, TensorFlow}
+    \resumeSubItem{Инструменты}{Git, Subversion, UNIX/Linux, Travis, AppVeyor, \LaTeX}
+  \resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
