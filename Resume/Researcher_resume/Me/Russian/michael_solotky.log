@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.25)  20 JUL 2019 22:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.6.25)  12 AUG 2019 11:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -827,6 +827,10 @@ line 80.
 (/usr/share/texlive/texmf-dist/tex/latex/fontawesome/ufontawesometwo.fd
 File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 )
+Overfull \hbox (26.13629pt too wide) in alignment at lines 79--82
+[] [] []
+ []
+
 
 Package hyperref Warning: Glyph not defined in PD1 encoding,
 (hyperref)                removing `\CYRO' on input line 90.
@@ -1090,7 +1094,7 @@ ype1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public/cm-super
 share/texmf/fonts/type1/public/cm-super/sfcc1200.pfb></usr/share/texmf/fonts/ty
 pe1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/
 sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on michael_solotky.pdf (2 pages, 142252 bytes).
+Output written on michael_solotky.pdf (2 pages, 143772 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  75 compressed objects within 1 object stream

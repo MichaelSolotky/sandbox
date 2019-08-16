@@ -106,10 +106,12 @@
         \href{https://www.msu.ru/en/info/struct/depts/vmc.html}{\color{blue} Faculty of Computational Mathematics and Cybernetics}
       }
   \resumeSubHeadingListEnd
+\vspace{-13pt}
 {Continuing with the PhD degree afterwards}
 
 
 %-----------EXPERIENCE-----------------
+\vspace{-13pt}
 \section{Experience}
   \resumeSubHeadingListStart
       \item{
@@ -118,27 +120,31 @@
         June 2019 -- September 2019 \\
         Software Engineering Intern (Machine learning engineer)
       }
+      \vspace{-6pt}
       \begin{itemize}
         \item Conducting experiments on diversity measurement of different inference methods in NMT system.
+        \vspace{-4pt}
         \item Implemented Diverse Beam Search to improve quality of diverse translations
       \end{itemize}
-  \resumeSubHeadingListEnd  
-
-  \resumeSubHeadingListStart
+	  \vspace{-10pt}
       \item{
         \textbf{Voice Technology department of \href{https://yandex.com/company/}{\color{blue} Yandex}}
         \hfill
         June 2018 -- October 2018 \\
         Software Engineering Intern (Back-end developer)
       }
+      \vspace{-6pt}
       \begin{itemize}
         \item Implemented several methods of probability smoothing in language models for Automatic Speech Recognition
+        \vspace{-2pt}
         \item Conducted experiments on quality measurement to find the best model among all
+		\vspace{-2pt}        
         \item Implemented an optimal algorithm for constructing n-gram language models in C++ using MapReduce, \textbf{which decreased wall time by at least 3 times and slightly increased quality measure comparing to the baseline}
       \end{itemize}
   \resumeSubHeadingListEnd
 
 %-----------OTHER EXPERIENCE-----------------
+\vspace{-23pt}
 \section{Other experience}
   \resumeSubHeadingListStart
       \item{
@@ -146,9 +152,18 @@
         Implementation of various ML algorithms from scratch \\
         \faGithub \enspace \href{https://github.com/MichaelSolotky/sandbox/tree/master/ML}{\color{blue} github.com/MichaelSolotky/sandbox/tree/master/ML}
       }
+      \vspace{-8pt}
+      \item{
+        Prize in the sentiment analysis contest at the
+        \hfill
+        July 2017 \\
+        HSE's summer school of automatic text processing
+
+      }
   \resumeSubHeadingListEnd
 
 %--------COURSES------------
+\vspace{-23pt}
 \section{Courses}
   \resumeSubHeadingListStart
       \item{
@@ -168,9 +183,8 @@
       }
       \resumeSubHeadingListEnd
 
-%--------AWARDS------------
-
 %--------DIPLOMA PAPER------------
+\vspace{-23pt}
 \section{Diploma Paper}
   \resumeSubHeadingListStart
       \item{
@@ -178,8 +192,62 @@
     }
   \resumeSubHeadingListEnd
 
+%--------OLYMPIADS------------
+\vspace{-23pt}
+\section{Olympiads}
+  \resumeSubHeadingListStart
+      \item{
+    		First degree diploma in student's Applied Math and Computer Science
+    		\hfill
+        March 2019 \\
+        olympiad of the Higher School of Economics
+      }
+  \resumeSubHeadingListEnd
+
+Геомметрическое распределение: k - количество испытаний, p(k) = A (1 - A)^{k - 1}
+Компилируете в TeX:
+$E\xi = \sum_{k = 0}^\infty k p(k) = A \sum_{k = 0}^\infty k (1 - A)^k = -(\sum_{k = 0}^{\infty} ((1 - A)^k)^{'}) = \frac{1}{A}$
+$D\xi = E\xi^2 - (E\xi)^2$
+$E\xi^2 = A \sum_{k = 0}^\infty k^2 (1 - A)^{k - 1} = A \sum_{k = -1}^\infty k (k + 1) (1 - A) ^{k - 1} - A \sum_{k = 0} k (1 - A)^{k - 1} = A ((\frac{1}{A})^{''} + (\frac{1}{A})^{'}) = \frac{2- A}{A^2}$
+$D\xi = \frac{1 - A}{A^2}$
+
+
+Критерий минимума:
+Пусть f - числовая функция от векторного аргумента в конечномерном евклидовом пространстве. Точка x -- точка локального минимума f <=> нулевой субградиент принадлежим субдифферециалу f в точке x.
+Задача оптимизации функции f(x) от векторого аргумента можно рассматривать как n независимых одномерных задач оптимизации, так как здесь можно перегруппировать слагаемые и получить n слагаемых, где каждое зависит только от своего аргумента. Полученная функция выпукла (как сумма выпуклых функций на выпуклом множестве -- числовой прямой). У выпуклой функции точка локального минимума является и точкой глобального минимума. Посчитаем субдифференциал f(x):
+1) 2(x - a) + lambda, x > 0
+2) [-lambda, lambda] - 2a, x = 0
+3) 2(x - a) - lambda, x < 0
+если a < 0, 1) != 0.
+если a < 0, a > -lambda / 2, в 2) имеется 0 и при этом 3) < 0 = > argmin = 0
+наборот если a < 0, a >= -lambda / 2, срабатывает 3) и не срабатывает 2).
+То же самое верно для a > 0, только там знаки поменяются.
+a = 0 => argmin = 0
+x^* = sgn(a) * (|a| - lambda / 2)_+, где все операции применены поточечно
+
+
+Пример кода на C++:
+https://github.com/bigartm/bigartm/blob/master/src/artm/core/cooccurrence_collector.cc
+Пример кода на Python:
+https://github.com/MichaelSolotky/sandbox/blob/master/ML/kNN_classifier/nearest_neighbors.py
+Мой github:
+https://github.com/MichaelSolotky
+
+
+
+Почему подаюсь на эту поизицию -- хочу вырасти как исследователь, интересует NLP и ML.
+В порядке убывания интересности
+1) Neural Ordinary Differential Equations, NIPS 2018, https://arxiv.org/abs/1806.07366
+Это совершенно новая техника для обучение нейросетей, которая ещё и хорошо себя показывает на задачах прогнозирования временных рядов. Техника интересна в первую очередь своей теорией, даёт более общих взгляд на то, что такое ResNet, даёт возможность использовать методы решения дифференциальных уравнений для обучения нейросетей, хотя раньше там использовались обычные методы оптимизации, все являющиеся вариацией градиентного спуска. Я часто задавался вопросом, возможно ли применение теории управления и дифференциальных уравнений в машинном обучении, теперь вижу, что возможно.
+2) Analyzing Uncertainty in Neural Machine Translation, ICML 2018, https://arxiv.org/abs/1803.00047
+Эта статья интересна подробным анализом причин, почему NMT системы могут плохо переводить, какие именно ошибки в данных мешают сети выучить правильное отображение. Показывается проблема размазывания вероятностной массы, что приводит к неоднозначности и иногда ошибкам перевода. Интересный вывод также получился: оказывается, лучше не решать задачу поиска максимального провдоподобного перевода точно, а вообще ограничить ширину beam тем самым находить менее оптимальное решение для того, чтобы реже ошибаться, так как сами вероятности восстановлены неправильно.
+3) Variational Dropout Sparsifies Deep Neural Networks, https://arxiv.org/abs/1701.05369
+Эта статья интересна в первую очередь с практической точки зрения. Оказывается, если учить нейросеть байесовскими методами: используя максимизацию обоснованности одновременно со стахостическим вариационным выводом, получается эффект прореживания весов нейросети, то есть очень большая доля весов становится нулевой, что даёт возможность ускорения inference в нейросетях на GPU при использовании умножения разреженных матриц (этот вывод не из статьи, просто самому так кажется). С теоретической точки зрения интересно, что эффект от модели такой же, как от похожей на неё модели релевантных векторов.
+
+
 
 %--------TECHNICAL SKILLS------------
+\vspace{-23pt}
 \section{Technical Skills}
   \resumeSubHeadingListStart
     \resumeSubItem{Used at work}{C++, Python, C, Bash}
