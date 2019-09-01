@@ -6,17 +6,30 @@
 
 \documentclass[letterpaper,11pt]{article}
 
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{booktabs}       % professional-quality tables
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
 \usepackage{fontawesome}
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
 %\usepackage{fontawesome5}
+\usepackage[empty]{fullpage}
+\usepackage[pdftex]{hyperref}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage{latexsym}
+\usepackage{microtype}      % microtypography
+\usepackage{marvosym}
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{titlesec}
+\usepackage{url}            % simple URL typesetting
+\usepackage{verbatim}
+\usepackage{xcolor}
+
+\definecolor{linkcolor}{HTML}{0000FF} % цвет ссылок
+\definecolor{urlcolor}{HTML}{0000FF} % цвет гиперссылок
+ 
+\hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -107,7 +120,7 @@
       }
   \resumeSubHeadingListEnd
   \vspace{-10pt}
-Continuing with the PhD degree afterwards
+Continuing with a PhD degree afterwards
 
 
 %-----------EXPERIENCE-----------------
@@ -120,10 +133,15 @@ Continuing with the PhD degree afterwards
         June 2019 -- September 2019 \\
         Software Engineering Intern (Machine learning engineer)
       }
-      \vspace{-4pt}
-      %\begin{itemize}
-      %  \item Improving quality of diverse translations
-      %\end{itemize}
+      \vspace{-6pt}
+      \begin{itemize}
+        \item Conducted experiments to improve quality and diversity of translations
+        \item Analyzed and found some basic mistakes that baseline approaches do
+        \item Implemented several successful models and inference techniques in the Yandex's machine learning library with an ability to control diversity level
+        \item {\bf Achieved statistically significant improvement in quality and diversity simultaneously} on Yandex's metrics, commonly used in scientific field metrics (such as BLEU and self-BLEU) and human evaluation compared to the baselines
+      \end{itemize}
+      \vspace{-10pt}
+
       \item{
         \textbf{Voice Technology department of \href{https://yandex.com/company/}{\color{blue} Yandex}}
         \hfill
@@ -136,7 +154,7 @@ Continuing with the PhD degree afterwards
         \vspace{-2pt}
         \item Conducted experiments on quality measurement to find the best model among all
 		\vspace{-2pt}        
-        \item Implemented an optimal algorithm for constructing n-gram language models in C++ using MapReduce, \textbf{which decreased wall time by at least 3 times and slightly increased quality measure comparing to the baseline}
+        \item Implemented an optimal algorithm for constructing n-gram language models in C++ using MapReduce, \textbf{which decreased wall time by at least 3 times and slightly increased quality measure} compared to baseline
         \vspace{-2pt}
         \item Wrote a complete framework with a set of operations available from CLI
       \end{itemize}
@@ -149,18 +167,15 @@ Continuing with the PhD degree afterwards
     \item{
       \textbf{{BigARTM}{ (C++ Boost/STL, Protobuf, Travis, AppVeyor)}}
       \hfill
-      January 2017 -- present
+      January 2017 -- May 2019
     } \\
-    Open Source library for topic modelling that supports multiple regularization \\
+    Open Source library for topic modelling with support of multiple regularization \\
     \faGithub \enspace \href{https://github.com/bigartm/bigartm}{\color{blue} github.com/bigartm/bigartm}
     \vspace{-6pt}    
     \begin{itemize}
-      \item Developed a tool for parallel calculation of pairwise word statistics such as frequency of mutual occurrence, PMI in text corpus of unlimited size \\
-      \textbf{Wikipedia full-text processing takes 6 hours on octa-core intel core i5 8th gen}
-      \vspace{-2pt}      
-      \item Responsible for parsing of input data
+      \item Developed and supported a tool for parallel calculation of pairwise word statistics such as frequency of mutual occurrence, PMI in large text corpora in conditions of low RAM \\
+      \textbf{Wikipedia full-text processing takes 6 hours on octa-core intel core i5 8th gen, taking less then 8 Gb of RAM}
     \end{itemize}
-
   \resumeSubHeadingListEnd
 
 %-----------OTHER EXPERIENCE-----------------
@@ -168,16 +183,9 @@ Continuing with the PhD degree afterwards
 \section{Other experience}
   \resumeSubHeadingListStart
       \item{
-        \textbf{{Primality test}{ (C++) }} \\
-        Implementation of Miller test for deterministic checking of large numbers for primality as part of the \href{https://www.kaspersky.com/}{\color{blue} Kaspersky Lab} information security course \\
-        \textbf{Wall time on prime numbers of length 100 is about 4 seconds} \\
-        \faGithub \enspace \href{https://github.com/MichaelSolotky/sandbox/tree/master/Cpp_old_tasks/Primality_tests}{\color{blue} github.com/MichaelSolotky/sandbox/tree/master/Cpp\_old\_tasks/Primality\_tests}
-      }
-	  \vspace{-6pt}
-      \item{
         \textbf{ML (NumPy, Scipy)} \\
         Implementation of various ML algorithms from scratch \\
-        \faGithub \enspace \href{https://github.com/MichaelSolotky/sandbox/tree/master/ML}{\color{blue} github.com/MichaelSolotky/sandbox/tree/master/ML}
+        \faGithub \enspace \href{https://github.com/MichaelSolotky/sandbox/tree/master/Machine_Learning}{\color{blue} github.com/MichaelSolotky/sandbox/tree/master/Machine\_Learning}
       }
       \resumeSubHeadingListEnd
 
@@ -186,10 +194,10 @@ Continuing with the PhD degree afterwards
 \vspace{-19pt}
 \section{Technical Skills}
   \resumeSubHeadingListStart
-    \resumeSubItem{Used at work}{C++, Python, C, Bash}
+    \resumeSubItem{Languages used at work}{C++, Python, C, Bash}
     \resumeSubItem{Basic knowledge}{SQL, Assembly language}
     \resumeSubItem{Technologies}{MapReduce, Protobuf, C++ Boost, CMake, Make, SciPy, Scikit-learn, NumPy, Pandas}
-    \resumeSubItem{Deep Learning frameworks}{PyTorch, TensorFlow}
+    \resumeSubItem{Deep Learning frameworks used at work}{PyTorch, TensorFlow}
     \resumeSubItem{Tools}{Git, Subversion, UNIX/Linux, Travis, AppVeyor, \LaTeX}
   \resumeSubHeadingListEnd
 
