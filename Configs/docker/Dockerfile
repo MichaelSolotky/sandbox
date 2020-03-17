@@ -8,12 +8,12 @@ RUN apt-get install -yqq python3-pip vim wget
 # install pip packages
 RUN pip3 install --upgrade pip
 RUN pip3 install bokeh
-RUN pip3 install box2d
-RUN pip3 install catboost
+# RUN pip3 install box2d # fails
+# RUN pip3 install catboost # retries
 RUN pip3 install cvxopt
 RUN pip3 install cvxpy
 RUN pip3 install cython
-RUN pip3 install dionysus
+# RUN pip3 install dionysus # fails
 RUN pip3 install flask
 RUN pip3 install gensim
 RUN pip3 install gym
@@ -43,8 +43,8 @@ RUN pip3 install sklearn
 RUN pip3 install sphinx
 RUN pip3 install sphinx_rtd_theme
 RUN pip3 install statsmodels
-RUN pip3 install stop_word
-#RUN pip3 install tensorflow-gpu=2.0.0 tensorboard
+# RUN pip3 install stop_word # fails
+# RUN pip3 install tensorflow-gpu=2.0.0 tensorboard # retries
 RUN pip3 install torch torchvision
 RUN pip3 install tqdm
 RUN pip3 install wheel
