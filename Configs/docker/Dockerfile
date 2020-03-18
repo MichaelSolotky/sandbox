@@ -3,7 +3,14 @@ FROM nvidia/cuda:10.0-cudnn7-runtime-ubuntu16.04
 
 # install basic bash comands from apt
 RUN apt-get update
-RUN apt-get install -yqq python3-pip vim wget
+RUN apt-get install -yqq build-essential
+RUN apt-get install -yqq libboost-all-dev
+RUN apt-get install -yqq cmake gcc g++
+RUN apt-get install -yqq ffmpeg
+RUN apt-get install -yqq git
+RUN apt-get install -yqq graphviz
+RUN apt-get install -yqq python3-pip
+RUN apt-get install -yqq vim wget zsh
 
 # install pip packages
 RUN pip3 install --upgrade pip
@@ -44,8 +51,8 @@ RUN pip3 install sphinx
 RUN pip3 install sphinx_rtd_theme
 RUN pip3 install statsmodels
 # RUN pip3 install stop_word # fails
-# RUN pip3 install tensorflow-gpu=2.0.0 tensorboard # retries
-RUN pip3 install torch torchvision
+RUN pip3 install tensorflow-gpu==2.0.0 tensorboard # retries
+RUN pip3 install torch torchvision torchsummary
 RUN pip3 install tqdm
 RUN pip3 install wheel
 RUN pip3 install xlrd
@@ -63,3 +70,9 @@ EXPOSE 8888
 # configure a working directory
 RUN mkdir /root/data
 WORKDIR /root/data
+
+# customize shell
+RUN git clone https://github.com/ohmyzsh/ohmyzsh.git ../.oh-my-zsh
+RUN git clone https://github.com/MichaelSolotky/sandbox.git
+RUN cp sandbox/Configs/zshrc ../.zshrc
+RUN cp sandbox/Configs/vimrc ../.vimrc
