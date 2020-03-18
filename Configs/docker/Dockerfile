@@ -9,6 +9,7 @@ RUN apt-get install -yqq cmake gcc g++
 RUN apt-get install -yqq ffmpeg
 RUN apt-get install -yqq git
 RUN apt-get install -yqq graphviz
+RUN apt-get install -yqq htop
 RUN apt-get install -yqq python3-pip
 RUN apt-get install -yqq vim wget zsh
 
