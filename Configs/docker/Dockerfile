@@ -1,8 +1,16 @@
-# add a specific cuda version
+# add specific cuda version
 FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu16.04
 
-# install basic bash comands from apt
+# update apt
 RUN apt-get update
+
+# configure locales
+RUN apt-get install -y locales locales-all
+ENV LC_ALL en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+
+# install basic bash comands from apt
 RUN apt-get install -yqq build-essential
 RUN apt-get install -yqq libboost-all-dev
 RUN apt-get install -yqq cmake gcc g++
