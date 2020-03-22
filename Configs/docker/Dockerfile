@@ -1,8 +1,8 @@
 # add specific cuda version
 FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu16.04
 
-# update apt
-RUN apt-get update
+# update and upgrade apt
+RUN apt-get update -y && apt-get upgrade -y
 
 # configure locales
 RUN apt-get install -y locales locales-all
@@ -47,6 +47,7 @@ RUN pip3 install nltk
 RUN pip3 install pandas
 RUN pip3 install Pillow
 RUN pip3 install protobuf
+RUN pip3 install psutil
 RUN pip3 install pyLDAvis
 RUN pip3 install pylint
 RUN pip3 install pytest
