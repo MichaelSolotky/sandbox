@@ -18,8 +18,11 @@ RUN apt-get install -yqq ffmpeg
 RUN apt-get install -yqq git
 RUN apt-get install -yqq graphviz
 RUN apt-get install -yqq htop
+RUN apt-get install -yqq python-opengl python3-opengl
 RUN apt-get install -yqq python3-pip
 RUN apt-get install -yqq vim wget zsh
+RUN apt-get install -yqq xvfb
+RUN apt-get install -yqq zip unzip
 
 # install pip packages
 RUN pip3 install --upgrade pip
