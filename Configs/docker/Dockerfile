@@ -2,7 +2,7 @@
 FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu16.04
 
 # update and upgrade apt
-RUN apt-get update -y && apt-get upgrade -y
+RUN apt-get update -y --fix-missing && apt-get upgrade -y
 
 # configure locales
 RUN apt-get install -y locales locales-all
@@ -27,7 +27,6 @@ RUN apt-get install -yqq zip unzip
 # install pip packages
 RUN pip3 install --upgrade pip
 RUN pip3 install bokeh
-# RUN pip3 install box2d # fails
 # RUN pip3 install catboost # retries
 RUN pip3 install cvxopt
 RUN pip3 install cvxpy
@@ -36,6 +35,8 @@ RUN pip3 install cython
 RUN pip3 install flask
 RUN pip3 install gensim
 RUN pip3 install gym
+RUN pip3 install gym[atari]
+RUN pip3 install gym[box2d]
 RUN pip3 install imgaug
 RUN pip3 install ipywidgets
 RUN pip3 install jupyter jupyter_contrib_nbextensions
