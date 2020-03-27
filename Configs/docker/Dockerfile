@@ -52,6 +52,7 @@ RUN pip3 install pandas
 RUN pip3 install Pillow
 RUN pip3 install protobuf
 RUN pip3 install psutil
+RUN pip3 install pygame
 RUN pip3 install pyLDAvis
 RUN pip3 install pylint
 RUN pip3 install pytest
