@@ -1,5 +1,5 @@
 # add specific cuda version
-FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu16.04
+FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
 
 # update and upgrade apt
 RUN apt-get update -y --fix-missing && apt-get upgrade -y
@@ -12,26 +12,40 @@ ENV LANGUAGE en_US.UTF-8
 
 # install basic bash comands from apt
 RUN apt-get install -yqq build-essential
-RUN apt-get install -yqq libboost-all-dev
+RUN apt-get install -yqq checkinstall
 RUN apt-get install -yqq cmake gcc g++
 RUN apt-get install -yqq ffmpeg
 RUN apt-get install -yqq git
 RUN apt-get install -yqq graphviz
 RUN apt-get install -yqq htop
-RUN apt-get install -yqq python-opengl python3-opengl
-RUN apt-get install -yqq python3-pip
+RUN apt-get install -yqq libboost-all-dev
+# RUN apt-get install -yqq libpython3.5-dev libpython3.6-dev libpython3.7-dev
+RUN apt-get install -yqq libpython3.6-dev libpython3.7-dev
+# RUN apt-get install -yqq libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev \
+#                          libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev
+RUN apt-get install -yqq python-dev python-opengl python3-dev python3-opengl python3-pip
+RUN apt-get install -yqq software-properties-common
 RUN apt-get install -yqq vim wget zsh
 RUN apt-get install -yqq xvfb
 RUN apt-get install -yqq zip unzip
 
+RUN add-apt-repository ppa:deadsnakes/ppa
+RUN apt-get update
+RUN apt-get install -yqq python3.6
+RUN python3.6 -m pip install --upgrade pip
+RUN apt-get install -yqq python3.7 python3.7-distutils
+RUN python3.7 -m pip install --upgrade pip
+RUN alias python="python3.7"
+RUN alias pip="pip3"
+
 # install pip packages
-RUN pip3 install --upgrade pip
+RUN pip3 install --upgrade pip setuptools wheel
 RUN pip3 install bokeh
-# RUN pip3 install catboost # retries
+RUN pip3 install catboost # retries
 RUN pip3 install cvxopt
-RUN pip3 install cvxpy
+RUN pip3 install cvxpy # fails, don't have python headers
 RUN pip3 install cython
-# RUN pip3 install dionysus # fails
+RUN pip3 install dionysus # fails, don't have python headers
 RUN pip3 install flask
 RUN pip3 install gensim
 RUN pip3 install gym
@@ -48,24 +62,27 @@ RUN pip3 install moviepy
 RUN pip3 install networkx
 RUN pip3 install numpy
 RUN pip3 install nltk
+RUN pip3 install nose
 RUN pip3 install pandas
 RUN pip3 install Pillow
 RUN pip3 install protobuf
-RUN pip3 install psutil
+RUN pip3 install psutil # fails, don't have python headers
 RUN pip3 install pygame
 RUN pip3 install pyLDAvis
 RUN pip3 install pylint
 RUN pip3 install pytest
 RUN pip3 install PyWavelets
 RUN pip3 install regex
-RUN pip3 install scikit-image scikit-learn scikit-tda
+RUN pip3 install scikit-image
+RUN pip3 install scikit-learn
+RUN pip3 install scikit-tda # fails, don't have python headers
 RUN pip3 install scipy
 RUN pip3 install seaborn
 RUN pip3 install sklearn
 RUN pip3 install sphinx
 RUN pip3 install sphinx_rtd_theme
 RUN pip3 install statsmodels
-# RUN pip3 install stop_word # fails
+RUN pip3 install stop_words # package not found
 RUN pip3 install tensorflow-gpu==2.1.0 tensorboard # retries
 RUN pip3 install torch torchvision torchsummary
 RUN pip3 install tqdm
