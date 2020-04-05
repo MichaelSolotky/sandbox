@@ -55,6 +55,7 @@ RUN pip3 install imgaug
 RUN pip3 install ipywidgets
 RUN pip3 install jupyter jupyter_contrib_nbextensions
 RUN pip3 install keras
+RUN pip3 install --upgrade https://github.com/Lasagne/Lasagne/archive/master.zip
 RUN pip3 install librosa
 RUN pip3 install lightgbm
 RUN pip3 install matplotlib
@@ -84,6 +85,7 @@ RUN pip3 install sphinx_rtd_theme
 RUN pip3 install statsmodels
 RUN pip3 install stop_words # package not found
 RUN pip3 install tensorflow-gpu==2.1.0 # retries
+RUN pip3 install theano
 RUN pip3 install torch torchvision torchsummary
 RUN pip3 install tqdm
 RUN pip3 install wheel
