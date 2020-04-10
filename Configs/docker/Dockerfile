@@ -3,6 +3,7 @@ FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
 
 # update and upgrade apt
 RUN apt-get update -y --fix-missing && apt-get upgrade -y
+RUN apt-get update -y --fix-missing && apt-get upgrade -y
 
 # configure locales
 RUN apt-get install -y locales locales-all
@@ -33,9 +34,9 @@ RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt-get update
 RUN apt-get install -yqq python3.6
 RUN python3.6 -m pip install --upgrade pip
-RUN apt-get install -yqq python3.7 python3.7-distutils
-RUN python3.7 -m pip install --upgrade pip
-RUN alias python="python3.7"
+# RUN apt-get install -yqq python3.7 python3.7-distutils
+# RUN python3.7 -m pip install --upgrade pip
+RUN alias python="python3.6"
 RUN alias pip="pip3"
 
 # install pip packages
