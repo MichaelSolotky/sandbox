@@ -15,6 +15,7 @@ ENV LANGUAGE en_US.UTF-8
 RUN apt-get install -yqq build-essential
 RUN apt-get install -yqq checkinstall
 RUN apt-get install -yqq cmake gcc g++
+RUN apt-get isntall -yqq curl wget
 RUN apt-get install -yqq ffmpeg
 RUN apt-get install -yqq git
 RUN apt-get install -yqq graphviz
@@ -26,7 +27,7 @@ RUN apt-get install -yqq libpython3.6-dev libpython3.7-dev
 #                          libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev
 RUN apt-get install -yqq python-dev python-opengl python3-dev python3-opengl python3-pip
 RUN apt-get install -yqq software-properties-common
-RUN apt-get install -yqq vim wget zsh
+RUN apt-get install -yqq vim zsh
 RUN apt-get install -yqq xvfb
 RUN apt-get install -yqq zip unzip
 
