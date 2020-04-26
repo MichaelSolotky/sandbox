@@ -15,7 +15,7 @@ ENV LANGUAGE en_US.UTF-8
 RUN apt-get install -yqq build-essential
 RUN apt-get install -yqq checkinstall
 RUN apt-get install -yqq cmake gcc g++
-RUN apt-get isntall -yqq curl wget
+RUN apt-get install -yqq curl wget
 RUN apt-get install -yqq ffmpeg
 RUN apt-get install -yqq git
 RUN apt-get install -yqq graphviz
