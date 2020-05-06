@@ -71,6 +71,7 @@ RUN pip3 install pandas
 RUN pip3 install Pillow
 RUN pip3 install protobuf
 RUN pip3 install psutil # fails, don't have python headers
+RUN pip3 install pycocotools
 RUN pip3 install pygame
 RUN pip3 install pyLDAvis
 RUN pip3 install pylint
