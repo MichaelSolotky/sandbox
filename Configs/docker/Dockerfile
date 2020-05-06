@@ -3,7 +3,7 @@ FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
 
 # update and upgrade apt
 RUN apt-get update -y --fix-missing && apt-get upgrade -y
-RUN apt-get update -y --fix-missing && apt-get upgrade -y
+# RUN DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends apt-utils
 
 # configure locales
 RUN apt-get install -y locales locales-all
