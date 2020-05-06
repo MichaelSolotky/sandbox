@@ -88,6 +88,7 @@ RUN pip3 install sphinx
 RUN pip3 install sphinx_rtd_theme
 RUN pip3 install statsmodels
 RUN pip3 install stop_words # package not found
+RUN pip3 install subword-nmt
 RUN pip3 install tensorflow-gpu==2.1.0 # retries
 RUN pip3 install theano
 RUN pip3 install torch torchvision torchsummary
