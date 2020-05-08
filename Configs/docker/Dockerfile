@@ -43,6 +43,7 @@ RUN alias pip="pip3"
 # install pip packages
 RUN pip3 install --upgrade pip setuptools wheel
 RUN pip3 install bokeh
+RUN pip3 install casadi
 RUN pip3 install catboost # retries
 RUN pip3 install cvxopt
 RUN pip3 install cvxpy # fails, don't have python headers
@@ -54,6 +55,7 @@ RUN pip3 install gensim
 RUN pip3 install gym
 RUN pip3 install gym[atari]
 RUN pip3 install gym[box2d]
+RUN pip3 install hyperopt
 RUN pip3 install imgaug
 RUN pip3 install ipywidgets
 RUN pip3 install jupyter jupyter_contrib_nbextensions
@@ -62,6 +64,7 @@ RUN pip3 install --upgrade https://github.com/Lasagne/Lasagne/archive/master.zip
 RUN pip3 install librosa
 RUN pip3 install lightgbm
 RUN pip3 install matplotlib
+RUN pip3 install mpld3
 RUN pip3 install moviepy
 RUN pip3 install networkx
 RUN pip3 install numpy
