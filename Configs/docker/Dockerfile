@@ -51,6 +51,7 @@ RUN pip3 install cython
 RUN pip3 install dionysus # fails, don't have python headers
 RUN pip3 install editdistance
 RUN pip3 install flask
+RUN pip3 install gekko
 RUN pip3 install gensim
 RUN pip3 install gym
 RUN pip3 install gym[atari]
