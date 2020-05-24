@@ -16,6 +16,7 @@ RUN apt-get install -yqq build-essential
 RUN apt-get install -yqq checkinstall
 RUN apt-get install -yqq cmake gcc g++
 RUN apt-get install -yqq curl wget
+RUN apt-get install -yqq docker
 RUN apt-get install -yqq ffmpeg
 RUN apt-get install -yqq git
 RUN apt-get install -yqq graphviz
@@ -44,18 +45,15 @@ RUN alias pip="pip3"
 RUN pip3 install --upgrade pip setuptools wheel
 RUN pip3 install bokeh
 RUN pip3 install casadi
-RUN pip3 install catboost # retries
-RUN pip3 install cvxopt
-RUN pip3 install cvxpy # fails, don't have python headers
+RUN pip3 install catboost
+RUN pip3 install cvxopt cvxpy
 RUN pip3 install cython
-RUN pip3 install dionysus # fails, don't have python headers
+RUN pip3 install dionysus
 RUN pip3 install editdistance
 RUN pip3 install flask
 RUN pip3 install gekko
 RUN pip3 install gensim
-RUN pip3 install gym
-RUN pip3 install gym[atari]
-RUN pip3 install gym[box2d]
+RUN pip3 install gym gym[atari] gym[box2d]
 RUN pip3 install hyperopt
 RUN pip3 install imgaug
 RUN pip3 install ipywidgets
@@ -74,7 +72,7 @@ RUN pip3 install nose
 RUN pip3 install pandas
 RUN pip3 install Pillow
 RUN pip3 install protobuf
-RUN pip3 install psutil # fails, don't have python headers
+RUN pip3 install psutil
 RUN pip3 install pycocotools
 RUN pip3 install pygame
 RUN pip3 install pyLDAvis
@@ -82,18 +80,15 @@ RUN pip3 install pylint
 RUN pip3 install pytest
 RUN pip3 install PyWavelets
 RUN pip3 install regex
-RUN pip3 install scikit-image
-RUN pip3 install scikit-learn
-RUN pip3 install scikit-tda # fails, don't have python headers
+RUN pip3 install scikit-image scikit-learn scikit-tda
 RUN pip3 install scipy
 RUN pip3 install seaborn
 RUN pip3 install sklearn
-RUN pip3 install sphinx
-RUN pip3 install sphinx_rtd_theme
+RUN pip3 install sphinx sphinx_rtd_theme
 RUN pip3 install statsmodels
-RUN pip3 install stop_words # package not found
+RUN pip3 install stop_words
 RUN pip3 install subword-nmt
-RUN pip3 install tensorflow-gpu==2.1.0 # retries
+RUN pip3 install tensorflow-gpu==2.1.0
 RUN pip3 install theano
 RUN pip3 install torch torchvision torchsummary
 RUN pip3 install tqdm
