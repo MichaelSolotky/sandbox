@@ -1,21 +1,34 @@
 \documentclass[10pt]{extarticle}
 
-\usepackage{fullpage}
-\usepackage[utf8]{inputenc}
-\usepackage[russian]{babel}
-\usepackage{graphicx}
-\usepackage{booktabs}
 \usepackage{amsmath,amsfonts,amssymb}
-\usepackage{mathtools}
-\usepackage{beamerarticle}
-\usepackage{multirow}
-\usepackage{indentfirst}
 \usepackage{array}
+\usepackage{beamerarticle}
+\usepackage{booktabs}
+\usepackage{filecontents}
 \usepackage{float}
-\usepackage{hyperref}
 \usepackage{fontawesome}
-
+\usepackage{fullpage}
 \usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage[russian]{babel}
+\usepackage[utf8]{inputenc}
+
+\begin{filecontents*}{trial.bib}
+ @article{paper,
+author={name},
+title="{title}",
+journal={J. Phys. Conf. Ser.},
+volume={67},
+number={},
+ pages={23},
+ year={2007}
+ }
+\end{filecontents*}
+
 \geometry{
     a4paper,
     total={170mm,257mm},
@@ -39,4 +52,10 @@
 \maketitle
     \section*{Список вопросов, выносимых на зачёт (2017 год)}
     \section{Список вопросов, выносимых на зачёт (2017 год)}
+
+    \cite{paper}
+
+    \bibliographystyle{unsrt}
+    \bibliography{trial}
+
 \end{document}
