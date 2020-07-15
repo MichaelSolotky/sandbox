@@ -58,4 +58,13 @@ number={},
     \bibliographystyle{unsrt}
     \bibliography{trial}
 
+    Consider 2 random variables : c is the true class of the object, k is the number of assessors, who labeled the object as class 1.
+
+    $P(k = m | c = 1) = C_n^m  q^{n - m}  (1 - q)^{m}$, i.e. there are m correct answers and n - m wrong answers
+    $P(k = m | c != 1) = C_n^m  q^{m}  (1 - q)^{n - m}$, i.e. there are m wrong and n - m correct answers.
+    According to the Bayes theorem: $P(c | k) = P(k | c) P(c)  /  ( \sum_{v \in dom P(c)}  P(k | c = v) P(c = v) )$
+    $P(c | k = m) = P(k = m | c) P(c)  /  (C_n^m  q^{n - m}  (1 - q)^{m}  p +  C_n^m  q^{m}  (1 - q)^{n - m}  (1 - p) )$
+    $P(c = 1 | k = m) = C_n^m  q^{n - m}  (1 - q)^{m}  p  /  (C_n^m  q^{n - m}  (1 - q)^{m}  p +  C_n^m  q^{m}  (1 - q)^{n - m}  (1 - p) ) = q^{n - m}  (1 - q)^{m} p  /  ( q^{n - m}  (1 - q)^{m} p  +  q^{m}  (1 - q)^{n - m}) (1 - p) )$
+
+
 \end{document}
