@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  4 SEP 2020 22:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  5 SEP 2020 22:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -422,7 +422,7 @@ ut line 92.
 (/usr/local/texlive/2020/texmf-dist/tex/latex/fontawesome/ufontawesometwo.fd
 File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 238.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 235.
 
 
 Package Fancyhdr Warning: \footskip is too small (0.0pt): 
@@ -433,14 +433,14 @@ This may cause the page layout to be inconsistent, however.
 [1
 
 {/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 238.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 235.
 
 (./michael_solotky.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 238.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 238.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 235.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 235.
 Package rerunfilecheck Info: File `michael_solotky.out' has not changed.
 (rerunfilecheck)             Checksum: B0FE8AF4B27CB02D1ED06DF1C0E3DDD8;183.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 238.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 235.
  ) 
 Here is how much of TeX's memory you used:
  10101 strings out of 480608
@@ -462,10 +462,10 @@ b></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb>
 usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></us
 r/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/
 local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on michael_solotky.pdf (1 page, 136647 bytes).
+Output written on michael_solotky.pdf (1 page, 136767 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 90 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  6 named destinations out of 1000 (max. 500000)
  17441 words of extra memory for PDF output out of 20736 (max. 10000000)
 
