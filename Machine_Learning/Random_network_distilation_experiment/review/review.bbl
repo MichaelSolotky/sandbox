@@ -1,0 +1,64 @@
+\begin{thebibliography}{10}
+
+\bibitem{pitfalls}
+Arsenii Ashukha, Alexander Lyzhov, Dmitry Molchanov, and Dmitry Vetrov.
+\newblock Pitfalls of in-domain uncertainty estimation and ensembling in deep
+  learning.
+\newblock In {\em International Conference on Learning Representations}, 2020.
+
+\bibitem{ensembles}
+Balaji Lakshminarayanan, Alexander Pritzel, and Charles Blundell.
+\newblock Simple and scalable predictive uncertainty estimation using deep
+  ensembles.
+\newblock In I.~Guyon, U.~V. Luxburg, S.~Bengio, H.~Wallach, R.~Fergus,
+  S.~Vishwanathan, and R.~Garnett, editors, {\em Advances in Neural Information
+  Processing Systems 30}, pages 6402--6413. Curran Associates, Inc., 2017.
+
+\bibitem{end2}
+Andrey Malinin, Bruno Mlodozeniec, and Mark Gales.
+\newblock Ensemble distribution distillation.
+\newblock In {\em International Conference on Learning Representations}, 2020.
+
+\bibitem{transformer}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones,
+  Aidan~N Gomez, \L~ukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need.
+\newblock In I.~Guyon, U.~V. Luxburg, S.~Bengio, H.~Wallach, R.~Fergus,
+  S.~Vishwanathan, and R.~Garnett, editors, {\em Advances in Neural Information
+  Processing Systems 30}, pages 5998--6008. Curran Associates, Inc., 2017.
+
+\bibitem{structured_prediction}
+Andrey Malinin and Mark Gales.
+\newblock Uncertainty in structured prediction.
+\newblock In {\em arXiv preprint arXiv:2002.07650}, 2020.
+
+\bibitem{autoencoders}
+Taylor Denouden, Rick Salay, Krzysztof Czarnecki, Vahdat Abdelzad, Buu Phan,
+  and Sachin Vernekar.
+\newblock Improving reconstruction autoencoder out-of-distribution detection
+  with mahalanobis distance.
+\newblock In {\em arXiv:1812.02765}, 12 2018.
+
+\bibitem{vae}
+Diederik~P. Kingma and Max Welling.
+\newblock Auto-encoding variational bayes.
+\newblock In {\em ICLR}, 2014.
+
+\bibitem{do_dont_know}
+Eric Nalisnick, Akihiro Matsukawa, Yee Teh, Dilan Gorur, and Balaji
+  Lakshminarayanan.
+\newblock Do deep generative models know what they don't know?
+\newblock In {\em International Conference on Learning Representations (ICLR)},
+  10 2019.
+
+\bibitem{norm_flows_fail}
+Polina Kirichenko, Pavel Izmailov, and Andrew~Gordon Wilson.
+\newblock Why normalizing flows fail to detect out-of-distribution data.
+\newblock In {\em arXiv preprint arXiv:2006.08545}, 06 2020.
+
+\bibitem{random_network}
+Yuri Burda, Harrison Edwards, Amos Storkey, and Oleg Klimov.
+\newblock Exploration by random network distillation.
+\newblock In {\em arXiv:1810.12894}, 10 2018.
+
+\end{thebibliography}
