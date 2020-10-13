@@ -49,7 +49,6 @@ RUN pip3 install catboost
 RUN pip3 install cvxopt
 RUN pip3 install cvxpy
 RUN pip3 install cython
-RUN pip3 install dionysus
 RUN pip3 install editdistance
 RUN pip3 install flask
 RUN pip3 install gekko
@@ -82,6 +81,7 @@ RUN pip3 install pygame
 RUN pip3 install pyLDAvis
 RUN pip3 install pylint
 RUN pip3 install pytest
+RUN pip3 install pytorch-ignite
 RUN pip3 install PyWavelets
 RUN pip3 install regex
 RUN pip3 install scikit-image
