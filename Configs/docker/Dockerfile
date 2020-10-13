@@ -86,7 +86,6 @@ RUN pip3 install PyWavelets
 RUN pip3 install regex
 RUN pip3 install scikit-image
 RUN pip3 install scikit-learn
-RUN pip3 install scikit-tda
 RUN pip3 install scipy
 RUN pip3 install seaborn
 RUN pip3 install sklearn
