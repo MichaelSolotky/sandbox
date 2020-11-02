@@ -9,14 +9,6 @@ with open(in_file_name, 'r') as in_file:
                 continue
             lines.add(line)
 
-        '''
-        lines_ = set()  # remove lines that have lowercase counterparts
-        for line in lines:
-            if line.lower() == line or line.lower() not in lines:
-                lines_.add(line)
-        lines = lines_
-        '''
-
         sorted_lines = sorted(lines)
 
         out_file.write(str(len(lines)) + '\n')
