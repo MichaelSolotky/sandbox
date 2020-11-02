@@ -5,11 +5,11 @@
 % before loading neurips_2018
 
 % ready for submission
-\usepackage{nips_2018}
+%\usepackage{nips_2018}
 
 % to compile a preprint version, e.g., for submission to arXiv, add add the
 % [preprint] option:
-%\usepackage[preprint]{nips_2018}
+\usepackage[preprint]{nips_2018}
 
 % to compile a camera-ready version, add the [final] option, e.g.:
 %\usepackage[final]{nips_2018}
@@ -169,6 +169,6 @@
     Let's summarize: we've got a very strong mechanism based on bayesian ensembles that is able to detect regions of extrapolation. Due to harmful inductive biases of some neural net architectures, the drawbacks that come from training objectives and noises in the labels, ensembles of discriminative models tend to predict the same values in the regions, where they are supposed to act more diversly. Thus in those regions the extrapolation effect isn't detected (that's is my assumption). Distilled random networks \cite{random_network} aren't sufferring from some of the inductive biases of discriminative networks and noisy labels. Also it seems possible to avoid the drawbacks of generative and reconstruction-based models caused by their training objectives (e.g. minimization of reconstruction loss in autoencoders encourages the network to reconstruct simple images better than complex ones) using randomness of targets on OoD data. One can also use many differently initialized distilled random networks, which will probably provide different error values on OoD data. The idea of random networks can be combined then with extrapolation detection ability of bayesian ensembling technique.
 
 \bibliographystyle{unsrt}
-\bibliography{nips_2018}
+\bibliography{report}
 
 \end{document}
