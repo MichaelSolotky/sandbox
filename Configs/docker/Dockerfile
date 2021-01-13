@@ -26,6 +26,7 @@ RUN apt-get install -yqq libboost-all-dev
 RUN apt-get install -yqq libpython3.6-dev libpython3.7-dev
 # RUN apt-get install -yqq libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev \
 #                          libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev
+RUN apt-get install -yqq liblzma-dev
 RUN apt-get install -yqq python-dev python-opengl python3-dev python3-opengl python3-pip
 RUN apt-get install -yqq software-properties-common
 RUN apt-get install -yqq vim zsh
