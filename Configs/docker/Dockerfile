@@ -22,16 +22,22 @@ RUN apt-get install -yqq git
 RUN apt-get install -yqq graphviz
 RUN apt-get install -yqq htop
 RUN apt-get install -yqq libboost-all-dev
+
+# Needed in order to install python
 # RUN apt-get install -yqq libpython3.5-dev libpython3.6-dev libpython3.7-dev
 RUN apt-get install -yqq libpython3.6-dev libpython3.7-dev
 # RUN apt-get install -yqq libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev \
 #                          libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev
+RUN apt-get install -yqq zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev \
+                         libffi-dev libsqlite3-dev libbz2-dev
+
 RUN apt-get install -yqq liblzma-dev
 RUN apt-get install -yqq python-dev python-opengl python3-dev python3-opengl python3-pip
 RUN apt-get install -yqq software-properties-common
 RUN apt-get install -yqq vim zsh
 RUN apt-get install -yqq xvfb
 RUN apt-get install -yqq zip unzip
+
 
 RUN add-apt-repository ppa:deadsnakes/ppa
 RUN apt-get update
