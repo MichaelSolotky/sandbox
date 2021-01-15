@@ -77,6 +77,7 @@ RUN pip3 install matplotlib
 RUN pip3 install mpld3
 RUN pip3 install moviepy
 RUN pip3 install networkx
+RUN pip3 install numba
 RUN pip3 install numpy
 RUN pip3 install nltk
 RUN pip3 install nose
