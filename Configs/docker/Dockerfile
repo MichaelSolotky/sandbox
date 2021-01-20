@@ -57,6 +57,7 @@ RUN pip3 install cvxopt
 RUN pip3 install cvxpy
 RUN pip3 install cython
 RUN pip3 install editdistance
+RUN pip3 install efficientnet_pytorch
 RUN pip3 install flask
 RUN pip3 install gekko
 RUN pip3 install gensim
