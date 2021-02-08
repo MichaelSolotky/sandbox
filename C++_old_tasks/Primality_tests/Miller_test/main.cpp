@@ -7,8 +7,8 @@
 #define len_of_cell 9
 #define sieve_limit_for_trivial 256
 
-// This code is written in C++ in C style (it was long ago on 1 course,
-// when I was really better in C than in C++)
+// This code is written in C++, but in C style (it was long time ago,
+// when I was better in C than in C++)
 
 typedef struct res_of_sieve {
     int *sieve, num_of_primes;
