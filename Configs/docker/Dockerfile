@@ -93,6 +93,7 @@ RUN pip3 install pylint
 RUN pip3 install pytest
 RUN pip3 install pytorch-ignite
 RUN pip3 install PyWavelets
+RUN pip3 install pyyaml
 RUN pip3 install regex
 RUN pip3 install scikit-image
 RUN pip3 install scikit-learn
