@@ -92,6 +92,7 @@ RUN pip3 install pyLDAvis
 RUN pip3 install pylint
 RUN pip3 install pytest
 RUN pip3 install pytorch-ignite
+RUN pip3 install pytorch_lightning
 RUN pip3 install PyWavelets
 RUN pip3 install pyyaml
 RUN pip3 install regex
