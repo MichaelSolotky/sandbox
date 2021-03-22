@@ -50,6 +50,7 @@ RUN alias pip="pip3"
 
 # install pip packages
 RUN pip3 install --upgrade pip setuptools wheel
+RUN pip3 install albumentations
 RUN pip3 install bokeh
 RUN pip3 install casadi
 RUN pip3 install catboost
