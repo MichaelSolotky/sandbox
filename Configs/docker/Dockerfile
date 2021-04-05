@@ -74,6 +74,7 @@ RUN pip3 install keras
 RUN pip3 install --upgrade https://github.com/Lasagne/Lasagne/archive/master.zip
 RUN pip3 install librosa
 RUN pip3 install lightgbm
+RUN pip3 install loguru
 RUN pip3 install lmdb
 RUN pip3 install matplotlib
 RUN pip3 install mpld3
