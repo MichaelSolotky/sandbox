@@ -37,6 +37,7 @@
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4.08003pt} % just to get rid of a warning
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.375in}
@@ -110,18 +111,18 @@
 \section{Education}{}
 \resumeSubHeadingListStart
     \item{
-        {\textbf{Master of Science} in Applied Mathematics and Informatics, GPA 3.9 / 4.0 } \\ % (9.23 / 10.0)
+        \textbf{Master of Science} in \textbf{Applied Mathematics and Informatics}, GPA 3.90 / 4.0 \\ % (9.23 / 10.0)
         \vspace{-1pt}
         \textbf{\href{https://www.topuniversities.com/universities/hse-university-national-research-university-higher-school-economics}{\color{blue} Higher School of Economics} :}
 		\textbf{\href{https://cs.hse.ru/en/}}{\color{blue} Faculty of Computer Science}
         \hfill
         Sep 2019 -- Jun 2021 \\
         \vspace{-1pt}
-        Joint programme with \href{https://yandexdataschool.com/}{\color{blue} Yandex School of Data Science}
+        Joint programme with \href{https://yandexdataschool.com/}{\color{blue} \bf Yandex School of Data Science}
     }
     \vspace{-7pt}
     \item{
-        {Bachelor of Science in Applied Mathematics and Computer Science, GPA 3.89 / 4.0} \\ % (4.89 / 5.0)
+        Bachelor of Science in Applied Mathematics and Computer Science, GPA 3.89 / 4.0 \\ % (4.89 / 5.0)
         \vspace{-1pt}
         \textbf{\href{https://www.topuniversities.com/universities/lomonosov-moscow-state-university}{\color{blue} Lomonosov Moscow State University}}
         \hfill
@@ -130,11 +131,10 @@
         \href{https://www.msu.ru/en/info/struct/depts/vmc.html}{\color{blue} Faculty of Computational Mathematics and Cybernetics}
     }
 \resumeSubHeadingListEnd
-\vspace{-14pt}
 
 
 %-----------EXPERIENCE-----------------
-\vspace{-8pt}
+\vspace{-20pt}
 \section{Experience}
 \resumeSubHeadingListStart
     \vspace{-2pt}
@@ -149,7 +149,7 @@
     \vspace{-9pt}
 
     \item{
-        \textbf{Research Science Intern at \href{https://research.yandex.com/}{\color{blue} Yandex}} \skill{PyTorch}
+        \textbf{Research Science Intern at \href{https://research.yandex.com/}{\color{blue} Yandex}} \skill{PyTorch} \skill{NumPy} \skill{h5py} \skill{Pyplot} \skill{\LaTeX}
         \hfill
         Sep 2020 -- Jun 2021 \\
     }
@@ -168,7 +168,7 @@
         \textbf{Software Engineering Intern at \href{https://yandex.com/company/}{\color{blue} Yandex}}
         \hfill
         Jun 2019 -- Sep 2019 \\
-        \textbf{Machine Translation department} \skill{TensorFlow} \skill{MapReduce} \skill{NumPy} \skill{SciPy}
+        \textbf{Machine Translation department} \skill{TensorFlow} \skill{MapReduce} \skill{SciPy} \skill{Pyplot}
     }
     \vspace{-6pt}
     \begin{itemize}
@@ -180,13 +180,14 @@
         \vspace{-2pt}
         \item {\bf Achieved statistically significant improvement in quality and diversity simultaneously} on Yandex's metrics, human evaluation compared to the baselines and commonly used in scientific field metrics: {\bf about 1.1 growth of max-BLEU} (maximum \href{https://en.wikipedia.org/wiki/BLEU}{BLEU} of generated translations) and {\bf about 1.6 times n-gram diversity} (1 - \href{https://github.com/geek-ai/Texygen/blob/master/docs/evaluation.md}{self-BLEU}) {\bf growth}
     \end{itemize}
-    \vspace{-13pt}
+    %\vspace{-13pt}
+    \vspace{-11pt}
 
     \item{
         \textbf{Software Engineering Intern at \href{https://yandex.com/company/}{\color{blue} Yandex}}
         \hfill
         Jun 2018 -- Oct 2018 \\
-        \textbf{Voice Technology department} \skill{C\textbf{\footnotesize++}} \skill{MapReduce} \skill{Protobuf}
+        \textbf{Voice Technology department} \skill{C\textbf{\footnotesize++}} \skill{Python} \skill{MapReduce} \skill{Protobuf}
     }
     \vspace{-6pt}
     \begin{itemize}
@@ -194,14 +195,14 @@
         \vspace{-2pt}
         \item Conducted experiments on quality measurement to find the best model among all
 	   \vspace{-2pt}        
-        \item Implemented an optimal algorithm for constructing n-gram language models in C++ using MapReduce, \textbf{which decreased wall time by at least 3 times and slightly increased quality measure} compared to baseline
+        \item Implemented an optimal algorithm for constructing n-gram language models in C\textbf{\footnotesize++} using MapReduce, \textbf{which decreased wall time by at least 3 times and slightly increased quality measure} compared to baseline
         \vspace{-2pt}
         \item Wrote a complete framework with a set of operations available from CLI
     \end{itemize}
 \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
-\vspace{-24pt}
+\vspace{-20pt}
 \section{Projects}
 \resumeSubHeadingListStart
     \vspace{-2pt}
@@ -217,19 +218,18 @@
         \item Development and support of a tool for parallel calculation of pairwise word statistics such as frequency of mutual occurrence, PMI in large text corpora in conditions of low RAM \\
         \textbf{Wikipedia full-text processing takes 6 hours on octa-core intel core i5 8th gen, taking less than 8 Gb of RAM compared to at least 20 Gb needed before (\href{https://github.com/MichaelSolotky/bigartm/blob/master/src/artm/core/cooccurrence_collector.cc}{code sample})}
     \end{itemize}
-    \vspace{-15pt}
 \resumeSubHeadingListEnd
 
 
 %--------TECHNICAL SKILLS------------
-\vspace{-16pt}
+\vspace{-20pt}
 \section{Technical Skills}
 \resumeSubHeadingListStart
-    \resumeSubItem{Languages used at work}{C++, Python, C, Bash}
-    \resumeSubItem{Basic knowledge}{SQL, Assembly language}
-    \resumeSubItem{Technologies}{MapReduce, Protobuf, C++ Boost, CMake, Make, SciPy, CVXPY, Scikit-learn, NumPy, Pandas, Docker}
-    \resumeSubItem{Deep Learning frameworks used at work}{PyTorch, TensorFlow, Keras}
-    \resumeSubItem{Tools}{Git, Subversion, UNIX/Linux, Travis CI, AppVeyor, \LaTeX}
+    \resumeSubItem{Languages used at work}{C\textbf{\footnotesize++}, Python, C, Bash}
+    \resumeSubItem{Basic knowledge}{SQL, Perl, Assembly language}
+    \resumeSubItem{Technologies/Libraries}{MapReduce, Protobuf, C\textbf{\footnotesize++} Boost, Make, NumPy/SciPy, Sklearn, Pandas, CVXPY}
+    \resumeSubItem{Deep Learning frameworks}{PyTorch, TensorFlow, Keras}
+    \resumeSubItem{Tools}{Git, Subversion, UNIX/Linux, Docker, Travis CI, AppVeyor, \LaTeX}
 \resumeSubHeadingListEnd
 
 %-------------------------------------------
