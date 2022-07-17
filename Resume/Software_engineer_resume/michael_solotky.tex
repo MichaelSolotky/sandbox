@@ -1,6 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : Sourabh Bajaj
+% Author  : Sourabh Bajaj
 % License : MIT
 %------------------------
 
@@ -27,8 +27,8 @@
 \usepackage{verbatim}
 \usepackage{xcolor}
 
-\definecolor{linkcolor}{HTML}{0000FF} % цвет ссылок
-\definecolor{urlcolor}{HTML}{0000FF} % цвет гиперссылок
+\definecolor{linkcolor}{HTML}{0000FF} % colour of links
+\definecolor{urlcolor}{HTML}{0000FF} % colour of hyperlinks
  
 \hypersetup{pdfstartview=FitH, linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
 
@@ -95,6 +95,7 @@
 
 \begin{document}
 
+
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} c @{\extracolsep{\fill}} r}
      \faGithub \enspace GitHub: \href{https://github.com/MichaelSolotky}{ MichaelSolotky} & \textbf{\LARGE Michael Solotky} \hspace{50pt} & Gdańsk, Poland \\
@@ -107,14 +108,15 @@
 
 
 %-----------EDUCATION-----------------
-\vspace{-10pt}
+%\vspace{-10pt}
+\vspace{-8pt}
 \section{Education}{}
 \resumeSubHeadingListStart
     \item{
         \textbf{Master of Science} in \textbf{Applied Mathematics and Informatics}, GPA 3.90 / 4.0 \\ % (9.23 / 10.0)
         \vspace{-1pt}
         \textbf{\href{https://www.topuniversities.com/universities/hse-university-national-research-university-higher-school-economics}{\color{blue} Higher School of Economics} :}
-		\textbf{\href{https://cs.hse.ru/en/}}{\color{blue} Faculty of Computer Science}
+		\href{https://cs.hse.ru/en/}{\color{blue} Faculty of Computer Science}
         \hfill
         Sep 2019 -- Jun 2021 \\
         \vspace{-1pt}
@@ -139,14 +141,22 @@
 \resumeSubHeadingListStart
     \vspace{-2pt}
     \item{
-        \textbf{Software Development Engineer at \href{https://www.amazon.com/}{\color{blue} Amazon}}
+        \textbf{Software Development Engineer at \href{https://www.aboutamazon.com/}{\color{blue} Amazon}}
         \hfill
         Aug 2021 -- now \\
         \textbf{Alexa TextToSpeech}
-        \skill{C} \skill{C\textbf{\footnotesize++}} \skill{Python} \skill{GDB} \skill{Continuous Deployment}
+        \skill{C} \skill{C\textbf{\footnotesize++}} \skill{Python} \skill{Bash} \skill{Perl} \skill{Continuous Deployment}
     }
-    %\vspace{-6pt}
-    \vspace{-9pt}
+    \vspace{-8pt}
+    %\vspace{-9pt}
+    \begin{itemize}
+        \item \textbf{Decreased latency} of a Deep Learning model for homograph disambiguation by \textbf{56\%}
+        \vspace{-2pt}
+        \item \textbf{Urgently fixing bugs} with wrong pronunciation helping to deliver projects on time
+        \vspace{-2pt}
+        \item Extending functionality of an internal library for integration testing in Speech Synthesis
+    \end{itemize}
+    \vspace{-12pt}
 
     \item{
         \textbf{Research Science Intern at \href{https://research.yandex.com/}{\color{blue} Yandex}} \skill{PyTorch} \skill{NumPy} \skill{h5py} \skill{Pyplot} \skill{\LaTeX}
@@ -154,15 +164,14 @@
         Sep 2020 -- Jun 2021 \\
     }
     \vspace{-6pt}
-    % ToDo: list the achievements
     \begin{itemize}
-        \item \textbf{Performance validation} of existing methods for \textbf{uncertainty estimation} \\ in more complex environments
+        \item \textbf{Quality validation} of existing methods for \textbf{uncertainty estimation} on complex tasks
         \vspace{-2pt}
-        \item Finding \textbf{theoretical foundations} for various methods of \textbf{uncertainty estimation} in \textbf{Deep Learning}
+        \item Finding \textbf{theoretical foundations} for various methods of \textbf{uncertainty estimation in Deep Learning}
         \vspace{-2pt}
-        \item \href{https://www.hse.ru/en/ma/datasci/students/diplomas/472546359}{\bf Master's thesis}
+        \item \textbf{Results} are described in the \href{https://www.hse.ru/en/ma/datasci/students/diplomas/472546359}{\bf Master's thesis}
     \end{itemize}
-    \vspace{-13pt}
+    \vspace{-14pt}
 
     \item{
         \textbf{Machine Learning Engineer Intern at \href{https://yandex.com/company/}{\color{blue} Yandex}}
@@ -170,18 +179,18 @@
         Jun 2019 -- Sep 2019 \\
         \textbf{Machine Translation department} \skill{TensorFlow} \skill{MapReduce} \skill{SciPy} \skill{Pyplot}
     }
-    \vspace{-6pt}
+    \vspace{-7pt}
     \begin{itemize}
-        \item Conducted experiments to improve the quality and diversity of translations
+        \item Conducted experiments to improve quality and diversity of translations
         \vspace{-2pt}
-        \item Analyzed and found some basic mistakes that baseline approaches make
+        \item Analyzed baseline approaches and found some basic mistakes that they make
         \vspace{-2pt}
-        \item Implemented several successful models and inference techniques in Yandex's \\ machine learning library with an ability to control diversity level
+        \item Implemented several successful models in company's internal machine learning library
         \vspace{-2pt}
-        \item {\bf Achieved statistically significant improvement in quality and diversity \\ simultaneously} on Yandex's metrics, human evaluation compared to the baselines and on metrics commonly used in machine translation: about \textbf{1.1 growth of max-\href{https://en.wikipedia.org/wiki/BLEU}{BLEU}} and about \textbf{1.6 times \href{https://github.com/geek-ai/Texygen/blob/master/docs/evaluation.md}{self-BLEU} diversity growth}
+        \item {\bf Achieved improvement in quality and diversity} by internal company's metrics and by commonly used machine translation metrics: about \textbf{10\% of max-\href{https://en.wikipedia.org/wiki/BLEU}{BLEU} growth} and about \textbf{60\% of \href{https://github.com/geek-ai/Texygen/blob/master/docs/evaluation.md}{self-BLEU} diversity growth}
     \end{itemize}
     %\vspace{-13pt}
-    \vspace{-11pt}
+    \vspace{-10pt}
 
     \item{
         \textbf{Software Engineer Intern at \href{https://yandex.com/company/}{\color{blue} Yandex}}
@@ -189,17 +198,16 @@
         Jun 2018 -- Oct 2018 \\
         \textbf{Voice Technology department} \skill{C\textbf{\footnotesize++}} \skill{Python} \skill{MapReduce} \skill{Protobuf}
     }
-    \vspace{-6pt}
+    \vspace{-7pt}
     \begin{itemize}
-        \item Implemented several methods of probability smoothing and their modification \\ in language models for Automatic Speech Recognition
+        \item Implemented several methods of probability smoothing in language models for Speech Recognition
         \vspace{-2pt}
         \item Conducted experiments on quality measurement to find the best model among all
-	   \vspace{-2pt}        
-        \item Implemented an optimal algorithm for constructing n-gram language models in C\textbf{\footnotesize++} using MapReduce, \textbf{which decreased wall time by at least 3 times and slightly increased quality measure} compared to baseline
-        \vspace{-2pt}
-        \item Wrote a complete framework with a set of operations available from CLI
+	    \vspace{-2pt}
+        \item Implemented an optimal algorithm for training n-gram language models in C\textbf{\footnotesize++} using MapReduce, which \textbf{reduced training time by 3 times and slightly increased quality measure}
     \end{itemize}
 \resumeSubHeadingListEnd
+
 
 %-----------PROJECTS-----------------
 \vspace{-20pt}
@@ -212,11 +220,12 @@
         Jan 2017 -- May 2019
     } \\
     \vspace{2pt}
-    Open Source library for topic modelling with support of multiple regularization \\
+    \textbf{Open Source} library for topic modelling with support of multiple regularization \\
     \vspace{-6pt}
     \begin{itemize}
         \item Development and support of a tool for parallel calculation of pairwise word statistics such as frequency of mutual occurrence, \href{https://en.wikipedia.org/wiki/Pointwise_mutual_information}{PMI} in large text corpora in conditions of low RAM \\
-        \textbf{Wikipedia full-text processing takes less than 8 Gb of RAM now compared to at least 20 Gb needed before (\href{https://github.com/MichaelSolotky/bigartm/blob/master/src/artm/core/cooccurrence_collector.cc}{code sample}, \href{https://bigartm.readthedocs.io/en/stable/tutorials/bigartm_cli.html}{documentation})}
+        \vspace{2pt}
+        \item \textbf{Wikipedia full-text processing takes less than 8 Gb of RAM now compared to at least 20 Gb needed before (\href{https://github.com/MichaelSolotky/bigartm/blob/master/src/artm/core/cooccurrence_collector.cc}{code sample}, \href{https://bigartm.readthedocs.io/en/stable/tutorials/bigartm_cli.html}{documentation})}
     \end{itemize}
 \resumeSubHeadingListEnd
 
@@ -225,12 +234,13 @@
 \vspace{-20pt}
 \section{Technical Skills}
 \resumeSubHeadingListStart
-    \resumeSubItem{Languages used at work}{C\textbf{\footnotesize++}, Python, C, Bash}
-    \resumeSubItem{Basic knowledge}{SQL, Perl, Assembly language}
+    \resumeSubItem{Languages used at work}{C\textbf{\footnotesize++}, Python, C, Bash, Perl}
+    \resumeSubItem{Basic knowledge}{SQL, Assembly language}
     \resumeSubItem{Technologies/Libraries}{MapReduce, Protobuf, C\textbf{\footnotesize++} Boost, Make, NumPy/SciPy, Sklearn, Pandas, CVXPY}
-    \resumeSubItem{Deep Learning frameworks}{PyTorch, TensorFlow, Keras}
+    \resumeSubItem{Deep Learning frameworks}{PyTorch, TensorFlow, Keras, MXNet}
     \resumeSubItem{Tools}{Git, Subversion, UNIX/Linux, Continuous Deployment, GDB, Docker, Travis CI, AppVeyor, \LaTeX}
 \resumeSubHeadingListEnd
 
 %-------------------------------------------
 \end{document}
+
