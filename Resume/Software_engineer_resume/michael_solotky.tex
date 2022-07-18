@@ -6,6 +6,10 @@
 
 \documentclass[letterpaper,11pt]{article}
 
+%-------------------------
+% Use packages
+%-------------------------
+
 \usepackage{amsfonts}       % blackboard math symbols
 \usepackage{booktabs}       % professional-quality tables
 \usepackage[usenames,dvipsnames]{color}
@@ -26,6 +30,10 @@
 \usepackage{url}            % simple URL typesetting
 \usepackage{verbatim}
 \usepackage{xcolor}
+
+%-------------------------
+% Other settings
+%-------------------------
 
 \definecolor{linkcolor}{HTML}{0000FF} % colour of links
 \definecolor{urlcolor}{HTML}{0000FF} % colour of hyperlinks
@@ -59,6 +67,8 @@
 
 %-------------------------
 % Custom commands
+%-------------------------
+
 \newcommand{\resumeItem}[2]{
     \item\small{
         \textbf{#1}{: #2 \vspace{-2pt}}
@@ -71,6 +81,13 @@
         \textbf{#1} & #2 \\
         \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand\blfootnote[1]{% footnote without numbers
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
@@ -98,7 +115,7 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} c @{\extracolsep{\fill}} r}
-     \faGithub \enspace GitHub: \href{https://github.com/MichaelSolotky}{ MichaelSolotky} & \textbf{\LARGE Michael Solotky} \hspace{50pt} & Gdańsk, Poland \\
+    \faGithub \enspace GitHub: \href{https://github.com/MichaelSolotky}{ MichaelSolotky} & \textbf{\LARGE Michael Solotky} \hspace{50pt} & \faMapMarker \enspace Gdańsk, Poland \\
 \end{tabular*}
 \vspace{-13pt}
 
@@ -112,135 +129,181 @@
 \vspace{-8pt}
 \section{Education}{}
 \resumeSubHeadingListStart
-    \item{
-        \textbf{Master of Science} in \textbf{Applied Mathematics and Informatics}, GPA 3.90 / 4.0 \\ % (9.23 / 10.0)
-        \vspace{-1pt}
-        \textbf{\href{https://www.topuniversities.com/universities/hse-university-national-research-university-higher-school-economics}{\color{blue} Higher School of Economics} :}
-		\href{https://cs.hse.ru/en/}{\color{blue} Faculty of Computer Science}
-        \hfill
-        Sep 2019 -- Jun 2021 \\
-        \vspace{-1pt}
-        Joint programme with \href{https://yandexdataschool.com/}{\color{blue} \bf Yandex School of Data Science}
-    }
-    \vspace{-7pt}
-    \item{
-        Bachelor of Science in Applied Mathematics and Computer Science, GPA 3.89 / 4.0 \\ % (4.89 / 5.0)
-        \vspace{-1pt}
-        \textbf{\href{https://www.topuniversities.com/universities/lomonosov-moscow-state-university}{\color{blue} Lomonosov Moscow State University}}
-        \hfill
-        Sep 2015 -- Jun 2019 \\
-        \vspace{-1pt}
-        \href{https://www.msu.ru/en/info/struct/depts/vmc.html}{\color{blue} Faculty of Computational Mathematics and Cybernetics}
-    }
+
+% Master of Science
+\item{
+    \textbf{Master of Science} in \textbf{Applied Mathematics and Informatics}, GPA 3.90 / 4.0 \\ % (9.23 / 10.0)
+    \vspace{-1pt}
+    \textbf{\href{https://www.topuniversities.com/universities/hse-university-national-research-university-higher-school-economics}{\color{blue} Higher School of Economics} :}
+	\href{https://cs.hse.ru/en/}{\color{blue} Faculty of Computer Science}
+    \hfill
+    Sep 2019 -- Jun 2021 \\
+    \vspace{-1pt}
+    Joint programme with \href{https://yandexdataschool.com/}{\color{blue} \bf Yandex School of Data Science}
+}
+
+% Bachelor of Science
+\vspace{-7pt}
+\item{
+    Bachelor of Science in Applied Mathematics and Computer Science, GPA 3.89 / 4.0 \\ % (4.89 / 5.0)
+    \vspace{-1pt}
+    \textbf{\href{https://www.topuniversities.com/universities/lomonosov-moscow-state-university}{\color{blue} Lomonosov Moscow State University}}
+    \hfill
+    Sep 2015 -- Jun 2019 \\
+    \vspace{-1pt}
+    \href{https://www.msu.ru/en/info/struct/depts/vmc.html}{\color{blue} Faculty of Computational Mathematics and Cybernetics}
+}
 \resumeSubHeadingListEnd
 
 
 %-----------EXPERIENCE-----------------
-\vspace{-20pt}
+\vspace{-18pt}
 \section{Experience}
 \resumeSubHeadingListStart
+
+% Software Development Engineer at Amazon
+\vspace{-2pt}
+\item{
+    \textbf{Software Development Engineer at \href{https://www.aboutamazon.com/}{\color{blue} Amazon}}
+    \hfill
+    Aug 2021 -- Present $\cdot$ 11mo \\
+    \textbf{Alexa TextToSpeech}
+    \skill{C} \skill{C\textbf{\footnotesize++}} \skill{Python} \skill{Bash} \skill{Perl} \skill{CI/CD} \skill{MXNet}
+}
+\vspace{-8pt}
+%\vspace{-9pt}
+\begin{itemize}
+    \item{
+        \textbf{Reduced latency} of a Deep Learning model for homograph disambiguation by \textbf{56\%}
+    }
     \vspace{-2pt}
     \item{
-        \textbf{Software Development Engineer at \href{https://www.aboutamazon.com/}{\color{blue} Amazon}}
-        \hfill
-        Aug 2021 -- now \\
-        \textbf{Alexa TextToSpeech}
-        \skill{C} \skill{C\textbf{\footnotesize++}} \skill{Python} \skill{Bash} \skill{Perl} \skill{Continuous Deployment}
+        \textbf{Urgently fixing bugs} with wrong pronunciation helping to deliver projects on time
     }
-    \vspace{-8pt}
-    %\vspace{-9pt}
-    \begin{itemize}
-        \item \textbf{Decreased latency} of a Deep Learning model for homograph disambiguation by \textbf{56\%}
-        \vspace{-2pt}
-        \item \textbf{Urgently fixing bugs} with wrong pronunciation helping to deliver projects on time
-        \vspace{-2pt}
-        \item Extending functionality of an internal library for integration testing in Speech Synthesis
-    \end{itemize}
-    \vspace{-12pt}
-
+    \vspace{-2pt}
     \item{
-        \textbf{Research Science Intern at \href{https://research.yandex.com/}{\color{blue} Yandex}} \skill{PyTorch} \skill{NumPy} \skill{h5py} \skill{Pyplot} \skill{\LaTeX}
-        \hfill
-        Sep 2020 -- Jun 2021 \\
+        Extending functionality of an internal library for integration testing in \\ Speech Synthesis
     }
-    \vspace{-6pt}
-    \begin{itemize}
-        \item \textbf{Quality validation} of existing methods for \textbf{uncertainty estimation} on complex tasks
-        \vspace{-2pt}
-        \item Finding \textbf{theoretical foundations} for various methods of \textbf{uncertainty estimation in Deep Learning}
-        \vspace{-2pt}
-        \item \textbf{Results} are described in the \href{https://www.hse.ru/en/ma/datasci/students/diplomas/472546359}{\bf Master's thesis}
-    \end{itemize}
-    \vspace{-14pt}
+\end{itemize}
+\vspace{-12pt}
 
+% Research Science Intern at Yandex
+\item{
+    \textbf{Research Science Intern at \href{https://research.yandex.com/}{\color{blue} Yandex}} \skill{PyTorch} \skill{NumPy} \skill{Pyplot} \skill{\LaTeX}
+    \hfill
+    Sep 2020 -- Jun 2021 $\cdot$ 9mo \\
+}
+\vspace{-6pt}
+\begin{itemize}
     \item{
-        \textbf{Machine Learning Engineer Intern at \href{https://yandex.com/company/}{\color{blue} Yandex}}
-        \hfill
-        Jun 2019 -- Sep 2019 \\
-        \textbf{Machine Translation department} \skill{TensorFlow} \skill{MapReduce} \skill{SciPy} \skill{Pyplot}
+        Comparing existing methods for \textbf{uncertainty estimation} on large-scale tasks
     }
-    \vspace{-7pt}
-    \begin{itemize}
-        \item Conducted experiments to improve quality and diversity of translations
-        \vspace{-2pt}
-        \item Analyzed baseline approaches and found some basic mistakes that they make
-        \vspace{-2pt}
-        \item Implemented several successful models in company's internal machine learning library
-        \vspace{-2pt}
-        \item {\bf Achieved improvement in quality and diversity} by internal company's metrics and by commonly used machine translation metrics: about \textbf{10\% of max-\href{https://en.wikipedia.org/wiki/BLEU}{BLEU} growth} and about \textbf{60\% of \href{https://github.com/geek-ai/Texygen/blob/master/docs/evaluation.md}{self-BLEU} diversity growth}
-    \end{itemize}
-    %\vspace{-13pt}
-    \vspace{-10pt}
+    \vspace{-2pt}
+    \item{
+        Finding \textbf{theoretical foundations} for various methods of
+        \textbf{uncertainty estimation in Deep Learning}
+    }
+    \vspace{-2pt}
+    \item{
+        \textbf{Results} are described in the \href{https://www.hse.ru/en/ma/datasci/students/diplomas/472546359}{\bf Master's thesis}
+    }
+\end{itemize}
+\vspace{-14pt}
 
+% Machine Learning Engineer Intern at Yandex
+\item{
+    \textbf{Machine Learning Engineer Intern at \href{https://yandex.com/company/}{\color{blue} Yandex}}
+    \hfill
+    Jun 2019 -- Sep 2019 $\cdot$ 3mo \\
+    \textbf{Machine Translation department} \skill{TensorFlow} \skill{MapReduce} \skill{SciPy} \skill{Pyplot}
+}
+\vspace{-7pt}
+\begin{itemize}
     \item{
-        \textbf{Software Engineer Intern at \href{https://yandex.com/company/}{\color{blue} Yandex}}
-        \hfill
-        Jun 2018 -- Oct 2018 \\
-        \textbf{Voice Technology department} \skill{C\textbf{\footnotesize++}} \skill{Python} \skill{MapReduce} \skill{Protobuf}
+        Conducted experiments to improve quality and diversity of translations
     }
-    \vspace{-7pt}
-    \begin{itemize}
-        \item Implemented several methods of probability smoothing in language models for Speech Recognition
-        \vspace{-2pt}
-        \item Conducted experiments on quality measurement to find the best model among all
-	    \vspace{-2pt}
-        \item Implemented an optimal algorithm for training n-gram language models in C\textbf{\footnotesize++} using MapReduce, which \textbf{reduced training time by 3 times and slightly increased quality measure}
-    \end{itemize}
+    \vspace{-2pt}
+    \item{
+        Analyzed baseline approaches and found some basic mistakes that they make
+    }
+    \vspace{-2pt}
+    \item{
+        {\bf Increased quality and diversity} by internal company's metrics and by commonly used machine translation metrics: \textbf{10\% of max-\href{https://en.wikipedia.org/wiki/BLEU}{BLEU} growth}
+        and about \textbf{60\% of \href{https://github.com/geek-ai/Texygen/blob/master/docs/evaluation.md}{self-BLEU} diversity growth}
+    }
+    \vspace{-2pt}
+    \item{
+        Implemented several models in company's internal machine learning library
+    }
+\end{itemize}
+%\vspace{-13pt}
+\vspace{-10pt}
+
+% Software Engineer Intern at Yandex
+\item{
+    \textbf{Software Engineer Intern at \href{https://yandex.com/company/}{\color{blue} Yandex}}
+    \hfill
+    Jun 2018 -- Oct 2018 $\cdot$ 3mo \\
+    \textbf{Voice Technology department} \skill{C\textbf{\footnotesize++}} \skill{Python} \skill{MapReduce} \skill{Protobuf}
+}
+\vspace{-7pt}
+\begin{itemize}
+    \item{
+        Implemented several methods of probability smoothing in language models for \\ Automatic Speech Recognition
+    }
+    \vspace{-2pt}
+    \item{
+        Conducted experiments on quality measurement to find the best model among all
+    }
+    \vspace{-2pt}
+    \item{
+        Implemented an optimal algorithm for training n-gram language models in C\textbf{\footnotesize++} using \\ MapReduce which \textbf{reduced training time by 3 times and slightly increased quality}
+    }
+\end{itemize}
+
 \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------------
-\vspace{-20pt}
+\vspace{-18pt}
 \section{Projects}
 \resumeSubHeadingListStart
-    \vspace{-2pt}
-    \item{
-        \textbf{\href{https://github.com/bigartm/bigartm}{\color{blue} BigARTM}} \skill{C\textbf{\footnotesize++}} \skill{Boost} \skill{Protobuf} \skill{Travis CI} \skill{AppVeyor}
-        \hfill
-        Jan 2017 -- May 2019
-    } \\
-    \vspace{2pt}
-    \textbf{Open Source} library for topic modelling with support of multiple regularization \\
-    \vspace{-6pt}
-    \begin{itemize}
-        \item Development and support of a tool for parallel calculation of pairwise word statistics such as frequency of mutual occurrence, \href{https://en.wikipedia.org/wiki/Pointwise_mutual_information}{PMI} in large text corpora in conditions of low RAM \\
-        \vspace{2pt}
-        \item \textbf{Wikipedia full-text processing takes less than 8 Gb of RAM now compared to at least 20 Gb needed before (\href{https://github.com/MichaelSolotky/bigartm/blob/master/src/artm/core/cooccurrence_collector.cc}{code sample}, \href{https://bigartm.readthedocs.io/en/stable/tutorials/bigartm_cli.html}{documentation})}
-    \end{itemize}
+
+% BigARTM
+\vspace{-2pt}
+\item{
+    \textbf{\href{https://github.com/bigartm/bigartm}{\color{blue} BigARTM}} \skill{C\textbf{\footnotesize++}} \skill{Boost} \skill{Protobuf} \skill{Travis CI} \skill{AppVeyor}
+    \hfill
+    Jan 2017 -- Jun 2018
+} \\
+\vspace{2pt}
+\textbf{Open Source library for topic modelling} \\
+\vspace{2pt}
+{
+    Developed a tool for parallel calculation of pairwise word statistics (\textbf{\href{https://github.com/MichaelSolotky/bigartm/blob/master/src/artm/core/cooccurrence_collector.cc}{code sample}, \href{https://bigartm.readthedocs.io/en/stable/tutorials/bigartm_cli.html}{documentation}})
+}
+
 \resumeSubHeadingListEnd
 
 
 %--------TECHNICAL SKILLS------------
-\vspace{-20pt}
+
+\vspace{-18pt}
 \section{Technical Skills}
 \resumeSubHeadingListStart
-    \resumeSubItem{Languages used at work}{C\textbf{\footnotesize++}, Python, C, Bash, Perl}
-    \resumeSubItem{Basic knowledge}{SQL, Assembly language}
-    \resumeSubItem{Technologies/Libraries}{MapReduce, Protobuf, C\textbf{\footnotesize++} Boost, Make, NumPy/SciPy, Sklearn, Pandas, CVXPY}
-    \resumeSubItem{Deep Learning frameworks}{PyTorch, TensorFlow, Keras, MXNet}
-    \resumeSubItem{Tools}{Git, Subversion, UNIX/Linux, Continuous Deployment, GDB, Docker, Travis CI, AppVeyor, \LaTeX}
+
+\resumeSubItem{Languages used at work}{C\textbf{\footnotesize++}, Python, C, Bash, Perl}
+\resumeSubItem{Basic knowledge}{SQL, Assembly language}
+\resumeSubItem{Technologies/Libraries}{MapReduce, Protobuf, C\textbf{\footnotesize++} Boost, Make, NumPy/SciPy, Sklearn, Pandas, CVXPY}
+\resumeSubItem{Deep Learning frameworks}{PyTorch, TensorFlow, Keras, MXNet}
+\resumeSubItem{Tools}{Git, Subversion, UNIX/Linux, Continuous Deployment, GDB, Docker, Travis CI, AppVeyor, \LaTeX}
+
 \resumeSubHeadingListEnd
 
 %-------------------------------------------
+\blfootnote{\fontsize{8pt}{8pt}\selectfont
+    I hereby give consent for my personal data included in the application to be processed for the purposes of the recruitment process in accordance with Art. 6 paragraph 1 letter a of the Regulation of the European Parliament and of the Council (EU) 2016/679 of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).
+}
+
 \end{document}
 
