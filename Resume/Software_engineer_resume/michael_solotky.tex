@@ -15,9 +15,9 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{enumitem}
 \usepackage{fancyhdr}
-\usepackage{fontawesome}
+%\usepackage{fontawesome}
+\usepackage{fontawesome5}
 \usepackage[T1]{fontenc}    % use 8-bit T1 fonts
-%\usepackage{fontawesome5}
 \usepackage[empty]{fullpage}
 \usepackage[pdftex]{hyperref}
 \usepackage[utf8]{inputenc} % allow utf-8 input
@@ -115,12 +115,18 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} c @{\extracolsep{\fill}} r}
-    \faGithub \enspace GitHub: \href{https://github.com/MichaelSolotky}{ MichaelSolotky} & \textbf{\LARGE Michael Solotky} \hspace{50pt} & \faMapMarker \enspace Gdańsk, Poland \\
+    \faLinkedinIn \enspace LinkedIn: \href{https://www.linkedin.com/in/michael-solotky/}{ michael-solotky}
+    &
+    \textbf{\LARGE Michael Solotky} \hspace{50pt}
+    &
+    \faMapMarker* \enspace Gdańsk, Poland \\
 \end{tabular*}
 \vspace{-13pt}
 
 \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} c @{\extracolsep{\fill}} r}
-    \faLinkedin \enspace LinkedIn: \href{https://www.linkedin.com/in/michael-solotky/}{ michael-solotky}  && \faEnvelope \enspace jawormichal128@gmail.com \\
+    %\faTelegram \enspace Telegram: @MichaelSolotky
+    \faEnvelope[regular] jawormichal128@gmail.com
+    && \\
 \end{tabular*}
 
 
@@ -132,12 +138,14 @@
 
 % Master of Science
 \item{
-    \textbf{Master of Science} in \textbf{Applied Mathematics and Informatics}, GPA 3.90 / 4.0 \\ % (9.23 / 10.0)
+    \textbf{Master of Science} in \textbf{Applied Mathematics and Informatics}, GPA 3.90 / 4.0 % (9.23 / 10.0)
+    \hfill
+    \textit{Sep 2019 -- Jun 2021}
+    \\
     \vspace{-1pt}
     \textbf{\href{https://www.topuniversities.com/universities/hse-university-national-research-university-higher-school-economics}{\color{blue} Higher School of Economics} :}
 	\href{https://cs.hse.ru/en/}{\color{blue} Faculty of Computer Science}
-    \hfill
-    \textit{Sep 2019 -- Jun 2021} \\
+    \\
     \vspace{-1pt}
     Joint programme with \href{https://yandexdataschool.com/}{\color{blue} \textbf{Yandex School of Data Science}}
 }
@@ -145,11 +153,13 @@
 % Bachelor of Science
 \vspace{-7pt}
 \item{
-    Bachelor of Science in Applied Mathematics and Computer Science, GPA 3.89 / 4.0 \\ % (4.89 / 5.0)
+    Bachelor of Science in Applied Mathematics and Computer Science, GPA 3.89 / 4.0 % (4.89 / 5.0)
+    \hfill
+    \textit{Sep 2015 -- Jun 2019}
+    \\
     \vspace{-1pt}
     \textbf{\href{https://www.topuniversities.com/universities/lomonosov-moscow-state-university}{\color{blue} Lomonosov Moscow State University}}
-    \hfill
-    \textit{Sep 2015 -- Jun 2019} \\
+    \\
     \vspace{-1pt}
     \href{https://www.msu.ru/en/info/struct/depts/vmc.html}{\color{blue} Faculty of Computational Mathematics and Cybernetics}
 }
@@ -292,11 +302,10 @@
 \section{Technical Skills}
 \resumeSubHeadingListStart
 
-\resumeSubItem{Languages used at work}{C\textbf{\footnotesize++}, Python, C, Bash, Perl}
-\resumeSubItem{Basic knowledge}{SQL, Assembly language}
+\resumeSubItem{Languages}{C\textbf{\footnotesize++}, Python, C, Bash, Perl}
 \resumeSubItem{Technologies/Libraries}{MapReduce, Protobuf, C\textbf{\footnotesize++} Boost, Make, NumPy/SciPy, Sklearn, Pandas, CVXPY}
 \resumeSubItem{Deep Learning frameworks}{PyTorch, TensorFlow, Keras, MXNet}
-\resumeSubItem{Tools}{Git, Subversion, UNIX/Linux, Continuous Deployment, GDB, Docker, Travis CI, AppVeyor, \LaTeX}
+\resumeSubItem{Tools}{Git, UNIX/Linux, GDB, Docker, \LaTeX, Continuous Deployment, Travis CI, AppVeyor}
 
 \resumeSubHeadingListEnd
 
