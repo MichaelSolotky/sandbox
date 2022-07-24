@@ -45,13 +45,31 @@
 \usepackage{xcolor}
 
 %-------------------------
+% Custom variables
+%-------------------------
+
+% One-line items are different from two-line ones because the skills are in the first line
+\newcommand\additionalSpaceBetweenOneLineItems{1pt}
+\newcommand\spaceBetweenEducations{-6pt}
+\newcommand\spaceBetweenItemAndSubItem{-6pt}
+\newcommand\spaceBetweenLinesInEducation{-1pt}
+\newcommand\spaceBetweenLinesInHeading{-12pt}
+\newcommand\spaceBetweenOrdinarySubItems{-2pt}
+\newcommand\spaceBetweenResumeItems{-2pt}
+\newcommand\spaceBetweenResumeSebitems{-4pt}
+\newcommand\spaceBetweenSections{-12pt}
+\newcommand\spaceBetweenSubItemAndItem{-12pt}
+
+%-------------------------
 % Custom commands
 %-------------------------
+% Notes:
+% 1. There are the resumeItem and the resumeSubItem commands defined, but the items used in this resume are actually created using conventional itemize tools
 
 % Resume items
 \newcommand{\resumeItem}[2]{
     \item\small{
-        \textbf{#1}{: #2 \vspace{-2pt}}
+        \textbf{#1}{: #2 \vspace{\spaceBetweenResumeItems}}
     }
 }
 
@@ -63,14 +81,16 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand\blfootnote[1]{% footnote without numbers
-  \begingroup
-  \renewcommand\thefootnote{}\footnote{#1}%
-  \addtocounter{footnote}{-1}%
-  \endgroup
+\newcommand\blfootnote[1]{ % footnote without numbers
+    \begingroup
+    \renewcommand\thefootnote{}\footnote{#1}%
+    \addtocounter{footnote}{-1}%
+    \endgroup
 }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[2]{
+    \resumeItem{#1}{#2}\vspace{\spaceBetweenResumeSebitems}
+}
 
 \renewcommand{\labelitemii}{$\circ$}
 
@@ -93,7 +113,12 @@
 \definecolor{linkcolor}{HTML}{0000FF} % colour of links
 \definecolor{urlcolor}{HTML}{0000FF} % colour of hyperlinks
  
-\hypersetup{pdfstartview=FitH, linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
+\hypersetup{
+    pdfstartview=FitH,
+    linkcolor=linkcolor,
+    urlcolor=urlcolor,
+    colorlinks=true
+}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -117,7 +142,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+    \vspace{\spaceBetweenSections}
+    \scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 
@@ -139,7 +165,7 @@
     &
     \faMapMarker* \enspace Gdańsk, Poland \\
 \end{tabular*}
-\vspace{-13pt}
+\vspace{\spaceBetweenLinesInHeading}
 
 \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} c @{\extracolsep{\fill}} r}
     \faEnvelope[regular] jawormichal128@gmail.com
@@ -156,8 +182,6 @@
 % Notes:
 % 1. Think about moving it bellow (that's a usual recommendation for experienced engineers, although I'm not sure it applies to ML engineers)
 
-%\vspace{-10pt}
-\vspace{-8pt}
 \section{Education}{}
 \resumeSubHeadingListStart
 
@@ -167,25 +191,25 @@
     \hfill
     \textit{Sep 2019 -- Jun 2021}
     \\
-    \vspace{-1pt}
+    \vspace{\spaceBetweenLinesInEducation}
     \textbf{\href{https://www.topuniversities.com/universities/hse-university-national-research-university-higher-school-economics}{\color{blue} Higher School of Economics} :}
 	\href{https://cs.hse.ru/en/}{\color{blue} Faculty of Computer Science}
     \\
-    \vspace{-1pt}
+    \vspace{\spaceBetweenLinesInEducation}
     Joint programme with \href{https://yandexdataschool.com/}{\color{blue} \textbf{Yandex School of Data Science}}
 }
 
 % Bachelor of Science
-\vspace{-6pt}
+\vspace{\spaceBetweenEducations}
 \item{
     Bachelor of Science in Applied Mathematics and Computer Science, GPA 3.89 / 4.0 % (4.89 / 5.0)
     \hfill
     \textit{Sep 2015 -- Jun 2019}
     \\
-    \vspace{-1pt}
+    \vspace{\spaceBetweenLinesInEducation}
     \textbf{\href{https://www.topuniversities.com/universities/lomonosov-moscow-state-university}{\color{blue} Lomonosov Moscow State University}}
     \\
-    \vspace{-1pt}
+    \vspace{\spaceBetweenLinesInEducation}
     \href{https://www.msu.ru/en/info/struct/depts/vmc.html}{\color{blue} Faculty of Computational Mathematics and Cybernetics}
 }
 \resumeSubHeadingListEnd
@@ -198,12 +222,10 @@
 % 1.b. Sometimes people write what they were developing (projects)
 % 1.c. Writing about your duties (e.g. writing integ tests) is excessive because it's obvious from the job title
 
-\vspace{-16pt}
 \section{Experience}
 \resumeSubHeadingListStart
 
 % Software Development Engineer at Amazon
-\vspace{-2pt}
 \item{
     \textbf{Software Development Engineer at \href{https://www.aboutamazon.com/}{\color{blue} Amazon}}
     \hfill
@@ -211,22 +233,22 @@
     \textbf{Alexa TextToSpeech}
     \skill{C} \skill{C\textbf{\footnotesize++}} \skill{Python} \skill{Bash} \skill{Perl} \skill{CI/CD}
 }
-\vspace{-8pt}
-%\vspace{-9pt}
+\vspace{\spaceBetweenItemAndSubItem}
 \begin{itemize}
     \item{
         \textbf{Reduced latency} of a Deep Learning model for homograph disambiguation by \textbf{56\%}
     }
-    \vspace{-2pt}
+    \vspace{\spaceBetweenOrdinarySubItems}
     \item{
         \textbf{Urgently fixing bugs} with wrong pronunciation helping to \textbf{deliver projects on time}
     }
-    \vspace{-2pt}
+    \vspace{\spaceBetweenOrdinarySubItems}
     \item{
         Extending functionality of an internal library for integration testing in \\ Speech Synthesis \textbf{making it simple} to execute various new testing scenarios
     }
 \end{itemize}
-\vspace{-12pt}
+\vspace{\spaceBetweenSubItemAndItem}
+\vspace{\additionalSpaceBetweenOneLineItems}
 
 % Research Science Intern at Yandex
 \item{
@@ -234,22 +256,23 @@
     \hfill
     \textit{Sep 2020 -- Jun 2021 $\cdot$ 9mo} \\
 }
-\vspace{-6pt}
+\vspace{\spaceBetweenItemAndSubItem}
+\vspace{\additionalSpaceBetweenOneLineItems}
 \begin{itemize}
     \item{
         Comparing existing methods for \textbf{uncertainty estimation} on large-scale tasks
     }
-    \vspace{-2pt}
+    \vspace{\spaceBetweenOrdinarySubItems}
     \item{
         Finding \textbf{theoretical foundations} for various methods of
         uncertainty \\ estimation in \textbf{Deep Learning}
     }
-    \vspace{-2pt}
+    \vspace{\spaceBetweenOrdinarySubItems}
     \item{
         \textbf{Results} are described in the \href{https://www.hse.ru/en/ma/datasci/students/diplomas/472546359}{\textbf{Master's thesis}}
     }
 \end{itemize}
-\vspace{-14pt}
+\vspace{\spaceBetweenSubItemAndItem}
 
 % Machine Learning Engineer Intern at Yandex
 \item{
@@ -258,27 +281,27 @@
     \textit{Jun 2019 -- Sep 2019 $\cdot$ 3mo} \\
     \textbf{Machine Translation department} \skill{TensorFlow} \skill{MapReduce} \skill{SciPy} \skill{Pyplot}
 }
-\vspace{-7pt}
+\vspace{\spaceBetweenItemAndSubItem}
 \begin{itemize}
     \item{
         Conducted experiments to improve quality and diversity of translations
     }
-    \vspace{-2pt}
+    \vspace{\spaceBetweenOrdinarySubItems}
     \item{
         Analyzed baseline approaches and found some basic mistakes that they make
     }
-    \vspace{-2pt}
+    \vspace{\spaceBetweenOrdinarySubItems}
     \item{
         \textbf{Increased quality and diversity} by internal company's metrics and by \\ commonly used machine translation metrics: \textbf{10\% of max-\href{https://en.wikipedia.org/wiki/BLEU}{BLEU} growth} \\
         and about \textbf{60\% of \href{https://github.com/geek-ai/Texygen/blob/master/docs/evaluation.md}{self-BLEU} diversity growth}
     }
-    \vspace{-2pt}
+    \vspace{\spaceBetweenOrdinarySubItems}
     \item{
         Implemented several models in company's internal machine learning library
     }
 \end{itemize}
-%\vspace{-13pt}
-\vspace{-10pt}
+\vspace{\spaceBetweenSubItemAndItem}
+\vspace{2pt} % For some reason this need to be added because without it the space is not the same as in similar cases above
 
 % Software Engineer Intern at Yandex
 \item{
@@ -287,16 +310,16 @@
     \textit{Jun 2018 -- Oct 2018 $\cdot$ 3mo} \\
     \textbf{Voice Technology department} \skill{C\textbf{\footnotesize++}} \skill{Python} \skill{MapReduce} \skill{Protobuf}
 }
-\vspace{-7pt}
+\vspace{\spaceBetweenItemAndSubItem}
 \begin{itemize}
     \item{
         Implemented several methods of probability smoothing in language models for \\ Automatic Speech Recognition
     }
-    \vspace{-2pt}
+    \vspace{\spaceBetweenOrdinarySubItems}
     \item{
         Conducted experiments on quality measurement to find the best model among all
     }
-    \vspace{-2pt}
+    \vspace{\spaceBetweenOrdinarySubItems}
     \item{
         Implemented an optimal algorithm for training n-gram language models in C\textbf{\footnotesize++} using \\ MapReduce which \textbf{reduced training time by 3 times and slightly increased quality}
     }
@@ -307,23 +330,20 @@
 
 %-----------PROJECTS-----------------
 % Notes:
-% 1. Think about removing this tab
+% 1. Think about removing this section
 
-\vspace{-16pt}
 \section{Projects}
 \resumeSubHeadingListStart
 
 % BigARTM
-\vspace{-2pt}
+\vspace{-2pt} % not sure if necessary, it just looks ok with it
 \item{
-    \textbf{\href{https://github.com/bigartm/bigartm}{\color{blue} BigARTM}} \skill{C\textbf{\footnotesize++}} \skill{Boost} \skill{Protobuf} \skill{Travis CI} \skill{AppVeyor}
+    \textbf{\href{https://github.com/bigartm/bigartm}{\color{blue} BigARTM}}
+    \skill{C\textbf{\footnotesize++}} \skill{Boost} \skill{Protobuf} \skill{Travis CI} \skill{AppVeyor}
     \hfill
-    \textit{Jan 2017 -- Jun 2018}
-} \\
-\vspace{2pt}
-\textbf{Open Source library for topic modelling} \\
-\vspace{2pt}
-{
+    \textit{Jan 2017 -- Jun 2018} \\
+    \vspace{2pt} % added to have normal space between the skills and the next line
+    \textbf{Open Source library for topic modelling} \\
     Developed a tool for parallel calculation of pairwise word statistics (\textbf{\href{https://github.com/MichaelSolotky/bigartm/blob/master/src/artm/core/cooccurrence_collector.cc}{code sample}, \href{https://bigartm.readthedocs.io/en/stable/tutorials/bigartm_cli.html}{documentation}})
 }
 
@@ -332,13 +352,13 @@
 
 %--------TECHNICAL SKILLS------------
 % Notes:
-% 1. Think about moving it above, even higher than the Experience tab
+% 1. Think about moving it above, even higher than the Experience section
 % 2. Think about adding soft skills here: scrum, public speaking
 
-\vspace{-16pt}
 \section{Technical Skills}
 \resumeSubHeadingListStart
 
+% Note: the only reason why sub-items are used instead of items is that they provide good spacing out-of-the-box
 \resumeSubItem{Languages}{C\textbf{\footnotesize++}, Python, C, Bash, Perl}
 \resumeSubItem{Technologies/Libraries}{MapReduce, Protobuf, C\textbf{\footnotesize++} Boost, Make, NumPy/SciPy, Sklearn, Pandas, CVXPY}
 \resumeSubItem{Deep Learning frameworks}{PyTorch, TensorFlow, Keras}
