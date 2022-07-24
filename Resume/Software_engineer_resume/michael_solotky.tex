@@ -5,70 +5,50 @@
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
+% Global notes:
+% 1. Font
+% 1.a. Font size: I saw even smaller font in other resumes, so think about making it smaller
+% 1.b. Italic font style: the TechLead suggests to not use italic, and I think that a few italic is not that bad
+% 1.c. Bold font style: too much bold is not ok. In this resume now it's not too much, but just know about that
 
 %-------------------------
 % Use packages
 %-------------------------
 
-\usepackage{amsfonts}       % blackboard math symbols
-\usepackage{booktabs}       % professional-quality tables
+% blackboard math symbols
+\usepackage{amsfonts}
+% professional-quality tables
+\usepackage{booktabs}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{enumitem}
 \usepackage{fancyhdr}
+% add icons like LinkedIn or Email envelope, fontawesome and fontawesome5 are conflicting, only one can be imported
 %\usepackage{fontawesome}
 \usepackage{fontawesome5}
-\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+% use 8-bit T1 fonts
+\usepackage[T1]{fontenc}
 \usepackage[empty]{fullpage}
 \usepackage[pdftex]{hyperref}
-\usepackage[utf8]{inputenc} % allow utf-8 input
+% allow utf-8 input
+\usepackage[utf8]{inputenc}
 \usepackage{latexsym}
-\usepackage{microtype}      % microtypography
+% microtypography
+\usepackage{microtype}
 \usepackage{marvosym}
-\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+% compact symbols for 1/2, etc.
+\usepackage{nicefrac}
 \usepackage{tikz}
 \usepackage{titlesec}
-\usepackage{url}            % simple URL typesetting
+% simple URL typesetting
+\usepackage{url}
 \usepackage{verbatim}
 \usepackage{xcolor}
-
-%-------------------------
-% Other settings
-%-------------------------
-
-\definecolor{linkcolor}{HTML}{0000FF} % colour of links
-\definecolor{urlcolor}{HTML}{0000FF} % colour of hyperlinks
- 
-\hypersetup{pdfstartview=FitH, linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-\setlength{\footskip}{4.08003pt} % just to get rid of a warning
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.375in}
-\addtolength{\evensidemargin}{-0.375in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 %-------------------------
 % Custom commands
 %-------------------------
 
+% Resume items
 \newcommand{\resumeItem}[2]{
     \item\small{
         \textbf{#1}{: #2 \vspace{-2pt}}
@@ -106,6 +86,40 @@
 \newcommand*{\mystrut}{\rule[-0.2\baselineskip]{0pt}{0.8\baselineskip}}
 \newcommand{\skill}[1]{\tframed[lightgray]{\mystrut#1}}
 
+%-------------------------
+% Other settings
+%-------------------------
+
+\definecolor{linkcolor}{HTML}{0000FF} % colour of links
+\definecolor{urlcolor}{HTML}{0000FF} % colour of hyperlinks
+ 
+\hypersetup{pdfstartview=FitH, linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4.08003pt} % just to get rid of a warning
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%
@@ -114,6 +128,10 @@
 
 
 %----------HEADING-----------------
+% Notes:
+% 1. Think about adding your prone number as recruiters in Poland usually want to see it and even call them
+% 2. Think about a Telegram link as it could be convenient for recruiters to call me, and in this case I won't expose my phone number
+
 \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} c @{\extracolsep{\fill}} r}
     \faLinkedinIn \enspace LinkedIn: \href{https://www.linkedin.com/in/michael-solotky/}{ michael-solotky}
     &
@@ -124,14 +142,19 @@
 \vspace{-13pt}
 
 \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} c @{\extracolsep{\fill}} r}
-    %\faTelegram \enspace Telegram: @MichaelSolotky
     \faEnvelope[regular] jawormichal128@gmail.com
-    && \\
+    &&
+    % Note: placeholder for a phone number
+    %\faTelegram \enspace Telegram:
+    % Note: placeholder for a telegram link
+    %\faPhone \enspace
+    \\
 \end{tabular*}
 
 
 %-----------EDUCATION-----------------
-% Note: think about moving it bellow (that's a usual recommendation for experienced engineers, although I'm not sure it applies to ML engineers)
+% Notes:
+% 1. Think about moving it bellow (that's a usual recommendation for experienced engineers, although I'm not sure it applies to ML engineers)
 
 %\vspace{-10pt}
 \vspace{-8pt}
@@ -169,6 +192,11 @@
 
 
 %-----------EXPERIENCE-----------------
+% Notes:
+% 1. Still not sure whether I should write what I was working on.
+% 1.a. It's clear that I should write achievements here
+% 1.b. Sometimes people write what they were developing (projects)
+% 1.c. Writing about your duties (e.g. writing integ tests) is excessive because it's obvious from the job title
 
 \vspace{-18pt}
 \section{Experience}
@@ -278,6 +306,8 @@
 
 
 %-----------PROJECTS-----------------
+% Notes:
+% 1. Think about removing this tab
 
 \vspace{-18pt}
 \section{Projects}
@@ -301,8 +331,9 @@
 
 
 %--------TECHNICAL SKILLS------------
-% Note: think about moving it above, even higher than the Experience tab
-% Note: think about adding soft skills here: scrum, public speaking
+% Notes:
+% 1. Think about moving it above, even higher than the Experience tab
+% 2. Think about adding soft skills here: scrum, public speaking
 
 \vspace{-18pt}
 \section{Technical Skills}
@@ -315,10 +346,15 @@
 
 \resumeSubHeadingListEnd
 
-%-------------------------------------------
+
+%--------------------------------------------------------------------
+% Consent to personal data processing in accordance with the GDPR
+% Notes:
+% 1. Most likely not needed outside of EU (not sure about UK)
+% 1. Possibly there could be a smaller statement, you can try to find it
+
 \blfootnote{\fontsize{8pt}{8pt}\selectfont
     I hereby give consent for my personal data included in the application to be processed for the purposes of the recruitment process in accordance with Art. 6 paragraph 1 letter a of the Regulation of the European Parliament and of the Council (EU) 2016/679 of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).
 }
 
 \end{document}
-
