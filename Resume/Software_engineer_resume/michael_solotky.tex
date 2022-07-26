@@ -10,6 +10,7 @@
 % 1.a. Font size: I saw even smaller font in other resumes, so think about making it smaller
 % 1.b. Italic font style: the TechLead suggests to not use italic, and I think that a few italic is not that bad
 % 1.c. Bold font style: too much bold is not ok. In this resume now it's not too much, but just know about that
+% 2. Dates are shifted to the right and it could be inconvenient to read it
 
 %-------------------------
 % Use packages
@@ -74,6 +75,9 @@
         \textbf{#1}{: #2 \vspace{\spaceBetweenResumeItems}}
     }
 }
+
+% Text style for dates (e.g. textit, textbf, textnormal)
+\newcommand{\textDate}{\textit}
 
 \newcommand{\resumeSubheading}[4]{
     \vspace{-1pt}\item
@@ -194,7 +198,7 @@
 \item{
     \textbf{Master of Science} in \textbf{Applied Mathematics and Informatics}, GPA 3.90 / 4.0 % (9.23 / 10.0)
     \hfill
-    \textit{Sep 2019 -- Jun 2021}
+    \textDate{Sep 2019 -- Jun 2021}
     \\
     \vspace{\spaceBetweenLinesInEducation}
     \textbf{\href{https://www.topuniversities.com/universities/hse-university-national-research-university-higher-school-economics}{\color{blue} Higher School of Economics} :}
@@ -209,7 +213,7 @@
 \item{
     Bachelor of Science in Applied Mathematics and Computer Science, GPA 3.89 / 4.0 % (4.89 / 5.0)
     \hfill
-    \textit{Sep 2015 -- Jun 2019}
+    \textDate{Sep 2015 -- Jun 2019}
     \\
     \vspace{\spaceBetweenLinesInEducation}
     \textbf{\href{https://www.topuniversities.com/universities/lomonosov-moscow-state-university}{\color{blue} Lomonosov Moscow State University}}
@@ -236,7 +240,7 @@
 \item{
     \textbf{Software Development Engineer at \href{https://www.aboutamazon.com/}{\color{blue} Amazon}}
     \hfill
-    \textit{Aug 2021 -- Present $\cdot$ 11mo} \\
+    \textDate{Aug 2021 -- Present $\cdot$ 11mo} \\
     \textbf{Alexa TextToSpeech}
     \skill{C} \skill{C\textbf{\footnotesize++}} \skill{Python} \skill{Bash} \skill{Perl} \skill{CI/CD}
 }
@@ -262,7 +266,7 @@
 \item{
     \textbf{Research Science Intern at \href{https://research.yandex.com/}{\color{blue} Yandex}} \skill{PyTorch} \skill{NumPy} \skill{Pyplot} \skill{\LaTeX}
     \hfill
-    \textit{Sep 2020 -- Jun 2021 $\cdot$ 9mo} \\
+    \textDate{Sep 2020 -- Jun 2021 $\cdot$ 9mo} \\
 }
 \vspace{\spaceBetweenItemAndSubItem}
 \vspace{\additionalSpaceBetweenOneLineItems}
@@ -286,7 +290,7 @@
 \item{
     \textbf{Machine Learning Engineer Intern at \href{https://yandex.com/company/}{\color{blue} Yandex}}
     \hfill
-    \textit{Jun 2019 -- Sep 2019 $\cdot$ 3mo} \\
+    \textDate{Jun 2019 -- Sep 2019 $\cdot$ 3mo} \\
     \textbf{Machine Translation department} \skill{TensorFlow} \skill{MapReduce} \skill{SciPy} \skill{Pyplot}
 }
 \vspace{\spaceBetweenItemAndSubItem}
@@ -315,7 +319,7 @@
 \item{
     \textbf{Software Engineer Intern at \href{https://yandex.com/company/}{\color{blue} Yandex}}
     \hfill
-    \textit{Jun 2018 -- Oct 2018 $\cdot$ 3mo} \\
+    \textDate{Jun 2018 -- Oct 2018 $\cdot$ 3mo} \\
     \textbf{Voice Technology department} \skill{C\textbf{\footnotesize++}} \skill{Python} \skill{MapReduce} \skill{Protobuf}
 }
 \vspace{\spaceBetweenItemAndSubItem}
@@ -351,7 +355,7 @@
     \textbf{\href{https://github.com/bigartm/bigartm}{\color{blue} BigARTM}}
     \skill{C\textbf{\footnotesize++}} \skill{Boost} \skill{Protobuf} \skill{Travis CI} \skill{AppVeyor}
     \hfill
-    \textit{Jan 2017 -- Jun 2018} \\
+    \textDate{Jan 2017 -- Jun 2018} \\
     \vspace{2pt} % added to have normal space between the skills and the next line
     \textbf{Open Source library for topic modelling} \\
     Developed a tool for parallel calculation of pairwise word statistics (\textbf{\href{https://github.com/MichaelSolotky/bigartm/blob/master/src/artm/core/cooccurrence_collector.cc}{code sample}, \href{https://bigartm.readthedocs.io/en/stable/tutorials/bigartm_cli.html}{documentation}})
